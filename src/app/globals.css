@@ -14,8 +14,8 @@ html,
 body,
 ul,
 ol {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   list-style: none;
 }
 
@@ -41,7 +41,7 @@ a:focus {
   background-color: #ffffff;
   border-color: #008CFF;
   outline: 0;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 html {
@@ -200,7 +200,7 @@ a:hover {
 
 .scrollToTop {
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   right: 30px;
   width: 45px;
   height: 45px;
@@ -292,13 +292,13 @@ a:hover {
 }
 
 .search-engine {
-  padding: 12rem 0 5rem 0;
+  padding: 5rem 0;
   background-size: cover;
   min-height: auto;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
-  min-height: 820px;
+  /* min-height: 820px; */
 }
 
 @media screen and (max-width: 992px) {
@@ -345,8 +345,8 @@ a:hover {
 }
 
 .cust-pills .nav-item .nav-link {
-  color: #ffffff;
-  background-color: transparent;
+  color: #ffffff !important;
+  background-color: transparent !important;
   border: none;
   padding: 0.5rem 1rem 1.5rem 0rem;
 }
@@ -506,12 +506,12 @@ a:hover {
 }
 
 .btn-search {
-  background-color: #0393D2;
+  background-color: #0393D2 !important;
   min-height: 48px;
-  color: #ffffff;
+  color: #ffffff !important;
   max-width: 175px;
   width: 100%;
-  border-radius: 50px;
+  border-radius: 50px !important;
   border: none;
   transition: all 0.2s;
   position: relative;
@@ -810,7 +810,7 @@ a:hover {
 }
 
 .special-offers .product02 {
-   background-image: url('./utils/images/section/product-banner02.png');
+  background-image: url('./utils/images/section/product-banner02.png');
 
 }
 

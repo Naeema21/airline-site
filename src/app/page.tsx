@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+import SearchEngine from './container/searchEngine';
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard } from './component';
 import { Product01, Product02, bannerImage, experienceBg } from './utils/images';
@@ -20,13 +21,14 @@ const Home = () => {
           <div className="search-engine" style={{ backgroundImage: `url(${bannerImage.src})` }}>
             <div className="container">
               <div className="row">
-                <div className="col-12 col-lg-12 mb-5 text-center position-relative">
-                  <h1 className="display-3 fw-bold mb-4 theme-text-white theme-text-shadow">
+                <div className="col-12 col-lg-12  text-center position-relative">
+                  <h1 className="display-3 fw-bold mb-2 theme-text-white theme-text-shadow">
                     A Journey to Adventurous
                   </h1>
                   <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
                 </div>
               </div>
+              <SearchEngine />
             </div>
           </div>
         </div>

@@ -1,9 +1,36 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState, useEffect } from 'react';
 
 import { SubscribeIcon, PlayIcon, AppleIcon } from '../utils/images'
 
 const Footer = () => {
+
+    const [isActive, setIsActive] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY < 500) {
+                setIsActive(false);
+            } else {
+                setIsActive(true);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
     return (
         <>
             <section className="py-5 theme-bg-primary">
@@ -133,7 +160,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <Link href="javascript:void(0)" className="scrollToTop"><i className="bi bi-chevron-double-up"></i></Link>
+                <button className={`scrollToTop ${isActive ? 'active' : ''}`} onClick={scrollToTop} >
+                    <i className="bi bi-chevron-double-up"></i>
+                </button>
             </footer>
         </>
 
