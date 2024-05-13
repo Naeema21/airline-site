@@ -40,3 +40,8 @@ export interface DropdownProps {
   title: React.ReactNode;
   items: { label: string; link: string }[];
 }
+
+export interface AutoSearchProps {
+  label: string;
+  options: string[];
+}

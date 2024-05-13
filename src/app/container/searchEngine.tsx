@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { AutoSearch } from "../component";
+import { searchOption } from "../utils/data";
 
 const SearchEngine = () => {
     const [dropdownVisible, setDropdownVisible] = useState(false);
     const [selectedTab, setSelectedTab] = useState('One Way');
+    const [sectors, setSectors] = useState([{ id: 1 }]);
 
     const toggleDropdown = () => {
         setDropdownVisible(!dropdownVisible);
@@ -10,6 +13,16 @@ const SearchEngine = () => {
 
     const handleTabChange = (tab: string) => {
         setSelectedTab(tab);
+    };
+
+    const handleAddSector = () => {
+        const newSectorId = sectors.length + 1;
+        setSectors([...sectors, { id: newSectorId }]);
+    };
+
+    const handleDeleteSector = (id: number) => {
+        const updatedSectors = sectors.filter(sector => sector.id !== id);
+        setSectors(updatedSectors);
     };
     return (
         <div className="row mt-0 mt-lg-4">
@@ -31,28 +44,12 @@ const SearchEngine = () => {
                         <div className="search-pan row mx-0 theme-border-radius">
                             <div className="col-12 col-lg-3 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                 <div className="form-group">
-                                    <label htmlFor="exampleDataList13" className="form-label">Depart From</label>
-                                    <input className="form-control" list="datalistOptions14" id="exampleDataList13" placeholder="New Delhi" />
-                                    <datalist id="datalistOptions14">
-                                        <option value="San Francisco" />
-                                        <option value="New York" />
-                                        <option value="Seattle" />
-                                        <option value="Los Angeles" />
-                                        <option value="Chicago " />
-                                    </datalist>
+                                    <AutoSearch label={'Depart From'} options={searchOption} />
                                 </div>
                             </div>
                             <div className="col-12 col-lg-3 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                 <div className="form-group">
-                                    <label htmlFor="exampleDataList4" className="form-label">Arrival To</label>
-                                    <input className="form-control" list="datalistOptions5" id="exampleDataList4" placeholder="London" />
-                                    <datalist id="datalistOptions5">
-                                        <option value="San Francisco" />
-                                        <option value="New York" />
-                                        <option value="Seattle" />
-                                        <option value="Los Angeles" />
-                                        <option value="Chicago" />
-                                    </datalist>
+                                    <AutoSearch label={'Arrival To'} options={searchOption} />
                                 </div>
                             </div>
                             <div className={`col-12  ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2 
@@ -128,7 +125,8 @@ const SearchEngine = () => {
                             <div className={`col-12  px-0 ${selectedTab == 'Multi City' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'}`}>
                                 <div className="d-flex">
                                     {
-                                        selectedTab == 'Multi City' && <button type="button" className="btn sector-add me-1">+ Add Sector</button>
+                                        selectedTab == 'Multi City' &&
+                                        <button type="button" className="btn sector-add me-1" onClick={handleAddSector}>+ Add Sector</button>
                                     }
 
                                     <button type="submit" className="btn btn-search" >
@@ -140,44 +138,34 @@ const SearchEngine = () => {
                         {/* <!-- add sector form --> */}
                         {
                             selectedTab == 'Multi City' &&
-                            <div className="row mt-4">
-                                <div className="col-12 col-lg-6">
-                                    <div className="search-pan row mx-0 theme-border-radius">
-                                        <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div className="form-group">
-                                                <label htmlFor="exampleDataList5" className="form-label">Depart From</label>
-                                                <input className="form-control" list="datalistOptions24" id="exampleDataList5" placeholder="New Delhi" />
-                                                <datalist id="datalistOptions24">
-                                                    <option value="San Francisco" />
-                                                    <option value="New York" />
-                                                    <option value="Seattle" />
-                                                    <option value="Los Angeles" />
-                                                    <option value="Chicago" />
-                                                </datalist>
+                            sectors.map((sector) => (
+                                <div className="row mt-4" key={sector?.id}>
+                                    <div className="col-12 col-lg-6">
+                                        <div className="search-pan row mx-0 theme-border-radius">
+                                            <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                                <div className="form-group">
+                                                    <AutoSearch label={'Depart From'} options={searchOption} />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div className="form-group">
-                                                <label htmlFor="exampleDataList6" className="form-label">Arrival To</label>
-                                                <input className="form-control" list="datalistOptions16" id="exampleDataList6" placeholder="London" />
-                                                <datalist id="datalistOptions16">
-                                                    <option value="San Francisco" />
-                                                    <option value="New York" />
-                                                    <option value="Seattle" />
-                                                    <option value="Los Angeles" />
-                                                    <option value="Chicago" />
-                                                </datalist>
+                                            <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                                <div className="form-group">
+                                                    <AutoSearch label={'Depart From'} options={searchOption} />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
-                                            <div className="form-group border-0">
-                                                <label className="form-label">Departure Date</label>
-                                                <input type="date" className="form-control" placeholder="Wed 2 Mar" />
+                                            <div className="col-11 col-lg-3 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
+                                                <div className="form-group border-0">
+                                                    <label className="form-label">Departure Date</label>
+                                                    <input type="date" className="form-control" placeholder="Wed 2 Mar" />
+                                                </div>
                                             </div>
+                                            <button type="button" className="btn border-0 col-1 col-lg-1 col-xl-1 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2"
+                                                onClick={() => handleDeleteSector(sector.id)} disabled={sectors.length <= 1}>
+                                                <i className="bi bi-trash" />
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))
                         }
                     </div>
                 </div>
