@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SearchEngine from './container/searchEngine';
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard } from './component';
-import { Product01, Product02, bannerImage, experienceBg } from './utils/images';
+import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from './utils/images';
 
 const Home = () => {
 
@@ -18,7 +18,7 @@ const Home = () => {
     <main>
       <div className="pagewrap">
         <div className="head-wrapper">
-          <div className="search-engine" style={{ backgroundImage: `url(${bannerImage.src})` }}>
+          <div className="search-engine" style={{ backgroundImage: `url(${bannerImage1.src})` }}>
             <div className="container">
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
@@ -231,7 +231,6 @@ const Home = () => {
 
         </div>
       </section>
-
     </main>
   );
 }

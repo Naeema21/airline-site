@@ -1,4 +1,5 @@
 import bannerImage from "./section/banner-image.png";
+import bannerImage1 from './banner_image.jpg'
 import Product01 from "./section/product-banner01.png";
 import Product02 from "./section/product-banner02.png";
 
@@ -33,6 +34,7 @@ import AppleIcon from './icons/play-icon.png'
 
 export {
   bannerImage,
+  bannerImage1,
   experienceBg,
   Product01,
   Product02,

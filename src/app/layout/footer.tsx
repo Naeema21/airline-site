@@ -62,11 +62,11 @@ const Footer = () => {
                             <h5 className="mb-5 fs-6">Contact Us</h5>
                             <div className="flex-grow-1">
                                 Customer Care<br />
-                                <span className="fs-5 theme-text-primary">+(1) 123 456 7890</span>
+                                <Link className="fs-5 theme-text-primary" href={'tel:1888 508 7143'}>1888 508 7143</Link>
                             </div>
                             <div className="flex-grow-1 mt-3">
                                 Need live support?<br />
-                                <Link href="#" className="fs-5 theme-text-primary">hi@example.com</Link>
+                                <Link href={'mail:info@Reservationkart.com'} className="fs-5 theme-text-primary">info@Reservationkart.com</Link>
                             </div>
                         </div>
                         <div className="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">

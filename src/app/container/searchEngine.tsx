@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { AutoSearch } from "../component";
 import { searchOption } from "../utils/data";
+import { useRouter } from "next/navigation";
 
 const SearchEngine = () => {
     const [dropdownVisible, setDropdownVisible] = useState(false);
     const [selectedTab, setSelectedTab] = useState('One Way');
     const [sectors, setSectors] = useState([{ id: 1 }]);
+    const router = useRouter()
 
     const toggleDropdown = () => {
         setDropdownVisible(!dropdownVisible);
@@ -24,8 +26,13 @@ const SearchEngine = () => {
         const updatedSectors = sectors.filter(sector => sector.id !== id);
         setSectors(updatedSectors);
     };
+
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        // router.push('/search')
+    }
     return (
-        <div className="row mt-0 mt-lg-4">
+        <form className="row mt-0 mt-lg-4" onSubmit={handleSubmit}>
             <div className="col-12 col-lg-10 offset-lg-1 mb-5 text-center position-relative">
                 <ul className="nav nav-pills cust-pills" id="pills-tab" role="tablist">
                     {
@@ -188,7 +195,7 @@ const SearchEngine = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     )
 }
 
