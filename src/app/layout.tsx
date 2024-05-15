@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import CookieCard from "./layout/cookieCard";
 import Footer from "./layout/footer";
 import Header from "./layout/header";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <CookieCard />
         <Footer />
       </body>
     </html>

@@ -249,6 +249,15 @@ a:hover {
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
 }
 
+.logo-title {
+  color: #2693a8;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.logo-title span{
+  color: #ec7e1b;
+}
+
 .page-menu li a {
   color: #5D5D5D;
 }
@@ -603,7 +612,7 @@ a:hover {
   width: 80px;
   height: 30px;
   line-height: 30px;
-  background:  #ec7e1b;
+  background: #ec7e1b;
   border-radius: 50px;
   position: absolute;
   left: 0px;
@@ -888,7 +897,7 @@ a:hover {
 }
 
 .experience .video-icon:hover {
-  background-color:  #ec7e1b;
+  background-color: #ec7e1b;
 }
 
 .experience .video-icon:hover i {
@@ -945,6 +954,36 @@ a:hover {
 .popular-routes .flightLine> :nth-child(2) {
   right: 0;
   background-color: #DDDDDD;
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 8px;
+  left: 20px;
+  width: 260px;
+  padding-top: 7px;
+  height: 83px;
+  color: #fff;
+
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  background: #292929;
+  z-index: 120;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.allow-button {
+  height: 20px;
+  width: 104px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 10px;
+  border-radius: 3px;
+  border: 1px solid green;
+  background-color: green;
 }
 
 /*# sourceMappingURL=main.css.map */
