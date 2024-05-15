@@ -947,4 +947,14 @@ a:hover {
   background-color: #DDDDDD;
 }
 
+.list-unstyled li::before {
+    content: '\2024'; 
+    color: black; 
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+
+  }
+
+
 /*# sourceMappingURL=main.css.map */
