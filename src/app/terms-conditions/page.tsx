@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsAndConditions = () => {
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 terms">
     <div className="mb-4">
         <h1 className="main-heading ">1. FLIGHT TICKETS</h1>
         <h2 className="sub-heading ">TERMS OF THE AIRLINES</h2>

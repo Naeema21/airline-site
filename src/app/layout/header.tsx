@@ -18,8 +18,8 @@ const Header = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-lg py-3 py-lg-0 px-0">
                     <Link href="/" className="navbar-brand">
-                        <Image src={Logo} alt='reservationkart'  width={50} height={50}/>
-                         {" "}Reservationkart
+                        <Image src={Logo} alt='reservationkart' width={50} height={50} />
+                        <span className="logo-title"><span> Reservation</span>kart</span>
                     </Link>
                     <button
                         className="navbar-toggler px-1 btn rounded-0"
@@ -37,10 +37,13 @@ const Header = () => {
                             <li className="nav-item"><Link className="nav-link pe-5" href="#review">Review</Link></li> */}
                         </ul>
                         <ul className="navbar-nav page-menu mb-3 mb-lg-0">
-                            <div className="flex flex-column justify-content-center align-items-center">
-                                <span> Available 24/7</span>
-                                <Link href='tel:1888 508 7143'> 1888 508 7143</Link>
-                            </div>
+                            <Link href='tel:1888 508 7143' style={{color:'#2290a6'}}
+                                className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold">
+                                <i className="bi bi-telephone"></i>
+                                <div>
+                                    1888 508 7143
+                                </div>
+                            </Link>
                             {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
                             <Dropdown title="INR" items={currencyItems} /> */}
                             {/* <li className="nav-item">

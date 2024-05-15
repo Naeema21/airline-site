@@ -85,13 +85,11 @@ const Footer = () => {
 
                         <div className="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">
                             <h5 className="mb-3 fs-6">Support</h5>
-                            <div className="mt-5">
+                            <div className="mt-3">
                                 <ul className="fl-menu">
                                     <li className="nav-item"><Link href="javascript:void(0)">Contact</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Legal Notice</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Privacy Policy</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Terms and Conditions</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Sitemap</Link></li>
+                                    <li className="nav-item"><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                    <li className="nav-item"><Link href="/terms-conditions">Terms and Conditions</Link></li>
                                 </ul>
                             </div>
                         </div>
