@@ -45,3 +45,22 @@ export interface AutoSearchProps {
   label: string;
   options: string[];
 }
+
+export interface Sector {
+  departFrom: string;
+  arrivalTo: string;
+  departureDate: string;
+}
+
+export interface FormValues {
+  selectedTab: string;
+  departFrom: string;
+  arrivalTo: string;
+  departureDate: string;
+  travelers: {
+      adults: number;
+      children: number;
+      infants: number;
+  };
+  sectors: Sector[];
+}

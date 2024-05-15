@@ -20,6 +20,7 @@ import {
   recommended3,
   recommended4,
 } from "./images";
+import { FormValues } from "./types";
 
 export const recommendedCardData = [
   {
@@ -136,6 +137,19 @@ export const userItems = [
   { label: "Sign in", link: "#" },
   { label: "Register", link: "#" },
 ];
+
+export const initialValues: FormValues = {
+  selectedTab: "One Way",
+  departFrom: "",
+  arrivalTo: "",
+  departureDate: "",
+  travelers: {
+    adults: 2,
+    children: 1,
+    infants: 1,
+  },
+  sectors: [{ departFrom: "", arrivalTo: "", departureDate: "" }],
+};
 
 export const searchOption = [
   "San Francisco",

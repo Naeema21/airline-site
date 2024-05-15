@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { AutoSearch } from "../component";
-import { searchOption } from "../utils/data";
+import { initialValues, searchOption } from "../utils/data";
 import { useRouter } from "next/navigation";
+import { validationSchema } from "../utils/schema";
+import { useFormik } from "formik";
 
 const SearchEngine = () => {
     const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -27,23 +29,42 @@ const SearchEngine = () => {
         setSectors(updatedSectors);
     };
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
-        e.preventDefault()
-        // router.push('/search')
-    }
+    const formik = useFormik({
+        initialValues,
+        validationSchema,
+        onSubmit: async (values, { setSubmitting }) => {
+            console.log(values)
+        },
+    });
+
+    const { values, handleChange, errors, touched, handleSubmit, setFieldValue, isSubmitting } = formik;
+
+   
     return (
         <form className="row mt-0 mt-lg-4" onSubmit={handleSubmit}>
             <div className="col-12 col-lg-10 offset-lg-1 mb-5 text-center position-relative">
                 <ul className="nav nav-pills cust-pills" id="pills-tab" role="tablist">
-                    {
-                        ['One Way', 'Round Trip', 'Multi City'].map((city, index) => (
-                            <li className="nav-item" role="presentation" key={index}>
-                                <button className={`nav-link ${selectedTab === city ? 'active' : ''}`} onClick={() => handleTabChange(city)} aria-current="true">
-                                    <span className="d-inline-block p-2 rounded-circle bg-white align-middle me-2"></span>
-                                    {city}</button>
-                            </li>
-                        ))
-                    }
+                    {['One Way', 'Round Trip', 'Multi City'].map((city, index) => (
+                        <li className="nav-item" role="presentation" key={index}>
+                            <input
+                                type="radio"
+                                id={`tab-${city}`}
+                                name="selectedTab"
+                                className="d-none"
+                                checked={values.selectedTab === city}
+                                onChange={() => setFieldValue("selectedTab", city)}
+                            />
+                            <label
+                                htmlFor={`tab-${city}`}
+                                className={`nav-link ${values.selectedTab === city ? 'active' : ''}`}
+                                role="button"
+                                aria-current="true"
+                            >
+                                <span className="d-inline-block p-2 rounded-circle bg-white align-middle me-2"></span>
+                                {city}
+                            </label>
+                        </li>
+                    ))}
                 </ul>
 
                 <div className="row">

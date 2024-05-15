@@ -23,7 +23,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
                   <h1 className="display-3 fw-bold mb-2 theme-text-white theme-text-shadow">
-                    A Journey to Adventurous
+                   Your dream travel just a phone call away !
                   </h1>
                   <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
                 </div>
@@ -41,21 +41,6 @@ const Home = () => {
             <div className="col-12 col-lg-6">
               <h4 className="fs-2 fw-bold theme-text-secondary mb-0">Recommended</h4>
               <p className="mb-0 theme-text-accent-one">International & Domestic fames ac ante ipsum</p>
-            </div>
-            <div className="col-12 col-lg-6 align-self-center justify-content-end d-flex">
-              <div className="d-flex">
-                <div className="dropdown-center">
-                  <button className="btn btn-secondary dropdown-toggle recomended-btn" type="button"
-                    onClick={toggleDropdown} aria-expanded={isOpen}>
-                    Hotels
-                  </button>
-                  <ul className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
-                    <li><Link className="dropdown-item" href="#">Hotels</Link></li>
-                    <li><Link className="dropdown-item" href="#">Flight</Link></li>
-                    <li><Link className="dropdown-item" href="#">Holidays</Link></li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
           {/* <!-- recomended tours card --> */}
@@ -157,9 +142,9 @@ const Home = () => {
                       Round Tours</h4>
                     <div className="group custom-button">
                       <div className="d-flex align-items-center">
-                        <Link href="https://www.youtube.com/watch?v=oNxCporOofo"
+                        <Link href="tel:1888 508 7143"
                           className="video-icon video-icon2 mr-30 ml-20 video_model">
-                          <i className="bi bi-play"></i>
+                          <i className="bi bi-telephone"></i>
                         </Link>
                       </div>
                     </div>

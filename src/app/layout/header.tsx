@@ -1,9 +1,11 @@
 'use client'
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 import { Dropdown } from "../component";
 import { currencyItems, languageItems, userItems } from "../utils/data";
+import { Logo } from "../utils/images";
 
 const Header = () => {
     const [collapsed, setCollapsed] = useState(true);
@@ -16,7 +18,8 @@ const Header = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-lg py-3 py-lg-0 px-0">
                     <Link href="/" className="navbar-brand">
-                        reservationkart
+                        <Image src={Logo} alt='reservationkart'  width={50} height={50}/>
+                         {" "}Reservationkart
                     </Link>
                     <button
                         className="navbar-toggler px-1 btn rounded-0"
@@ -28,22 +31,26 @@ const Header = () => {
                     </button>
                     <div className={`collapse navbar-collapse ${collapsed ? '' : 'show'}`} id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto page-menu" id="nav">
-                            <li className="nav-item"><Link className="nav-link pe-5 ps-0 ps-lg-5" href="#deals">Deals</Link></li>
+                            {/* <li className="nav-item"><Link className="nav-link pe-5 ps-0 ps-lg-5" href="#deals">Deals</Link></li>
                             <li className="nav-item"><Link className="nav-link pe-5" href="#offers">Offers</Link></li>
                             <li className="nav-item"><Link className="nav-link pe-5" href="#holidays">Holidays</Link></li>
-                            <li className="nav-item"><Link className="nav-link pe-5" href="#review">Review</Link></li>
+                            <li className="nav-item"><Link className="nav-link pe-5" href="#review">Review</Link></li> */}
                         </ul>
                         <ul className="navbar-nav page-menu mb-3 mb-lg-0">
-                            <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
-                            <Dropdown title="INR" items={currencyItems} />
-                            <li className="nav-item">
+                            <div className="flex flex-column justify-content-center align-items-center">
+                                <span> Available 24/7</span>
+                                <Link href='tel:1888 508 7143'> 1888 508 7143</Link>
+                            </div>
+                            {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
+                            <Dropdown title="INR" items={currencyItems} /> */}
+                            {/* <li className="nav-item">
                                 <Link href="#" className="nav-link mein-link d-inline-block position-relative">
                                     <i className="bi bi-bell"></i>
                                     <span className="position-absolute translate-middle p-1 bg-success border border-light rounded-circle">
                                         <span className="visually-hidden">New alerts</span>
                                     </span>
                                 </Link>
-                            </li>
+                            </li> */}
                             <Dropdown title={<i className="bi bi-person"></i>} items={userItems} />
                         </ul>
                     </div>

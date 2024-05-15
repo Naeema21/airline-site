@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
 
-import { SubscribeIcon, PlayIcon, AppleIcon } from '../utils/images'
+import { SubscribeIcon, FooterLogo, Logo, paymentMethod } from '../utils/images'
 
 const Footer = () => {
 
@@ -58,34 +58,33 @@ const Footer = () => {
             <footer className="footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
-                            <h5 className="mb-5 fs-6">Contact Us</h5>
+
+
+                        <div className="col-12 col-sm-6 col-lg-5 mb-5 mb-lg-0">
+                            <h5 className="mb-3 fs-6">Contact Us</h5>
+                            <div className="flex-grow-1">
+                                Location <br />
+                                <address className='text-muted'>30 Summer St, Hagerstown Maryland 21740 USA.</address>
+                            </div>
                             <div className="flex-grow-1">
                                 Customer Care<br />
                                 <Link className="fs-5 theme-text-primary" href={'tel:1888 508 7143'}>1888 508 7143</Link>
                             </div>
                             <div className="flex-grow-1 mt-3">
                                 Need live support?<br />
-                                <Link href={'mail:info@Reservationkart.com'} className="fs-5 theme-text-primary">info@Reservationkart.com</Link>
+                                <Link href={'mail:info@Reservationkart.com'} className="fs-5 theme-text-primary">info@reservationkart.com</Link>
+                            </div>
+                            <div className="d-flex social  mt-2">
+                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-facebook"></i></Link>
+                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-twitter"></i></Link>
+                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-linkedin"></i></Link>
+                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-instagram"></i></Link>
+                                <Link href="javascript:void(0)" className="fs-4"><i className="bi bi-whatsapp"></i></Link>
                             </div>
                         </div>
+
                         <div className="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">
-                            <div className="d-flex">
-                                <h5 className="mb-5 fs-6">Company</h5>
-                            </div>
-                            <div className="d-flex">
-                                <ul className="fl-menu">
-                                    <li className="nav-item"><Link href="javascript:void(0)">About Us</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Careers</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Blog</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Press</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Offers</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Deals</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">
-                            <h5 className="mb-5 fs-6">Support</h5>
+                            <h5 className="mb-3 fs-6">Support</h5>
                             <div className="mt-5">
                                 <ul className="fl-menu">
                                     <li className="nav-item"><Link href="javascript:void(0)">Contact</Link></li>
@@ -96,68 +95,23 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
-                            <div className="d-flex justify-content-lg-center">
-                                <h5 className="mb-5 fs-6">Other Services</h5>
-                            </div>
-                            <div className="d-flex justify-content-lg-center">
-                                <ul className="fl-menu">
-                                    <li className="nav-item"><Link href="javascript:void(0)">Bus</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Activity Finder</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Tour List</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Flight Search</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Cruise Ticket</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Holidays</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Travel Agents</Link></li>
-                                </ul>
-                            </div>
+
+                        <div className="col-12 col-sm-12 col-lg-5 mb-5 mb-lg-0">
+                            <Image src={FooterLogo} alt={'reservationKart'} className='w-100' height={200} />
                         </div>
-                        <div className="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">
-                            <h5 className="mb-5 fs-6">Download App</h5>
-                            <Link href="javascript:void(0)"
-                                className="d-inline-flex align-items-center border px-3 py-2 theme-border-radius min-w-150">
-                                <div className="flex-shrink-0">
-                                    <Image src={PlayIcon} className="img-fluid" alt="Google-Play"
-                                        title="Google-Play" />
-                                </div>
-                                <div className="flex-grow-1 ms-2">
-                                    <p className="mb-0 small theme-text-accent-two">Get it on</p>
-                                    <p className="mb-0 small theme-text-accent-one fw-bold">Google Play</p>
-                                </div>
-                            </Link>
-                            <Link href="javascript:void(0)"
-                                className="d-inline-flex align-items-center border px-3 py-2 theme-border-radius mt-2 min-w-150">
-                                <div className="flex-shrink-0">
-                                    <Image src={AppleIcon} className="img-fluid" alt="apple" title="apple" />
-                                </div>
-                                <div className="flex-grow-1 ms-2">
-                                    <p className="mb-0 small theme-text-accent-two">Get it on</p>
-                                    <p className="mb-0 small theme-text-accent-one fw-bold">App Store</p>
-                                </div>
-                            </Link>
-                        </div>
+
                     </div>
                     <div className="row">
-                        <div className="col-12 col-lg-3 mt-lg-5">
+                        <div className="col-12 col-lg-6 mt-lg-5">
                             <p className="pt-2 mb-0 small theme-text-accent-one">&copy; 2024 Reservationkart All rights reserved.
                             </p>
                         </div>
                         <div className="col-12 col-lg-6 mt-5">
                             <ul className="footer-link d-flex flex-row flex-wrap justify-content-lg-center align-items-center">
-                                <li><Link href="javascript:void(0)">Privacy</Link></li>
-                                <li><Link href="javascript:void(0)">Terms</Link></li>
-                                <li><Link href="javascript:void(0)">Site Map</Link></li>
+                                <Image src={paymentMethod} className='w-100 h-auto' alt='flight-booking' />
                             </ul>
                         </div>
-                        <div className="col-12 col-lg-3 mt-5">
-                            <div className="d-flex social justify-content-lg-end">
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-facebook"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-twitter"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-linkedin"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-instagram"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4"><i className="bi bi-whatsapp"></i></Link>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <button className={`scrollToTop ${isActive ? 'active' : ''}`} onClick={scrollToTop} >

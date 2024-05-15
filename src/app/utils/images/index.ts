@@ -31,6 +31,10 @@ import icon4 from "./icons/4.png";
 import SubscribeIcon from './icons/subscribe-icon.png'
 import PlayIcon from './icons/apple.png'
 import AppleIcon from './icons/play-icon.png'
+import paymentMethod from './icons/payment-method.svg'
+
+import Logo from './logo/logo.png'
+import FooterLogo from './logo/NameKart - Logo.png'
 
 export {
   bannerImage,
@@ -54,11 +58,12 @@ export {
   destination10,
   destination11,
   destination12,
+  paymentMethod,
   icon1,
   icon2,
   icon3,
   icon4,
   SubscribeIcon,
   PlayIcon,
-  AppleIcon
+  AppleIcon, Logo, FooterLogo
 };
