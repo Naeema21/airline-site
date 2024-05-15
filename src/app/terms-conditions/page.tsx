@@ -18,7 +18,7 @@ const TermsAndConditions = () => {
     <div className="mb-4">
         <h2 className="sub-heading">CODE SHARE</h2>
         <ul className="list-unstyled">
-            <li>Some airlines enter into "code share" agreements with other Airlines. This means that on certain routes, the airline carrier selling or marketing the flight ticker does not fly its own aircraft to that destination. Instead, it contracts or partners with another airline to fly to that destination. The partner airline is listed as "operated by" in the booking flow.</li>
+            <li>Some airlines enter into &quot;code share&quot; agreements with other Airlines. This means that on certain routes, the airline carrier selling or marketing the flight ticker does not fly its own aircraft to that destination. Instead, it contracts or partners with another airline to fly to that destination. The partner airline is listed as &quot;operated by&quot; in the booking flow.</li>
             <li>If your flight is a code share, it will be disclosed to you in the booking process and prior to payment.</li>
             <li>ReservationKart will disclose any such code-share arrangements to the User, only when the ticketing airline discloses it to ReservationKart in the first place.</li>
         </ul>
@@ -59,7 +59,7 @@ const TermsAndConditions = () => {
         <h2 className="sub-heading">CHANGES TO EXISTING BOOKING</h2>
         <ul className="list-unstyled">
             <li>Any changes that are made to any existing booking shall be subject to certain charges levied by the respective airline, apart from the service fee charged by ReservationKart.</li>
-            <li>The User shall be obligated to pay applicable charges in the event of any alteration or modification to an existing booking. However, depending on the airline's policy and fare className, charges for changes or modifications to existing bookings may vary.</li>
+            <li>The User shall be obligated to pay applicable charges in the event of any alteration or modification to an existing booking. However, depending on the airline&apos;s policy and fare className, charges for changes or modifications to existing bookings may vary.</li>
         </ul>
     </div>
 
