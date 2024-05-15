@@ -88,10 +88,8 @@ const Footer = () => {
                             <div className="mt-3">
                                 <ul className="fl-menu">
                                     <li className="nav-item"><Link href="javascript:void(0)">Contact</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Legal Notice</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Privacy Policy</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Terms and Conditions</Link></li>
-                                    <li className="nav-item"><Link href="javascript:void(0)">Sitemap</Link></li>
+                                    <li className="nav-item"><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                    <li className="nav-item"><Link href="/terms-conditions">Terms and Conditions</Link></li>
                                 </ul>
                             </div>
                         </div>

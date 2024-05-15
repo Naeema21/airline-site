@@ -254,7 +254,8 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 600;
 }
-.logo-title span{
+
+.logo-title span {
   color: #ec7e1b;
 }
 
@@ -985,5 +986,14 @@ a:hover {
   border: 1px solid green;
   background-color: green;
 }
+
+.terms .list-unstyled li::before {
+  content: '\2024';
+  color: black;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
 
 /*# sourceMappingURL=main.css.map */
