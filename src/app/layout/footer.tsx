@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
 
-import { SubscribeIcon, FooterLogo, Logo, paymentMethod } from '../utils/images'
+import { SubscribeIcon, FooterLogo, Logo, paymentMethod, paymentMethod1 } from '../utils/images'
 
 const Footer = () => {
 
@@ -95,9 +95,9 @@ const Footer = () => {
                         </div>
 
                         <div className="col-12 col-sm-12 col-lg-5 mb-5 mb-lg-0">
-                            <Image src={FooterLogo} alt={'reservationKart'} className='w-100' height={200} />
+                            <Image src={FooterLogo} alt={'reservationKart'} className='w-100 h-auto'  />
+                            <Image src={paymentMethod1} className='w-100 h-auto' alt='flight-booking' />
                         </div>
-
                     </div>
                     <div className="row">
                         <div className="col-12 col-lg-6 mt-lg-5">
@@ -106,7 +106,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-6 mt-5">
                             <ul className="footer-link d-flex flex-row flex-wrap justify-content-lg-center align-items-center">
-                                <Image src={paymentMethod} className='w-100 h-auto' alt='flight-booking' />
+                                {/* <Image src={paymentMethod} className='w-100 h-auto' alt='flight-booking' /> */}
                             </ul>
                         </div>
 
