@@ -32,6 +32,8 @@ import SubscribeIcon from './icons/subscribe-icon.png'
 import PlayIcon from './icons/apple.png'
 import AppleIcon from './icons/play-icon.png'
 import paymentMethod from './icons/payment-method.svg'
+import paymentMethod1 from './icons/payment-method1.png'
+
 
 import Logo from './logo/logo.png'
 import FooterLogo from './logo/NameKart - Logo.png'
@@ -59,6 +61,7 @@ export {
   destination11,
   destination12,
   paymentMethod,
+  paymentMethod1,
   icon1,
   icon2,
   icon3,
