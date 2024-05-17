@@ -2,9 +2,10 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+
 import SearchEngine from './container/searchEngine';
 import { destinationData, recommendedCardData, routesData } from './utils/data';
-import { RecommendedCard, DestinationCard, RouteCard } from './component';
+import { RecommendedCard, DestinationCard, RouteCard, Chatbot } from './component';
 import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from './utils/images';
 
 const Home = () => {
@@ -16,6 +17,21 @@ const Home = () => {
   };
   return (
     <main>
+
+      {/* Chatbot */}
+          <div>
+      
+        <title>Flight Booking Chatbot</title>
+        <meta name="description" content="Flight Booking Chatbot" />
+        <link rel="icon" href="/favicon.ico" />
+      
+
+      <main className="container">
+        <h1 className="my-5">Welcome to Flight Booking Service</h1>
+        <Chatbot />
+      </main>
+    </div>
+
       <div className="pagewrap">
         <div className="head-wrapper">
           <div className="search-engine" style={{ backgroundImage: `url(${bannerImage1.src})` }}>
