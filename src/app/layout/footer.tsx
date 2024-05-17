@@ -75,11 +75,11 @@ const Footer = () => {
                                 <Link href={'mail:info@Reservationkart.com'} className="fs-5 theme-text-primary">info@reservationkart.com</Link>
                             </div>
                             <div className="d-flex social  mt-2">
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-facebook"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-twitter"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-linkedin"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4 pe-3"><i className="bi bi-instagram"></i></Link>
-                                <Link href="javascript:void(0)" className="fs-4"><i className="bi bi-whatsapp"></i></Link>
+                                <Link href="#" className="fs-4 pe-3"><i className="bi bi-facebook"></i></Link>
+                                <Link href="#" className="fs-4 pe-3"><i className="bi bi-twitter"></i></Link>
+                                <Link href="#" className="fs-4 pe-3"><i className="bi bi-linkedin"></i></Link>
+                                <Link href="#" className="fs-4 pe-3"><i className="bi bi-instagram"></i></Link>
+                                <Link href="#" className="fs-4"><i className="bi bi-whatsapp"></i></Link>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@ const Footer = () => {
                             <h5 className="mb-3 fs-6">Support</h5>
                             <div className="mt-3">
                                 <ul className="fl-menu">
-                                    <li className="nav-item"><Link href="javascript:void(0)">Contact</Link></li>
+                                    <li className="nav-item"><Link href="#">Contact</Link></li>
                                     <li className="nav-item"><Link href="/privacy-policy">Privacy Policy</Link></li>
                                     <li className="nav-item"><Link href="/terms-conditions">Terms and Conditions</Link></li>
                                 </ul>

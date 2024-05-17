@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { AutoSearchProps } from "../utils/types";
 
-const AutoSearch: React.FC<AutoSearchProps> = ({ label, options }) => {
+const AutoSearch: React.FC<AutoSearchProps> = ({ label, options, error, name  }) => {
+    // console.log(error)
     const [searchTerm, setSearchTerm] = useState('');
     const [suggestions, setSuggestions] = useState<string[]>([]);
 
@@ -31,8 +32,8 @@ const AutoSearch: React.FC<AutoSearchProps> = ({ label, options }) => {
             <label htmlFor="exampleDataList13" className="form-label">{label}</label>
             <input
                 className="form-control"
-                list="datalistOptions14"
-                id="exampleDataList13"
+                id={name}
+                name={name}
                 placeholder='country, city or airport'
                 value={searchTerm}
                 onChange={handleInputChange}
@@ -49,6 +50,7 @@ const AutoSearch: React.FC<AutoSearchProps> = ({ label, options }) => {
                     </ul>
                 </div>
             }
+            {error && <span className="text-danger error">{error}</span>}
         </div>
     );
 }
