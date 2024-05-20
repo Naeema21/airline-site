@@ -8,7 +8,6 @@ import Footer from "./layout/footer";
 import Header from "./layout/header";
 
 import "./globals.css";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,14 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <title>Reservationkart.com</title>
+      <head>
         <GoogleTagManager gtmId='GTM-M26V4CTJ' />
         <link rel="canonical" href="https://reservationkart.com/" key='canonical' />
         <meta name="robots" content="all" />
         <meta name="googlebot" content="noindex,nofollow" />
         <meta charSet="UTF-8" />
-      </Head>
+      </head>
       <body className={inter.className}>
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M26V4CTJ"
