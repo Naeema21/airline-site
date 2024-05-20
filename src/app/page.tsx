@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
 
 import SearchEngine from './container/searchEngine';
 import { destinationData, recommendedCardData, routesData } from './utils/data';
