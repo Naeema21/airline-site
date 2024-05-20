@@ -99,7 +99,7 @@ const Policy = () => {
           </li>
         </ul>
         <p>c. Personal information of child</p>
-        <p className='mb-4'>State that your company complies with the Children's Online Privacy Protection Act (COPPA) and thatyou take special measures to protect the privacy of children under 13.
+        <p className='mb-4'>State that your company complies with the Children&apos;s Online Privacy Protection Act (COPPA) and thatyou take special measures to protect the privacy of children under 13.
  </p>
  
       </div>
