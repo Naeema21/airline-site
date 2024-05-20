@@ -643,6 +643,10 @@ a:hover {
   font-size: 0.875rem;
 }
 
+.error{
+  font-size: 0.7rem;
+}
+
 .testimonials {
   position: relative;
   background-color: rgba(3, 147, 210, 0.05);

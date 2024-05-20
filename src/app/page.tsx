@@ -1,20 +1,13 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
 
 
 import SearchEngine from './container/searchEngine';
-import { destinationData, recommendedCardData, routesData } from './utils/data';
+import { destinationData, recommendedCardData, routesData } from './utils/data
 import { RecommendedCard, DestinationCard, RouteCard, Chatbot } from './component';
 import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from './utils/images';
 
 const Home = () => {
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <main>
 
@@ -84,7 +77,7 @@ const Home = () => {
                   <p className="fs-1 theme-heading theme-text-white mb-4">Things to do on <br />
                     your trip</p>
                   <div className="custom-button">
-                    <Link href="javascript:void(0)" className="btn btn-shop small">
+                    <Link href="#" className="btn btn-shop small">
                       Learn More
                       <i className="bi bi-arrow-up-right fs-6 ms-2"></i>
                     </Link>
@@ -98,7 +91,7 @@ const Home = () => {
                   <p className="fs-6 mb-2 theme-text-white">Enjoy Summer Deals</p>
                   <p className="fs-1 theme-heading theme-text-white mb-4">Up to 70% Discount!</p>
                   <div className="custom-button">
-                    <Link href="javascript:void(0)" className="btn btn-shop small">
+                    <Link href="#" className="btn btn-shop small">
                       View Deal
                       <i className="bi bi-arrow-up-right fs-6 ms-2"></i>
                     </Link>

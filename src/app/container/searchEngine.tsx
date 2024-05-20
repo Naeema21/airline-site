@@ -1,22 +1,18 @@
-import { useState } from "react";
-import { AutoSearch } from "../component";
-import { initialValues, searchOption } from "../utils/data";
-import { useRouter } from "next/navigation";
-import { validationSchema } from "../utils/schema";
 import { useFormik } from "formik";
+import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+
+import { AutoSearch } from "../component";
+import { validationSchema } from "../utils/schema";
+import { initialValues, searchOption } from "../utils/data";
 
 const SearchEngine = () => {
     const [dropdownVisible, setDropdownVisible] = useState(false);
-    const [selectedTab, setSelectedTab] = useState('One Way');
     const [sectors, setSectors] = useState([{ id: 1 }]);
     const router = useRouter()
-
+    const isSearch = usePathname() === '/search'
     const toggleDropdown = () => {
         setDropdownVisible(!dropdownVisible);
-    };
-
-    const handleTabChange = (tab: string) => {
-        setSelectedTab(tab);
     };
 
     const handleAddSector = () => {
@@ -30,26 +26,29 @@ const SearchEngine = () => {
     };
 
     const formik = useFormik({
-        initialValues,
+        initialValues: initialValues(isSearch),
         validationSchema,
         onSubmit: async (values, { setSubmitting }) => {
             console.log(values)
+            router.push('/search')
         },
     });
 
     const { values, handleChange, errors, touched, handleSubmit, setFieldValue, isSubmitting } = formik;
 
-   
+    console.log(formik.errors.sectors && Array.isArray(formik.errors.sectors) && formik.errors.sectors[0])
+
+
     return (
-        <form className="row mt-0 mt-lg-4" onSubmit={handleSubmit}>
-            <div className="col-12 col-lg-10 offset-lg-1 mb-5 text-center position-relative">
-                <ul className="nav nav-pills cust-pills" id="pills-tab" role="tablist">
+        <form className="row mt-0 mt-lg-4 justify-content-center" onSubmit={handleSubmit}>
+            <div className={`col-12 ${isSearch ? 'col-lg-12' : 'col-lg-11'}  mb-5 text-center position-relative`}>
+                <ul className={`nav nav-pills cust-pills ${isSearch ? 'd-none' : ''}`} id="pills-tab" role="tablist">
                     {['One Way', 'Round Trip', 'Multi City'].map((city, index) => (
-                        <li className="nav-item" role="presentation" key={index}>
+                        <li className="nav-item"  key={index}>
                             <input
                                 type="radio"
                                 id={`tab-${city}`}
-                                name="selectedTab"
+                                name={'selectedTab'}
                                 className="d-none"
                                 checked={values.selectedTab === city}
                                 onChange={() => setFieldValue("selectedTab", city)}
@@ -57,8 +56,6 @@ const SearchEngine = () => {
                             <label
                                 htmlFor={`tab-${city}`}
                                 className={`nav-link ${values.selectedTab === city ? 'active' : ''}`}
-                                role="button"
-                                aria-current="true"
                             >
                                 <span className="d-inline-block p-2 rounded-circle bg-white align-middle me-2"></span>
                                 {city}
@@ -69,22 +66,25 @@ const SearchEngine = () => {
 
                 <div className="row">
                     <div className="col-12">
-                        <div className="search-pan row mx-0 theme-border-radius">
+                        <div className="search-pan row mx-0 theme-border-radius border">
                             <div className="col-12 col-lg-3 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                 <div className="form-group">
-                                    <AutoSearch label={'Depart From'} options={searchOption} />
+                                    <AutoSearch label={'Depart From'} options={searchOption} error={errors?.departFrom}
+                                        name={'departFrom'} />
                                 </div>
                             </div>
                             <div className="col-12 col-lg-3 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                 <div className="form-group">
-                                    <AutoSearch label={'Arrival To'} options={searchOption} />
+                                    <AutoSearch label={'Arrival To'} options={searchOption} error={errors?.arrivalTo} />
                                 </div>
                             </div>
                             <div className={`col-12  ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2 
-                            ${selectedTab == 'Round Trip' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'} `}>
+                            ${values.selectedTab == 'Round Trip' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'} `}>
                                 <div className="form-group">
-                                    <label className="form-label">{selectedTab == 'Round Trip' && 'Arrival -'} Departure Date </label>
-                                    <input type="date" className="form-control" placeholder="Wed 2 Mar" />
+                                    <label className="form-label">{values.selectedTab == 'Round Trip' && 'Arrival -'} Departure Date </label>
+                                    <input type="date" className="form-control" />
+                                    {errors.arrivalTo && <span className="text-danger error">{errors.arrivalTo}</span>}
+                                    {errors.departureDate && <span className="text-danger error">{errors.departureDate}</span>}
                                 </div>
                             </div>
                             <div className="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2">
@@ -150,10 +150,10 @@ const SearchEngine = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`col-12  px-0 ${selectedTab == 'Multi City' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'}`}>
+                            <div className={`col-12  px-0 ${values.selectedTab == 'Multi City' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'}`}>
                                 <div className="d-flex">
                                     {
-                                        selectedTab == 'Multi City' &&
+                                        values.selectedTab == 'Multi City' &&
                                         <button type="button" className="btn sector-add me-1" onClick={handleAddSector}>+ Add Sector</button>
                                     }
 
@@ -165,14 +165,15 @@ const SearchEngine = () => {
                         </div>
                         {/* <!-- add sector form --> */}
                         {
-                            selectedTab == 'Multi City' &&
-                            sectors.map((sector) => (
+                            values.selectedTab == 'Multi City' &&
+                            sectors.map((sector, index) => (
                                 <div className="row mt-4" key={sector?.id}>
                                     <div className="col-12 col-lg-6">
-                                        <div className="search-pan row mx-0 theme-border-radius">
+                                        <div className="search-pan row mx-0 theme-border-radius border">
                                             <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                                 <div className="form-group">
-                                                    <AutoSearch label={'Depart From'} options={searchOption} />
+                                                    <AutoSearch label={'Depart From'} options={searchOption}
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
@@ -197,7 +198,7 @@ const SearchEngine = () => {
                         }
                     </div>
                 </div>
-                <div className="row">
+                <div className={`row ${isSearch ? 'd-none' : ''}`}>
                     <div className="col-12 mt-4">
                         <div className="d-flex flex-sm-row flex-column">
                             <div className="me-2 mb-2 mb-lg-0">
