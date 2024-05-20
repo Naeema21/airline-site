@@ -184,7 +184,8 @@ const SearchEngine = () => {
                                             <div className="col-11 col-lg-3 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
                                                 <div className="form-group border-0">
                                                     <label className="form-label">Departure Date</label>
-                                                    <input type="date" className="form-control" placeholder="Wed 2 Mar" />
+                                                    <input type="date" className="form-control" placeholder="Wed 2 Mar"  
+                                                    onChange={()=>{console.log('value')}}/>
                                                 </div>
                                             </div>
                                             <button type="button" className="btn border-0 col-1 col-lg-1 col-xl-1 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2"
@@ -203,13 +204,13 @@ const SearchEngine = () => {
                         <div className="d-flex flex-sm-row flex-column">
                             <div className="me-2 mb-2 mb-lg-0">
                                 <div className="switch mode-switch">
-                                    <input type="checkbox" name="stop_mode" id="stop_mode" value="1" />
+                                    <input type="checkbox" name="stop_mode" id="stop_mode" value="1" onChange={()=>{console.log('value')}} />
                                     <label htmlFor="stop_mode" data-on="NonStop" data-off="Stop" className="mode-switch-inner" />
                                 </div>
                             </div>
                             <div className="me-2">
                                 <div className="switch mode-switch">
-                                    <input type="checkbox" name="class_mode" id="class_mode" value="1" />
+                                    <input type="checkbox" name="class_mode" id="class_mode" value="1" onChange={()=>{console.log('value')}}/>
                                     <label htmlFor="class_mode" data-on="Premium" data-off="Economy" className="mode-switch-inner" />
                                 </div>
                             </div>
