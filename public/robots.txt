@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /search/
+Allow: /Privacy-policy/
+Allow: /terms-conditions/
+Allow: /refund-cancellation/
+Sitemap: https://reservationkart.com/sitemap.xml

@@ -23,7 +23,7 @@ const RouteCard: React.FC<RouteCardProps> = ({ routes }) => {
                     <div className="col-xl-8 col-lg-6">
                         <div className="row align-items-center">
                             <div className="col-sm-auto">
-                                <Image className="size-40" src={image} alt="image" />
+                                <Image className="size-40" src={image} alt="Cheap flight ticket, traveller agency" />
                             </div>
                             <div className="col">
                                 <div className="row align-items-center">

@@ -26,6 +26,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
 
       {/* <!-- recommended section --> */}
       <section className="recommended" id="deals">

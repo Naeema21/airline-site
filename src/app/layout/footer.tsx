@@ -38,7 +38,7 @@ const Footer = () => {
                     <div className="row justify-between items-center">
                         <div className="col-12 col-lg-6">
                             <div className="d-flex  align-items-center">
-                                <Image src={SubscribeIcon} alt="subscribe" width={100} height={100} />
+                                <Image src={SubscribeIcon} alt="airline tickets" width={100} height={100} />
                                 <div className="ms-3">
                                     <h4 className="text-26 text-white fw-600">Your Travel Journey Starts Here</h4>
                                     <p className="text-white">{`Sign up and we'll send the best deals to you`}</p>
@@ -97,7 +97,7 @@ const Footer = () => {
 
                         <div className="col-12 col-sm-12 col-lg-5 mb-5 mb-lg-0">
                             <Image src={FooterLogo} alt={'reservationKart'} className='w-100 h-auto'  />
-                            <Image src={paymentMethod1} className='w-100 h-auto' alt='flight-booking' />
+                            <Image src={paymentMethod1} className='w-100 h-auto' alt='plane tickets' />
                         </div>
                     </div>
                     <div className="row">
