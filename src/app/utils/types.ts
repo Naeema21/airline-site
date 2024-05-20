@@ -42,8 +42,10 @@ export interface DropdownProps {
 }
 
 export interface AutoSearchProps {
+  error?: any;
   label: string;
   options: string[];
+  name?:string
 }
 
 export interface Sector {
@@ -58,9 +60,9 @@ export interface FormValues {
   arrivalTo: string;
   departureDate: string;
   travelers: {
-      adults: number;
-      children: number;
-      infants: number;
+    adults: number;
+    children: number;
+    infants: number;
   };
-  sectors: Sector[];
+  sectors: any;
 }

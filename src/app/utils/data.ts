@@ -138,8 +138,8 @@ export const userItems = [
   { label: "Register", link: "#" },
 ];
 
-export const initialValues: FormValues = {
-  selectedTab: "One Way",
+export const initialValues = (isSearch: boolean): FormValues => ({
+  selectedTab: isSearch ? "Round Trip" : "One Way",
   departFrom: "",
   arrivalTo: "",
   departureDate: "",
@@ -149,7 +149,7 @@ export const initialValues: FormValues = {
     infants: 1,
   },
   sectors: [{ departFrom: "", arrivalTo: "", departureDate: "" }],
-};
+});
 
 export const searchOption = [
   "San Francisco",
