@@ -4,11 +4,11 @@ import Link from 'next/link';
 import SearchEngine from './container/searchEngine';
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard } from './component';
-import { Product01, Product02, experienceBg, bannerImage1 } from './utils/images';
+import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from './utils/images';
 
 const Home = () => {
   return (
-    <main>
+    <main>     
       <div className="pagewrap">
         <div className="head-wrapper">
           <div className="search-engine" style={{ backgroundImage: `url(${bannerImage1.src})` }}>

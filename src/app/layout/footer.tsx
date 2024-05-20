@@ -90,6 +90,7 @@ const Footer = () => {
                                     <li className="nav-item"><Link href="#">Contact</Link></li>
                                     <li className="nav-item"><Link href="/privacy-policy">Privacy Policy</Link></li>
                                     <li className="nav-item"><Link href="/terms-conditions">Terms and Conditions</Link></li>
+                                    <li className="nav-item"><Link href="/refund-cancellation">Refund and Cancellation</Link></li>
                                 </ul>
                             </div>
                         </div>

@@ -58,7 +58,7 @@ const Policy = () => {
           to seek consent of the end customer.</p>
         <p><b>1. What Personal Data shall we collect?</b></p>
         <p>a. We collect the following personal and sensitive information from you when you transact through us:</p>
-        <ul className="ml-4">
+        <ul className="ml-4 ">
           <li>Name, gender, age and date of birth</li>
           <li>Contact information such as address, email, and mobile phone number</li>
           <li>Country of residence</li>
@@ -99,7 +99,9 @@ const Policy = () => {
           </li>
         </ul>
         <p>c. Personal information of child</p>
-        <p>The Services are not intended for users under the age of 16 (Permissible Age), unless </p>
+        <p className='mb-4'>State that your company complies with the Children's Online Privacy Protection Act (COPPA) and thatyou take special measures to protect the privacy of children under 13.
+ </p>
+ 
       </div>
     </div>
 
