@@ -8,7 +8,8 @@ const RecommendedCard: React.FC<recommendedCardProps> = ({ card }) => {
         <div className="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
             <div className="card-wrap">
                 <div className="con-img-wrap m-auto">
-                    <Image src={imgSrc} className="img-fluid mx-auto d-block" alt="product picture" width={300} height={200} />
+                    <Image src={imgSrc} className="img-fluid mx-auto d-block" 
+                    alt="cheap flight agency,airoplan ticket booking" width={300} height={200} />
                     <div className={`offer-tag ${tagColor}`}>{offerTag}</div>
                     <span className="wishlist-tag"><i className="bi bi-heart"></i></span>
                 </div>
