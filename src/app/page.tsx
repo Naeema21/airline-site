@@ -13,7 +13,7 @@ import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from '.
 
 const Home = () => {
   return (
-    <main>     
+    <main>
       <div className="pagewrap">
         <div className="head-wrapper">
           <div className="search-engine" style={{ backgroundImage: `url(${bannerImage1.src})` }}>
@@ -21,7 +21,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
                   <h1 className="display-3 fw-bold mb-2 theme-text-white theme-text-shadow">
-                   Your dream travel just a phone call away !
+                    Your dream travel just a phone call away !
                   </h1>
                   <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
                 </div>
@@ -32,7 +32,6 @@ const Home = () => {
         </div>
       </div>
       <CallModal />
-
       {/* <!-- recommended section --> */}
       <section className="recommended" id="deals">
         <div className="container">

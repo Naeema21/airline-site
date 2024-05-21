@@ -1,5 +1,4 @@
 // pages/refund-cancellation.js
-import Head from "next/head";
 
 const RefundCancellation = () => {
   return (
@@ -187,7 +186,7 @@ const RefundCancellation = () => {
           <h6 className="fw-bold mt-4">Refund Requests:</h6>
           <li>
             <i className="bi bi-dot"></i> Refund requests can be made through
-            the airline's website, customer service, or the travel agency where
+            the airlines website, customer service, or the travel agency where
             the ticket was purchased.
           </li>
 
