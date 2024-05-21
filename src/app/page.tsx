@@ -2,9 +2,14 @@
 import Link from 'next/link';
 
 import SearchEngine from './container/searchEngine';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CallModal from './component/callModal';
+
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard } from './component';
 import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from './utils/images';
+
+
 
 const Home = () => {
   return (
@@ -26,6 +31,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <CallModal />
 
       {/* <!-- recommended section --> */}
       <section className="recommended" id="deals">
