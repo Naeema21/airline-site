@@ -1,49 +1,36 @@
+import Link from 'next/link';
+import { Modalprops } from '../utils/types';
 
-import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
-import styles from './CallModal.module.css'; 
-import phoneIcon from '../utils/images/icons/phone-icon-yellow.png'; 
-
-const CallModal = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const handleCall = () => {
-    alert("Calling...");
-    handleClose();
-  };
+const CallModal:React.FC<Modalprops> = ({show , handleClose}) => {
 
   return (
     <>
-      <Button
-        variant="primary"
-        onClick={handleShow}
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          zIndex: 1000,
-        }}
-      >
-        Please Call Us
-      </Button>
+      <div className={`modal fade ${show ? 'show d-block' : ''}`} id="exampleModalCenter"
+        tabIndex={-1} role="dialog" aria-labelledby="flight booking"
+        aria-hidden={!show} style={{ display: show ? 'block' : 'none' }}>
+        <div className="modal-dialog modal-dialog-centered" role="document">
+          <div className="modal-content">
+            <div className="modal-header justify-content-end border-0 p-0">
+              <button type="button" className="closeButton mx-2" onClick={handleClose}>
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body text-center d-flex flex-column align-items-center">
+              <Link href="tel:1888 508 7143"
+                className="video-icon video-icon2 mr-30 ml-20 video_model mb-3">
+                <i className="bi bi-telephone"></i>
+              </Link>              <h4 className='call-title'>Give Us A Call</h4>
+              <p>Your dream travel just a phone call away!</p>
 
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Body className={styles.modalBody}>
-          <button type="button" className={styles.closeButton} onClick={handleClose}>
-            &times;
-          </button>
-          <div className={styles.modalContent}>
-          <img src= {phoneIcon.src} alt="" className={styles.callIcon} />
-            <h5>Give Us A Call</h5>
-            <p>We're here to help you with your experience.</p>
-            <Button variant="warning" onClick={handleCall}>
-              CALL US NOW
-            </Button>
+              <button className='btn btn-search'>
+                <Link href={'tel:18885087143'}>
+                  <span className="fw-bold text-white">CALL US </span>
+                </Link>
+              </button>
+            </div>
           </div>
-        </Modal.Body>
-      </Modal>
+        </div>
+      </div>
     </>
   );
 };

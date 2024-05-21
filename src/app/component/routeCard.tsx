@@ -1,11 +1,10 @@
 // RouteCard.tsx
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
 import { RouteCardProps } from '../utils/types';
 
-const RouteCard: React.FC<RouteCardProps> = ({ routes }) => {
+const RouteCard: React.FC<RouteCardProps> = ({ routes , handle}) => {
     const {
         image,
         departureTime,
@@ -78,9 +77,9 @@ const RouteCard: React.FC<RouteCardProps> = ({ routes }) => {
                                 <div className="fs-6">{price}</div>
                                 <div className="small theme-text-accent-one">{deals}</div>
                             </div>
-                            <Link href="#" className="theme-btn-outline p-2">
+                            <button onClick={handle} className="theme-btn-outline p-2">
                                 View Deal <i className="bi bi-arrow-up-right ms-2"></i>
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

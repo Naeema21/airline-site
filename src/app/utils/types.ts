@@ -19,6 +19,7 @@ interface Destination {
 
 export interface DestinationCardProps {
   destination: Destination;
+  handle:()=> void;
 }
 
 interface RouteProps {
@@ -33,6 +34,7 @@ interface RouteProps {
 }
 
 export interface RouteCardProps {
+  handle:()=> void
   routes: RouteProps;
 }
 
@@ -41,11 +43,16 @@ export interface DropdownProps {
   items: { label: string; link: string }[];
 }
 
+export interface Modalprops {
+  show: boolean;
+  handleClose: () => void;
+}
+
 export interface AutoSearchProps {
   error?: any;
   label: string;
   options: string[];
-  name?:string
+  name?: string;
 }
 
 export interface Sector {
