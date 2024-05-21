@@ -213,7 +213,7 @@ const Home = () => {
             <div className="col-12 mb-3">
               {
                 routesData.map((routes, index) => (
-                  <RouteCard routes={routes} key={index} handle={handleToggle} />
+                  <RouteCard routes={routes}  handle={handleToggle} key={index} />
                 ))
               }
             </div>

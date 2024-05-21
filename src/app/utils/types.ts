@@ -34,8 +34,8 @@ interface RouteProps {
 }
 
 export interface RouteCardProps {
-  handle:()=> void
   routes: RouteProps;
+  handle?:()=> void
 }
 
 export interface DropdownProps {
