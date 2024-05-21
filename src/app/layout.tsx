@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleTagManager gtmId='GTM-M26V4CTJ' />
+        <GoogleTagManager gtmId='GTM-N94F9JBM' />
         <link rel="canonical" href="https://reservationkart.com/" key='canonical' />
         <meta name="robots" content="all" />
         <meta name="googlebot" content="noindex,nofollow" />
@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M26V4CTJ"
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N94F9JBM"
             height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}>
           </iframe>
         </noscript>
