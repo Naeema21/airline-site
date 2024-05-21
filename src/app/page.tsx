@@ -1,14 +1,22 @@
 'use client'
 import Link from 'next/link';
+import { useState } from 'react';
 
 import SearchEngine from './container/searchEngine';
+
 import { destinationData, recommendedCardData, routesData } from './utils/data';
-import { RecommendedCard, DestinationCard, RouteCard } from './component';
+import { RecommendedCard, DestinationCard, RouteCard, CallModal } from './component';
 import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from './utils/images';
 
 const Home = () => {
+  const [show, setShow] = useState<boolean>(false)
+
+  const handleToggle = () => {
+    setShow(!show)
+  }
+
   return (
-    <main>     
+    <main>
       <div className="pagewrap">
         <div className="head-wrapper">
           <div className="search-engine" style={{ backgroundImage: `url(${bannerImage1.src})` }}>
@@ -16,17 +24,20 @@ const Home = () => {
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
                   <h1 className="display-3 fw-bold mb-2 theme-text-white theme-text-shadow">
-                   Your dream travel just a phone call away !
+                    Your dream travel just a phone call away!
                   </h1>
                   <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
+
+                  <button type="submit" className="btn btn-search mt-4 mb-6" onClick={handleToggle}>
+                    <span className="fw-bold"> BOOK NOW</span>
+                  </button>
                 </div>
               </div>
-              <SearchEngine />
+              {/* <SearchEngine /> */}
             </div>
           </div>
         </div>
       </div>
-      
 
       {/* <!-- recommended section --> */}
       <section className="recommended" id="deals">
@@ -62,10 +73,10 @@ const Home = () => {
                   <p className="fs-1 theme-heading theme-text-white mb-4">Things to do on <br />
                     your trip</p>
                   <div className="custom-button">
-                    <Link href="#" className="btn btn-shop small">
+                    <button onClick={handleToggle} className="btn btn-shop small">
                       Learn More
                       <i className="bi bi-arrow-up-right fs-6 ms-2"></i>
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -76,10 +87,10 @@ const Home = () => {
                   <p className="fs-6 mb-2 theme-text-white">Enjoy Summer Deals</p>
                   <p className="fs-1 theme-heading theme-text-white mb-4">Up to 70% Discount!</p>
                   <div className="custom-button">
-                    <Link href="#" className="btn btn-shop small">
+                    <button onClick={handleToggle} className="btn btn-shop small">
                       View Deal
                       <i className="bi bi-arrow-up-right fs-6 ms-2"></i>
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -112,7 +123,7 @@ const Home = () => {
                 <div className="tab-pane fade show active" id="pills-regions" role="tabpanel" aria-labelledby="pills-regions-tab">
                   <div className="row">
                     {destinationData.map((destination, index) => (
-                      <DestinationCard key={index} destination={destination} />
+                      <DestinationCard key={index} destination={destination} handle={handleToggle} />
                     ))}
                   </div>
                 </div>
@@ -202,14 +213,17 @@ const Home = () => {
             <div className="col-12 mb-3">
               {
                 routesData.map((routes, index) => (
-                  <RouteCard routes={routes} key={index} />
+                  <RouteCard routes={routes}  handle={handleToggle} key={index} />
                 ))
               }
             </div>
           </div>
-
         </div>
       </section>
+
+      {/* call us modal */}
+      <CallModal show={show} handleClose={handleToggle} />
+
     </main>
   );
 }

@@ -1,11 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { DestinationCardProps } from '../utils/types';
 
-const DestinationCard: React.FC<DestinationCardProps> = ({ destination }) => {
-  const { imgSrc, destination: destinationName, hotels } = destination;
+const DestinationCard: React.FC<DestinationCardProps> = ({ destination, handle }) => {
+  const { imgSrc, destination: destinationName, hotels} = destination;
 
   return (
     <div className="col-12 col-lg-3">
@@ -25,7 +24,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ destination }) => {
                 <span className="d-flex small fw-normal theme-text-accent-one">{hotels} Hotels</span>
               </div>
               <div className="d-flex">
-                <Link href="#" className="link-btn"><span><i className="bi bi-arrow-up-right"></i></span></Link>
+                <button onClick={handle} className="link-btn border-0"><span><i className="bi bi-arrow-up-right"></i></span></button>
               </div>
             </div>
           </div>

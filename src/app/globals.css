@@ -159,7 +159,7 @@ a:hover {
 /* pulseBig */
 @keyframes pulseBig {
   0% {
-    box-shadow: 0 0 0 0 #ffffff;
+    box-shadow: 0 0 0 0 #015dc7;
   }
 
   50% {
@@ -643,7 +643,7 @@ a:hover {
   font-size: 0.875rem;
 }
 
-.error{
+.error {
   font-size: 0.7rem;
 }
 
@@ -890,7 +890,7 @@ a:hover {
   background-position: center center;
 }
 
-.experience .video-icon {
+ .video-icon {
   border-radius: 50%;
   background-color: #2290a6;
   color: #ffffff;
@@ -900,18 +900,18 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: pulseBig infinite 4s linear;
+  animation: pulseBig infinite 3s linear;
 }
 
-.experience .video-icon:hover {
+ .video-icon:hover {
   background-color: #ec7e1b;
 }
 
-.experience .video-icon:hover i {
+ .video-icon:hover i {
   color: #2290a6;
 }
 
-.experience .video-icon i {
+ .video-icon i {
   color: #ffffff;
   font-size: 2rem;
 }
@@ -1009,7 +1009,44 @@ a:hover {
   z-index: 1030;
 }
 
+.modalBody {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
 
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+.callIcon {
+  width: 75px;
+  height: 75px;
+
+  margin-bottom: 1rem;
+}
+
+.call-title {
+  color: #2693a8;
+  font-weight: 900;
+}
+
+.modalContent button {
+  background-color: #ffc107;
+  border: none;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 
 
