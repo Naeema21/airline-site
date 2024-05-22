@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
-import { Logo } from "../utils/images";
+import logo  from "../utils/images/logo/Reservation Kart - Logo hori.png";
 
 const Header = () => {
     const [collapsed, setCollapsed] = useState(true);
@@ -16,7 +16,7 @@ const Header = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-lg py-3 py-lg-0 px-0">
                     <Link href="/" className="navbar-brand">
-                        <Image src={Logo} alt='reservationkart- flight booking app' width={50} height={50} />
+                        <Image src={logo} alt='reservationkart- flight booking app' width={50} height={50} />
                         <span className="logo-title text-uppercase"><span> Reservation</span>kart.com</span>
                     </Link>
                     <button
