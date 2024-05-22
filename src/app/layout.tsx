@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         <GoogleTagManager gtmId='GTM-M26V4CTJ' />
         <link rel="canonical" href="https://reservationkart.com/" key='canonical' />

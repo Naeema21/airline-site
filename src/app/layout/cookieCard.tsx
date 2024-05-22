@@ -24,6 +24,7 @@ const CookieCard = () => {
     };
 
     const handleCancel = () => {
+        setCookieConsent(true)
         // Perform any action on cancel, if needed
     };
 
