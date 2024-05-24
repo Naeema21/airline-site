@@ -1038,14 +1038,11 @@ a:hover {
   font-weight: 900;
 }
 
-.modalContent button {
-  background-color: #ffc107;
-  border: none;
-  padding: 0.5rem 2rem;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+
+.autosearch-container .dropdown-menu{
+  max-height: 200px;
+  height: auto;
+  overflow-y: auto;
 }
 
 
