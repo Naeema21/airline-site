@@ -17,7 +17,7 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg py-3 py-lg-0 px-0">
                     <Link href="/" className="navbar-brand">
                         <Image src={Logo} alt='reservationkart-flight booking app' className="img-fluid me-2" height={50} />
-                        <Image src={FooterLogo} alt="" className="img-fluid" height={35} />
+                        <Image src={FooterLogo} alt="" className="w-full" height={35} />
                     </Link>
                     <button
                         className="navbar-toggler px-1 btn rounded-0"

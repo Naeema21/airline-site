@@ -4,11 +4,13 @@ export const validationSchema = object({
   selectedTab: string().required("Tab selection is required"),
   departFrom: string().required("Departure location is required"),
   arrivalTo: string().required("Arrival location is required"),
-  departureDate: date().when("selectedTab", ([selectedTab], schema) => {
-    return selectedTab == "Round Trip"
-      ? schema.required("Departure date is required")
-      : schema.notRequired();
-  }),
+  arrivalDate: date(),
+  departureDate: date(),
+  // departureDate: date().when("selectedTab", ([selectedTab], schema) => {
+  //   return selectedTab == "Round Trip"
+  //     ? schema.required("Departure date is required")
+  //     : schema.notRequired();
+  // }),
   travelers: object({
     adults: number()
       .min(1, "At least one adult is required")
@@ -23,9 +25,9 @@ export const validationSchema = object({
   sectors: array()
     .of(
       object({
-        departFrom: string().required("Departure location is required"),
-        arrivalTo: string().required("Arrival location is required"),
-        departureDate: date().required("Departure date is required"),
+        departFrom: string(),
+        arrivalTo: string(),
+        departureDate: date(),
       })
     )
     // .when("selectedTab", ([selectedTab], schema) => {

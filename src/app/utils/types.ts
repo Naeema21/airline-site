@@ -19,7 +19,7 @@ interface Destination {
 
 export interface DestinationCardProps {
   destination: Destination;
-  handle:()=> void;
+  handle: () => void;
 }
 
 interface RouteProps {
@@ -35,7 +35,7 @@ interface RouteProps {
 
 export interface RouteCardProps {
   routes: RouteProps;
-  handle?:()=> void
+  handle?: () => void;
 }
 
 export interface DropdownProps {
@@ -53,9 +53,26 @@ export interface AutoSearchProps {
   label: string;
   options: string[];
   name?: string;
+  setFieldValue?: any;
+}
+
+// utils/types.ts
+
+export interface AirportData {
+  country: string;
+  city: string;
+  name: string;
+  code: string;
+}
+
+export interface Travelers {
+  adults: number;
+  children: number;
+  infants: number;
 }
 
 export interface Sector {
+  id: number;
   departFrom: string;
   arrivalTo: string;
   departureDate: string;
@@ -65,11 +82,13 @@ export interface FormValues {
   selectedTab: string;
   departFrom: string;
   arrivalTo: string;
-  departureDate: string;
-  travelers: {
-    adults: number;
-    children: number;
-    infants: number;
-  };
-  sectors: any;
+  arrivalDate: string;
+  travelers: Travelers;
+  stop_mode: boolean;
+  class_mode: boolean;
+  sectors: Sector[];
+}
+
+export interface SearchEngineProps {
+  handleToggle:  () => void
 }
