@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import { AutoSearch } from "../component";
+import { SearchEngineProps } from "../utils/types";
 import { validationSchema } from "../utils/schema";
 import { initialValues, searchOption } from "../utils/data";
-import { SearchEngineProps } from "../utils/types";
 
-const SearchEngine:React.FC<SearchEngineProps> = ({handleToggle}) => {
+const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
     const [dropdownVisible, setDropdownVisible] = useState(false);
     const [sectors, setSectors] = useState([{ id: 1 }]);
     const isSearch = usePathname() === '/search';
@@ -30,7 +30,7 @@ const SearchEngine:React.FC<SearchEngineProps> = ({handleToggle}) => {
         initialValues: initialValues(isSearch),
         validationSchema,
         onSubmit: async (values, { setSubmitting }) => {
-            handleToggle()
+            handleToggle && handleToggle()
             // console.log(values);
             // router.push('/search');
         },
@@ -38,7 +38,7 @@ const SearchEngine:React.FC<SearchEngineProps> = ({handleToggle}) => {
 
     const { values, handleChange, errors, touched, handleSubmit, setFieldValue, isSubmitting } = formik;
 
-console.log(values,errors)
+    console.log(values, errors)
     return (
         <form className="row mt-0 mt-lg-4 justify-content-center" onSubmit={handleSubmit}>
             <div className={`col-12 ${isSearch ? 'col-lg-12' : 'col-lg-11'} mb-5 text-center position-relative`}>
