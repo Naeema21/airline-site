@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { AutoSearchProps } from "../utils/types";
+import { airportData } from '../utils/airport';
 
-const AutoSearch: React.FC<AutoSearchProps> = ({ label, options, error, name  }) => {
-    // console.log(error)
+const AutoSearch: React.FC<AutoSearchProps> = ({ label, error, name, setFieldValue }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [suggestions, setSuggestions] = useState<string[]>([]);
+    const [suggestions, setSuggestions] = useState<any>([]);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
@@ -15,15 +15,18 @@ const AutoSearch: React.FC<AutoSearchProps> = ({ label, options, error, name  })
             return;
         }
 
-        const filteredSuggestions = options.filter(country =>
-            country.toLowerCase().includes(value.toLowerCase())
+        const filteredSuggestions = airportData.filter(data =>
+            data.country.toLowerCase().includes(value.toLowerCase()) ||
+            data.city.toLowerCase().includes(value.toLowerCase()) ||
+            data.name.toLowerCase().includes(value.toLowerCase())
         );
 
         setSuggestions(filteredSuggestions);
     };
 
-    const handleSuggestionClick = (suggestion: string) => {
-        setSearchTerm(suggestion);
+    const handleSuggestionClick = (suggestion: any) => {
+        setSearchTerm(suggestion.name);
+        setFieldValue(name, suggestion.code);
         setSuggestions([]);
     };
 
@@ -31,6 +34,7 @@ const AutoSearch: React.FC<AutoSearchProps> = ({ label, options, error, name  })
         <div className="autosearch-container">
             <label htmlFor="exampleDataList13" className="form-label">{label}</label>
             <input
+                maxLength={150}
                 className="form-control"
                 id={name}
                 name={name}
@@ -39,12 +43,12 @@ const AutoSearch: React.FC<AutoSearchProps> = ({ label, options, error, name  })
                 onChange={handleInputChange}
             />
             {
-                <div className={`dropdown-menu ${suggestions.length > 1 ? 'show' : ''}`}>
+                <div className={`dropdown-menu px-2 ${suggestions.length > 0 ? 'show' : ''}`}>
                     <ul className="drop-rest">
-                        {suggestions.map((suggestion, index) => (
+                        {suggestions.map((suggestion: any, index: number) => (
                             <li key={index} onClick={() => handleSuggestionClick(suggestion)}
-                                style={{ cursor: 'pointer' }}>
-                                {suggestion}
+                                style={{ cursor: 'pointer' }} className="mb-2">
+                                {`${suggestion.name} (${suggestion.code})`}
                             </li>
                         ))}
                     </ul>

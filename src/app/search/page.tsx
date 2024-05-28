@@ -12,8 +12,6 @@ const Search = () => {
         <SearchEngine />
       </div>
       <div className="container mt-4">
-
-
         {/* search cards */}
         {routesData.map((routes, index) => (
           <RouteCard routes={routes} key={index} />

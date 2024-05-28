@@ -139,16 +139,18 @@ export const userItems = [
 ];
 
 export const initialValues = (isSearch: boolean): FormValues => ({
-  selectedTab: isSearch ? "Round Trip" : "One Way",
-  departFrom: "",
-  arrivalTo: "",
-  departureDate: "",
+  selectedTab: 'One Way',
+  departFrom: '',
+  arrivalTo: '',
+  arrivalDate: '',
   travelers: {
-    adults: 2,
-    children: 1,
-    infants: 1,
+      adults: 1,
+      children: 0,
+      infants: 0
   },
-  sectors: [{ departFrom: "", arrivalTo: "", departureDate: "" }],
+  stop_mode: false,
+  class_mode: false,
+  sectors: [{ id: 1, departFrom: '', arrivalTo: '', departureDate: '' }]
 });
 
 export const searchOption = [

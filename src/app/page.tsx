@@ -6,7 +6,7 @@ import SearchEngine from './container/searchEngine';
 
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard, CallModal } from './component';
-import { Product01, Product02, bannerImage, experienceBg, bannerImage1 } from './utils/images';
+import { Product01, Product02, experienceBg, bannerImage1 } from './utils/images';
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false)
@@ -28,12 +28,12 @@ const Home = () => {
                   </h1>
                   <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
 
-                  <button type="submit" className="btn btn-search mt-4 mb-6" onClick={handleToggle}>
+                  {/* <button type="submit" className="btn btn-search mt-4 mb-6" onClick={handleToggle}>
                     <span className="fw-bold"> BOOK NOW</span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
-              {/* <SearchEngine /> */}
+              <SearchEngine  handleToggle={handleToggle}/>
             </div>
           </div>
         </div>

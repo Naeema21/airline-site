@@ -1,16 +1,17 @@
+import React, { useState } from "react";
 import { useFormik } from "formik";
-import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import { AutoSearch } from "../component";
+import { SearchEngineProps } from "../utils/types";
 import { validationSchema } from "../utils/schema";
 import { initialValues, searchOption } from "../utils/data";
 
-const SearchEngine = () => {
+const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
     const [dropdownVisible, setDropdownVisible] = useState(false);
     const [sectors, setSectors] = useState([{ id: 1 }]);
-    const router = useRouter()
-    const isSearch = usePathname() === '/search'
+    const isSearch = usePathname() === '/search';
+
     const toggleDropdown = () => {
         setDropdownVisible(!dropdownVisible);
     };
@@ -29,22 +30,21 @@ const SearchEngine = () => {
         initialValues: initialValues(isSearch),
         validationSchema,
         onSubmit: async (values, { setSubmitting }) => {
-            console.log(values)
-            router.push('/search')
+            handleToggle && handleToggle()
+            // console.log(values);
+            // router.push('/search');
         },
     });
 
     const { values, handleChange, errors, touched, handleSubmit, setFieldValue, isSubmitting } = formik;
 
-    console.log(formik.errors.sectors && Array.isArray(formik.errors.sectors) && formik.errors.sectors[0])
-
-
+    console.log(values, errors)
     return (
         <form className="row mt-0 mt-lg-4 justify-content-center" onSubmit={handleSubmit}>
-            <div className={`col-12 ${isSearch ? 'col-lg-12' : 'col-lg-11'}  mb-5 text-center position-relative`}>
+            <div className={`col-12 ${isSearch ? 'col-lg-12' : 'col-lg-11'} mb-5 text-center position-relative`}>
                 <ul className={`nav nav-pills cust-pills ${isSearch ? 'd-none' : ''}`} id="pills-tab" role="tablist">
                     {['One Way', 'Round Trip', 'Multi City'].map((city, index) => (
-                        <li className="nav-item"  key={index}>
+                        <li className="nav-item" key={index}>
                             <input
                                 type="radio"
                                 id={`tab-${city}`}
@@ -69,22 +69,35 @@ const SearchEngine = () => {
                         <div className="search-pan row mx-0 theme-border-radius border">
                             <div className="col-12 col-lg-3 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                 <div className="form-group">
-                                    <AutoSearch label={'Depart From'} options={searchOption} error={errors?.departFrom}
+                                    <AutoSearch
+                                        setFieldValue={setFieldValue}
+                                        label={'Depart From'}
+                                        options={searchOption}
+                                        error={errors?.departFrom}
                                         name={'departFrom'} />
                                 </div>
                             </div>
                             <div className="col-12 col-lg-3 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                 <div className="form-group">
-                                    <AutoSearch label={'Arrival To'} options={searchOption} error={errors?.arrivalTo} />
+                                    <AutoSearch
+                                        setFieldValue={setFieldValue}
+                                        label={'Arrival To'}
+                                        options={searchOption}
+                                        error={errors?.arrivalTo}
+                                        name={'arrivalTo'} />
                                 </div>
                             </div>
-                            <div className={`col-12  ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2 
+                            <div className={`col-12 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2 
                             ${values.selectedTab == 'Round Trip' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'} `}>
                                 <div className="form-group">
-                                    <label className="form-label">{values.selectedTab == 'Round Trip' && 'Arrival -'} Departure Date </label>
-                                    <input type="date" className="form-control" />
-                                    {errors.arrivalTo && <span className="text-danger error">{errors.arrivalTo}</span>}
-                                    {errors.departureDate && <span className="text-danger error">{errors.departureDate}</span>}
+                                    <label className="form-label">
+                                        {values.selectedTab == 'Round Trip' && 'Arrival -'} Departure Date
+                                    </label>
+                                    <input type="date"
+                                        name="arrivalDate"
+                                        className="form-control"
+                                        value={values?.arrivalDate}
+                                        onChange={handleChange} />
                                 </div>
                             </div>
                             <div className="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2">
@@ -93,53 +106,70 @@ const SearchEngine = () => {
                                     <div className="dropdown" id="myDD3">
                                         <button className="dropdown-toggle form-control" type="button" id="travellerInfoOneway21"
                                             data-bs-toggle="dropdown" aria-expanded="false" onClick={toggleDropdown}>
-                                            <span className="text-truncate">2 adults - 1childeren - 1 Infants</span>
+                                            <span className="text-truncate">
+                                                {`${values?.travelers?.adults} adults - ${values?.travelers?.children} children - ${values?.travelers?.infants} infants`}
+                                            </span>
                                         </button>
                                         <div className={`dropdown-menu ${dropdownVisible ? 'show' : ''}`} aria-labelledby="travellerInfoOneway21">
                                             <ul className="drop-rest">
-                                                <li>
-                                                    <div className="d-flex small">Adults </div>
+                                                <li >
+                                                    <div className="d-flex small">Adults</div>
                                                     <div className="ms-auto input-group plus-minus-input">
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle" data-quantity="minus" data-field="onewayAdult">
+                                                            <button type="button" className="circle"
+                                                                onClick={() => setFieldValue(`travelers.adults`, Math.max(0, values.travelers.adults - 1))}>
                                                                 <i className="bi bi-dash"></i>
                                                             </button>
                                                         </div>
-                                                        <input className="input-group-field" type="number" name="onewayAdult" value="0" />
+                                                        <input className="input-group-field" type="number"
+                                                            name={`travelers.adults`}
+                                                            value={values?.travelers.adults} readOnly
+                                                        />
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle" data-quantity="plus" data-field="onewayAdult">
+                                                            <button type="button" className="circle"
+                                                                onClick={() => setFieldValue(`travelers.adults`, values.travelers.adults + 1)} >
                                                                 <i className="bi bi-plus"></i>
                                                             </button>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
-                                                    <div className="d-flex small">Child </div>
+                                                <li >
+                                                    <div className="d-flex small">Childrens</div>
                                                     <div className="ms-auto input-group plus-minus-input">
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle" data-quantity="minus" data-field="onewayChild">
+                                                            <button type="button" className="circle"
+                                                                onClick={() => setFieldValue(`travelers.children`, Math.max(0, values.travelers.children - 1))} >
                                                                 <i className="bi bi-dash"></i>
                                                             </button>
                                                         </div>
-                                                        <input className="input-group-field" type="number" name="onewayChild" value="0" />
+                                                        <input className="input-group-field" type="number"
+                                                            name={`travelers.children`}
+                                                            value={values?.travelers.children} readOnly
+                                                        />
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle" data-quantity="plus" data-field="onewayChild">
+                                                            <button type="button" className="circle"
+                                                                onClick={() => setFieldValue(`travelers.children`, values.travelers.children + 1)}>
                                                                 <i className="bi bi-plus"></i>
                                                             </button>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
-                                                    <div className="d-flex small">Infants   </div>
+                                                <li >
+                                                    <div className="d-flex small">Infants</div>
                                                     <div className="ms-auto input-group plus-minus-input">
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle" data-quantity="minus" data-field="onewayInfant">
+                                                            <button type="button" className="circle"
+                                                                onClick={() => setFieldValue(`travelers.infants`, Math.max(0, values.travelers.infants - 1))}>
                                                                 <i className="bi bi-dash"></i>
                                                             </button>
                                                         </div>
-                                                        <input className="input-group-field" type="number" name="onewayInfant" value="0" />
+                                                        <input className="input-group-field" type="number"
+                                                            name={`travelers.infants`}
+                                                            value={values?.travelers.infants} readOnly
+                                                        />
                                                         <div className="input-group-button">
-                                                            <button type="button" className="circle" data-quantity="plus" data-field="onewayInfant">
+                                                            <button type="button" className="circle"
+                                                                onClick={() => setFieldValue(`travelers.infants`, values.travelers.infants + 1)}>
                                                                 <i className="bi bi-plus"></i>
                                                             </button>
                                                         </div>
@@ -150,42 +180,48 @@ const SearchEngine = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`col-12  px-0 ${values.selectedTab == 'Multi City' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'}`}>
+                            <div className={`col-12 px-0 ${values.selectedTab == 'Multi City' ? 'col-lg-6 col-xl-3' : 'col-lg-5 col-xl-2'}`}>
                                 <div className="d-flex">
-                                    {
-                                        values.selectedTab == 'Multi City' &&
+                                    {values.selectedTab == 'Multi City' &&
                                         <button type="button" className="btn sector-add me-1" onClick={handleAddSector}>+ Add Sector</button>
                                     }
-
-                                    <button type="submit" className="btn btn-search" >
+                                    <button type="submit" className="btn btn-search" disabled={isSubmitting}>
                                         <span className="fw-bold"><i className="bi bi-search me-2"></i>Search</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- add sector form --> */}
-                        {
-                            values.selectedTab == 'Multi City' &&
+                        {values.selectedTab == 'Multi City' &&
                             sectors.map((sector, index) => (
-                                <div className="row mt-4" key={sector?.id}>
+                                <div className="row mt-4" key={sector.id}>
                                     <div className="col-12 col-lg-6">
                                         <div className="search-pan row mx-0 theme-border-radius border">
                                             <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                                 <div className="form-group">
-                                                    <AutoSearch label={'Depart From'} options={searchOption}
-                                                    />
+                                                    <AutoSearch
+                                                        label={'Depart From'}
+                                                        options={searchOption}
+                                                        setFieldValue={setFieldValue}
+                                                        name={`sectors[${index}].departFrom`} />
                                                 </div>
                                             </div>
                                             <div className="col-12 col-lg-4 col-xl-4 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
                                                 <div className="form-group">
-                                                    <AutoSearch label={'Depart From'} options={searchOption} />
+                                                    <AutoSearch
+                                                        label={'Arrival To'}
+                                                        options={searchOption}
+                                                        setFieldValue={setFieldValue}
+                                                        name={`sectors[${index}].arrivalTo`} />
                                                 </div>
                                             </div>
                                             <div className="col-11 col-lg-3 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
                                                 <div className="form-group border-0">
                                                     <label className="form-label">Departure Date</label>
-                                                    <input type="date" className="form-control" placeholder="Wed 2 Mar"  
-                                                    onChange={()=>{console.log('value')}}/>
+                                                    <input type="date"
+                                                        name={`sectors[${index}].departureDate`}
+                                                        className="form-control"
+                                                        value={values?.sectors[index]?.departureDate}
+                                                        onChange={handleChange} />
                                                 </div>
                                             </div>
                                             <button type="button" className="btn border-0 col-1 col-lg-1 col-xl-1 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2"
@@ -204,13 +240,21 @@ const SearchEngine = () => {
                         <div className="d-flex flex-sm-row flex-column">
                             <div className="me-2 mb-2 mb-lg-0">
                                 <div className="switch mode-switch">
-                                    <input type="checkbox" name="stop_mode" id="stop_mode" value="1" onChange={()=>{console.log('value')}} />
+                                    <input type="checkbox"
+                                        id="stop_mode"
+                                        name="stop_mode"
+                                        // checked={values.stop_mode}
+                                        onChange={handleChange} />
                                     <label htmlFor="stop_mode" data-on="NonStop" data-off="Stop" className="mode-switch-inner" />
                                 </div>
                             </div>
                             <div className="me-2">
                                 <div className="switch mode-switch">
-                                    <input type="checkbox" name="class_mode" id="class_mode" value="1" onChange={()=>{console.log('value')}}/>
+                                    <input type="checkbox"
+                                        id="class_mode"
+                                        name="class_mode"
+                                        // checked={values.class_mode}
+                                        onChange={handleChange} />
                                     <label htmlFor="class_mode" data-on="Premium" data-off="Economy" className="mode-switch-inner" />
                                 </div>
                             </div>
@@ -219,7 +263,7 @@ const SearchEngine = () => {
                 </div>
             </div>
         </form>
-    )
+    );
 }
 
-export default SearchEngine
+export default SearchEngine;
