@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import SearchEngine from './container/searchEngine';
+import NewsLetter from './component/newsLetter'
 
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard, CallModal } from './component';
@@ -13,6 +14,12 @@ const Home = () => {
 
   const handleToggle = () => {
     setShow(!show)
+
+   const [showModal, setShowModal] = useState(false);
+
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   }
 
   return (
@@ -32,12 +39,17 @@ const Home = () => {
                     <span className="fw-bold"> BOOK NOW</span>
                   </button> */}
                 </div>
+               
               </div>
               <SearchEngine  handleToggle={handleToggle}/>
             </div>
           </div>
         </div>
+        <NewsLetter handleClose={handleToggle} show={false} />
       </div>
+
+      
+     
 
       {/* <!-- recommended section --> */}
       <section className="recommended" id="deals">
@@ -217,6 +229,9 @@ const Home = () => {
 
       {/* call us modal */}
       <CallModal show={show} handleClose={handleToggle} />
+      
+
+
 
     </main>
   );
