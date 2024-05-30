@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard, CallModal } from './component';
 import { Product01, Product02, experienceBg, bannerImage1, Gallery1, Gallery2, Gallery3, Gallery4, Gallery5 } from './utils/images';
+import NewsLetter from './component/newsLetter';
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false)
@@ -25,7 +26,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
                   <h1 className="display-1 mb-2 theme-text-white theme-text-shadow">
-                    Your dream travel just <br/> a phone call away!
+                    Your dream travel just <br /> a phone call away!
                   </h1>
                   <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
 
@@ -33,12 +34,17 @@ const Home = () => {
                     <span className="fw-bold"> Call Us Now</span>
                   </button>
                 </div>
+
               </div>
               {/* <SearchEngine handleToggle={handleToggle} /> */}
             </div>
           </div>
         </div>
+        <NewsLetter  />
       </div>
+
+
+
 
       {/* <!-- recommended section --> */}
       {/* <section className="recommended" id="deals">
@@ -268,6 +274,9 @@ const Home = () => {
 
       {/* call us modal */}
       <CallModal show={show} handleClose={handleToggle} />
+
+
+
 
     </main>
   );
