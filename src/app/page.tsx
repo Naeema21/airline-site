@@ -1,12 +1,13 @@
 'use client'
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
-import SearchEngine from './container/searchEngine';
+// import SearchEngine from './container/searchEngine';
 
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard, CallModal } from './component';
-import { Product01, Product02, experienceBg, bannerImage1 } from './utils/images';
+import { Product01, Product02, experienceBg, bannerImage1, Gallery1, Gallery2, Gallery3, Gallery4, Gallery5 } from './utils/images';
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false)
@@ -17,30 +18,30 @@ const Home = () => {
 
   return (
     <main>
-      <div className="pagewrap">
+      <div className="pagewrap" id='home'>
         <div className="head-wrapper">
           <div className="search-engine" style={{ backgroundImage: `url(${bannerImage1.src})` }}>
             <div className="container">
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
-                  <h1 className="display-3 fw-bold mb-2 theme-text-white theme-text-shadow">
-                    Your dream travel just a phone call away!
+                  <h1 className="display-1 mb-2 theme-text-white theme-text-shadow">
+                    Your dream travel just <br/> a phone call away!
                   </h1>
                   <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
 
-                  {/* <button type="submit" className="btn btn-search mt-4 mb-6" onClick={handleToggle}>
-                    <span className="fw-bold"> BOOK NOW</span>
-                  </button> */}
+                  <button type="submit" className="btn btn-search mt-4 mb-6" onClick={handleToggle}>
+                    <span className="fw-bold"> Call Us Now</span>
+                  </button>
                 </div>
               </div>
-              <SearchEngine  handleToggle={handleToggle}/>
+              {/* <SearchEngine handleToggle={handleToggle} /> */}
             </div>
           </div>
         </div>
       </div>
 
       {/* <!-- recommended section --> */}
-      <section className="recommended" id="deals">
+      {/* <section className="recommended" id="deals">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6">
@@ -48,14 +49,14 @@ const Home = () => {
               <p className="mb-0 theme-text-accent-one">International & Domestic fames ac ante ipsum</p>
             </div>
           </div>
-          {/* <!-- recomended tours card --> */}
+          {/* <!-- recomended tours card -->
           <div className="row mt-5">
             {recommendedCardData?.map((card, index) => (
               <RecommendedCard card={card} key={index} />
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <!-- special offers section --> */}
       <section className="special-offers" id="offers">
@@ -108,7 +109,7 @@ const Home = () => {
               <p className="mb-0 theme-text-accent-one">International & Domestic fames ac ante ipsum</p>
             </div>
             <div className="col-12">
-              <ul className="nav nav-pills mb-3 destination-pill" id="pills-tab2" role="tablist">
+              {/* <ul className="nav nav-pills mb-3 destination-pill" id="pills-tab2" role="tablist">
                 <li className="nav-item" role="presentation">
                   <button className="nav-link active" id="pills-regions-tab" data-bs-toggle="pill" data-bs-target="#pills-regions" type="button" role="tab" aria-controls="pills-regions" aria-selected="true">Regions</button>
                 </li>
@@ -118,8 +119,8 @@ const Home = () => {
                 <li className="nav-item" role="presentation">
                   <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Places of interest</button>
                 </li>
-              </ul>
-              <div className="tab-content mt-5" id="pills-tab2Content">
+              </ul> */}
+              <div className="tab-content mt-3" id="pills-tab2Content">
                 <div className="tab-pane fade show active" id="pills-regions" role="tabpanel" aria-labelledby="pills-regions-tab">
                   <div className="row">
                     {destinationData.map((destination, index) => (
@@ -158,7 +159,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="row mt-5">
+          {/* <div className="row mt-5">
             <div className="col-12 col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div className="d-flex align-items-center p-4 p-md-0">
                 <i className="bi bi-airplane fs-4 theme-text-primary"></i>
@@ -181,12 +182,12 @@ const Home = () => {
                 <p className="fs-4 mb-0 theme-text-accent-one">Ratings</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* <!-- popular routes section --> */}
-      <section className="popular-routes">
+      {/* <section className="popular-routes">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6 mb-5 mb-lg-0">
@@ -210,6 +211,56 @@ const Home = () => {
                   <RouteCard routes={routes}  handle={handleToggle} key={index} />
                 ))
               }
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section id='gallery' >
+        <div className="container">
+          <div className="row">
+            <div className="col-12 text-center mb-5">
+              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">PHOTO&apos;S FROM TRAVELLERS</h4>
+              <p className="mb-0 theme-text-accent-one">
+                Be it a family vacation, a business trip or a short getaway,we know exactly how to make it unforgettable
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
+              <Image
+                src={Gallery1}
+                className="w-100  h-full shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+              />
+
+              <Image
+                src={Gallery5}
+                className="w-100 h-full shadow-1-strong rounded mb-4"
+                alt="Wintry Mountain Landscape"
+              />
+            </div>
+
+            <div className="col-lg-4 mb-4 mb-lg-0">
+              <Image
+                src={Gallery3}
+                className="w-100 h-auto shadow-1-strong rounded mb-4"
+                alt="Mountains in the Clouds"
+              />
+            </div>
+
+            <div className="col-lg-4 mb-4 mb-lg-0">
+              <Image
+                src={Gallery2}
+                className="w-100 h-full shadow-1-strong rounded mb-4"
+                alt="Waves at Sea"
+              />
+
+              <Image
+                src={Gallery1}
+                className="w-100 h-full shadow-1-strong rounded mb-4"
+                alt="Yosemite National Park"
+              />
             </div>
           </div>
         </div>
