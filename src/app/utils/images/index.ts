@@ -38,6 +38,13 @@ import paymentMethod1 from './icons/payment-method1.png'
 import Logo from './logo/logo.png'
 import FooterLogo from './logo/NameKart - Logo.png'
 
+import Gallery1 from './gallery/gallery-1.jpg'
+import Gallery2 from './gallery/gallery-2.jpg'
+import Gallery3 from './gallery/gallery-3.jpg'
+import Gallery4 from './gallery/gallery-4.jpg'
+import Gallery5 from './gallery/gallery-5.jpg'
+
+
 export {
   bannerImage,
   bannerImage1,
@@ -62,6 +69,11 @@ export {
   destination12,
   paymentMethod,
   paymentMethod1,
+  Gallery1,
+  Gallery2,
+  Gallery3,
+  Gallery4,
+  Gallery5,
   icon1,
   icon2,
   icon3,

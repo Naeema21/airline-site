@@ -6,8 +6,6 @@ import { useState, useEffect } from "react";
 import {
   SubscribeIcon,
   FooterLogo,
-  Logo,
-  paymentMethod,
   paymentMethod1,
 } from "../utils/images";
 
@@ -111,6 +109,7 @@ const Footer = () => {
               </div>
               <div className="d-flex social  mt-2">
                 <Link
+                  target="_blank"
                   href="https://www.facebook.com/profile.php?id=61559553997456"
                   className="fs-4 pe-3"
                 >
@@ -120,12 +119,14 @@ const Footer = () => {
                   <i className="bi bi-twitter"></i>
                 </Link>
                 <Link
+                  target="_blank"
                   href="https://www.linkedin.com/company/reservationkart-com/"
                   className="fs-4 pe-3"
                 >
                   <i className="bi bi-linkedin"></i>
                 </Link>
                 <Link
+                  target="_blank"
                   href="https://www.instagram.com/reservationkart.com_/"
                   className="fs-4 pe-3"
                 >
@@ -175,7 +176,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-12 col-lg-6 mt-lg-5">
               <p className="pt-2 mb-0 small theme-text-accent-one">
-                &copy; 2024 Reservationkart All rights reserved.
+                &copy; 2024 Reservationkart.com All rights reserved.
               </p>
             </div>
             <div className="col-12 col-lg-6 mt-5">

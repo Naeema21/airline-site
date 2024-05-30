@@ -1,49 +1,43 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
+
 import Image from "next/image";
-import { Modalprops } from "../utils/types";
 import NewsImage from "../utils/images/icons/email-Img.png";
 
-const Newsletter: React.FC<Modalprops> = () => {
+const Newsletter: React.FC = () => {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
-        setShow(true);
+      setShow(true);
     }, 5000);
-
     return () => clearTimeout(timer);
-     
   }, []);
 
   const handleSubscribe = async () => {
-    
+    //    { 
+    // try {
+    //       const response = await fetch("/api/subscribe", {
+    //         method: "POST",
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({ email }),
+    //       });
 
-//    { try {
-//       const response = await fetch("/api/subscribe", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ email }),
-//       });
+    //       const result = await response.json();
 
-//       const result = await response.json();
+    //       if (response.ok) {
+    //         setMessage("Subscription successful");
+    //         setEmail("");
+    //       } else {
+    //         setMessage(result.error);
+    //       }
+    //     }
 
-//       if (response.ok) {
-//         setMessage("Subscription successful");
-//         setEmail("");
-//       } else {
-//         setMessage(result.error);
-//       }
-//     }
-    
-//     catch (error) {
-//       setMessage("An error occurred. Please try again.");
-//     }
-
+    //     catch (error) {
+    //       setMessage("An error occurred. Please try again.");
+    //     }
   };
 
   return (
@@ -80,26 +74,24 @@ const Newsletter: React.FC<Modalprops> = () => {
                 promotions and discounts of our store
               </span>
               <div className="mx-5">
-                <div className="input-group mb-3 mt-4">
+                <form className="input-group mb-3 mt-4">
                   <input
+                    required
                     type="text"
                     className="form-control"
                     placeholder="Enter email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    aria-label="Recipient's email"
-                    aria-describedby="button-addon2"
+                    aria-label="reservationkart"
                   />
                   <button
                     className="btn btn-warning border-rad"
-                    type="button"
-                    id="button-addon2"
+                    type="submit"
                     onClick={handleSubscribe}
                   >
                     Subscribe
                   </button>
-                </div>
-                {message && <p className="text-center mt-2">{message}</p>}
+                </form>
               </div>
             </div>
           </div>
