@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 import { FooterLogo, Logo } from "../utils/images";
 
 
@@ -15,9 +15,9 @@ const Header = () => {
         <header className="header theme-bg-white sticky-top">
             <div className="container">
                 <nav className="navbar navbar-expand-lg py-3 py-lg-0 px-0">
-                    <Link href="/" className="navbar-brand">
+                    <Link href="/" className="navbar-brand py-3">
                         <Image src={Logo} alt='reservationkart-flight booking app' className="img-fluid me-2" height={50} />
-                        <Image src={FooterLogo} alt="" className="w-full" height={35} />
+                        <Image src={FooterLogo} alt="airoplan ticket booking" className="w-full" height={35} />
                     </Link>
                     <button
                         className="navbar-toggler px-1 btn rounded-0"
@@ -29,12 +29,13 @@ const Header = () => {
                     </button>
                     <div className={`collapse navbar-collapse ${collapsed ? '' : 'show'}`} id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto page-menu" id="nav">
-                            {/* <li className="nav-item"><Link className="nav-link pe-5 ps-0 ps-lg-5" href="#deals">Deals</Link></li>
-                            <li className="nav-item"><Link className="nav-link pe-5" href="#offers">Offers</Link></li>
-                            <li className="nav-item"><Link className="nav-link pe-5" href="#holidays">Holidays</Link></li>
-                            <li className="nav-item"><Link className="nav-link pe-5" href="#review">Review</Link></li> */}
+
                         </ul>
                         <ul className="navbar-nav page-menu mb-3 mb-lg-0">
+                            <li className="nav-item"><Link className="nav-link pe-5 ps-0 ps-lg-5" href="#home">Deals</Link></li>
+                            <li className="nav-item"><Link className="nav-link pe-5" href="#offers">Offers</Link></li>
+                            <li className="nav-item"><Link className="nav-link pe-5" href="#holidays">Holidays</Link></li>
+                            <li className="nav-item"><Link className="nav-link pe-5" href="#gallery">Gallery</Link></li>
                             <Link href='tel:1888 508 7143' style={{ color: '#2290a6' }}
                                 className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold">
                                 <i className="bi bi-telephone"></i>

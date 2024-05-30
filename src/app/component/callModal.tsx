@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Modalprops } from '../utils/types';
 
-const CallModal:React.FC<Modalprops> = ({show , handleClose}) => {
+const CallModal: React.FC<Modalprops> = ({ show, handleClose }) => {
 
   return (
     <>
@@ -19,7 +19,10 @@ const CallModal:React.FC<Modalprops> = ({show , handleClose}) => {
               <Link href="tel:1888 508 7143"
                 className="video-icon video-icon2 mr-30 ml-20 video_model mb-3">
                 <i className="bi bi-telephone"></i>
-              </Link>              <h4 className='call-title'>Give Us A Call</h4>
+              </Link>
+
+              <Link href={"tel:1888 508 7143"} className='call-title my-2'> 1888 508 7143 </Link>
+              <h4 className='call-title'>Give Us A Call</h4>
               <p>Your dream travel just a phone call away!</p>
 
               <button className='btn btn-search'>

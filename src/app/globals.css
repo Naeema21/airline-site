@@ -305,12 +305,14 @@ a:hover {
 }
 
 .search-engine {
-  padding: 5rem 0;
+  /* padding: 5rem 0; */
   background-size: cover;
-  min-height: auto;
+  min-height: 90vh;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
+  display: flex;
+  align-items: center;
   /* min-height: 820px; */
 }
 
@@ -331,6 +333,10 @@ a:hover {
   left: 0;
   background: #2290a6;
   background: linear-gradient(180deg, rgba(3, 147, 210, 0.3281687675) 0%, rgba(0, 0, 0, 0.762342437) 100%);
+}
+
+.search-engine h1{
+  font-weight: 900;
 }
 
 .cust-tab li .nav-link,
@@ -393,6 +399,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
 .search-pan .dropdown-toggle::after {
@@ -1009,6 +1016,10 @@ a:hover {
   z-index: 1030;
 }
 
+.modal{
+  background-color: #000000d6;
+}
+
 .modalBody {
   position: relative;
   padding: 2rem;
@@ -1043,6 +1054,29 @@ a:hover {
   max-height: 200px;
   height: auto;
   overflow-y: auto;
+}
+
+.gallery { padding-block: var(--section-padding); }
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-15);
+  overflow: hidden;
+}
+
+.gallery-item:nth-child(3) { grid-area: 1 / 2 / 3 / 3; }
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
