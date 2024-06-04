@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 
 import Image from "next/image";
 import NewsImage from "../utils/images/icons/email-Img.png";
 
 const Newsletter: React.FC = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [email, setEmail] = useState("");
 
   useEffect(() => {
@@ -14,30 +14,25 @@ const Newsletter: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSubscribe = async () => {
-    //    { 
-    // try {
-    //       const response = await fetch("/api/subscribe", {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({ email }),
-    //       });
+  const handleSubscribe = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    //       const result = await response.json();
-
-    //       if (response.ok) {
-    //         setMessage("Subscription successful");
-    //         setEmail("");
-    //       } else {
-    //         setMessage(result.error);
-    //       }
-    //     }
-
-    //     catch (error) {
-    //       setMessage("An error occurred. Please try again.");
-    //     }
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+      const result = await response.json();
+      if (result?.status) {
+        setShow(false)
+      }
+    }
+    catch (error) {
+      console.log(error)
+    }
   };
 
   return (
@@ -74,7 +69,7 @@ const Newsletter: React.FC = () => {
                 promotions and discounts of our store
               </span>
               <div className="mx-5">
-                <form className="input-group mb-3 mt-4">
+                <form className="input-group mb-3 mt-4" onSubmit={handleSubscribe}>
                   <input
                     required
                     type="text"
@@ -85,9 +80,9 @@ const Newsletter: React.FC = () => {
                     aria-label="reservationkart"
                   />
                   <button
-                    className="btn btn-warning border-rad"
+                    style={{ background: '#ec7e1b' }}
+                    className="btn text-white"
                     type="submit"
-                    onClick={handleSubscribe}
                   >
                     Subscribe
                   </button>
