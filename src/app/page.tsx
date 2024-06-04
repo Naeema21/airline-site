@@ -1,14 +1,13 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 // import SearchEngine from './container/searchEngine';
-
+import NewsLetter from './component/newsLetter';
 import { destinationData, recommendedCardData, routesData } from './utils/data';
 import { RecommendedCard, DestinationCard, RouteCard, CallModal } from './component';
 import { Product01, Product02, experienceBg, bannerImage1, Gallery1, Gallery2, Gallery3, Gallery4, Gallery5 } from './utils/images';
-import NewsLetter from './component/newsLetter';
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false)
@@ -28,7 +27,8 @@ const Home = () => {
                   <h1 className="display-1 mb-2 theme-text-white theme-text-shadow">
                     Your dream travel just <br /> a phone call away!
                   </h1>
-                  <p className="mb-0 theme-text-white">Discover amzaing places at exclusive deals</p>
+                  <p className="mb-0 theme-text-white">travel has always proven to be the ultimate cure. Even if not pursued with fervor,<br/>
+                   unfamiliar destinations consistently offer the tranquility you have been seeking.</p>
 
                   <button type="submit" className="btn btn-search mt-4 mb-6" onClick={handleToggle}>
                     <span className="fw-bold"> Call Us Now</span>
