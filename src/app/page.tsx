@@ -27,7 +27,7 @@ const Home = () => {
                   <h1 className="display-1 mb-2 theme-text-white theme-text-shadow">
                     Your dream travel just <br /> a phone call away!
                   </h1>
-                  <p className="mb-0 theme-text-white">travel has always proven to be the ultimate cure. Even if not pursued with fervor,<br/>
+                  <p className="mb-0 theme-text-white">Travel has always proven to be the ultimate cure. Even if not pursued with fervor,<br/>
                    unfamiliar destinations consistently offer the tranquility you have been seeking.</p>
 
                   <button type="submit" className="btn btn-search mt-4 mb-6" onClick={handleToggle}>
@@ -112,7 +112,7 @@ const Home = () => {
           <div className="row">
             <div className="col-12 mb-5">
               <h4 className="fs-2 fw-bold theme-text-secondary mb-0">Most loved Destinations</h4>
-              <p className="mb-0 theme-text-accent-one">International & Domestic fames ac ante ipsum</p>
+              <p className="mb-0 theme-text-accent-one">International & Domestic fames </p>
             </div>
             <div className="col-12">
               {/* <ul className="nav nav-pills mb-3 destination-pill" id="pills-tab2" role="tablist">
