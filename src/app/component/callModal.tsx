@@ -16,17 +16,17 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose }) => {
               </button>
             </div>
             <div className="modal-body text-center d-flex flex-column align-items-center">
-              <Link href="tel:1888 508 7143"
+              <Link href="tel:1888 632 2155"
                 className="video-icon video-icon2 mr-30 ml-20 video_model mb-3">
                 <i className="bi bi-telephone"></i>
               </Link>
 
-              <Link href={"tel:1888 508 7143"} className='call-title my-2'> 1888 508 7143 </Link>
+              <Link href={"tel:1888 508 7143"} className='call-title my-2'> 1888 632 2155 </Link>
               <h4 className='call-title'>Give Us A Call</h4>
               <p>Your dream travel just a phone call away!</p>
 
               <button className='btn btn-search'>
-                <Link href={'tel:18885087143'}>
+                <Link href={'tel:1888 632 2155'}>
                   <span className="fw-bold text-white">CALL US </span>
                 </Link>
               </button>

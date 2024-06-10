@@ -92,9 +92,9 @@ const Footer = () => {
                 <br />
                 <Link
                   className="fs-5 theme-text-primary"
-                  href={"tel:1888 508 7143"}
+                  href={"tel:1888 632 2155"}
                 >
-                  1888 508 7143
+                1888 632 2155 
                 </Link>
               </div>
               <div className="flex-grow-1 mt-3">
@@ -115,9 +115,9 @@ const Footer = () => {
                 >
                   <i className="bi bi-facebook"></i>
                 </Link>
-                <Link href="#" className="fs-4 pe-3">
+               {/*} <Link href="#" className="fs-4 pe-3">
                   <i className="bi bi-twitter"></i>
-                </Link>
+                </Link>  */}
                 <Link
                   target="_blank"
                   href="https://www.linkedin.com/company/reservationkart-com/"
@@ -168,7 +168,7 @@ const Footer = () => {
               />
               <Image
                 src={paymentMethod1}
-                className="w-100 h-auto"
+                className="w-100 h-auto mt-4"
                 alt="plane tickets"
               />
             </div>
