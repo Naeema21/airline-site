@@ -46,6 +46,7 @@ export interface DropdownProps {
 export interface Modalprops {
   show: boolean;
   handleClose: () => void;
+  setShow: any;
 }
 
 export interface AutoSearchProps {

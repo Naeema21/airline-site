@@ -63,12 +63,12 @@ const Header = () => {
                 </Link>
               </li>
               <Link
-                href="tel:1888 508 7143"
+                href="tel:1888 632 2155"
                 style={{ color: "#2290a6" }}
                 className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold"
               >
                 <i className="bi bi-telephone"></i>
-                <div>1888 508 7143</div>
+                <div>1888 632 2155</div>
               </Link>
               {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
                             <Dropdown title="INR" items={currencyItems} /> 

@@ -1,16 +1,16 @@
-import React, { FormEvent, useEffect, useState } from "react";
+ import React, { FormEvent, useEffect, useState } from "react";
 
 import Image from "next/image";
 import NewsImage from "../utils/images/icons/email-Img.png";
 
-const Newsletter: React.FC = () => {
+const NewsLetter: React.FC = () => {
   const [show, setShow] = useState(true);
   const [email, setEmail] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true);
-    }, 5000);
+    }, 50000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -96,4 +96,4 @@ const Newsletter: React.FC = () => {
   );
 };
 
-export default Newsletter;
+export default NewsLetter; 
