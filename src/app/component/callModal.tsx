@@ -1,7 +1,15 @@
 import Link from 'next/link';
 import { Modalprops } from '../utils/types';
+import { useEffect } from 'react';
 
-const CallModal: React.FC<Modalprops> = ({ show, handleClose }) => {
+const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow }) => {
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -23,7 +31,8 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose }) => {
 
               <Link href={"tel:1888 508 7143"} className='call-title my-2'> 1888 632 2155 </Link>
               <h4 className='call-title'>Give Us A Call</h4>
-              <p>Your dream travel just a phone call away!</p>
+              <p>Request a call back from us to get more information about our
+                services and offers.</p>
 
               <button className='btn btn-search'>
                 <Link href={'tel:1888 632 2155'}>

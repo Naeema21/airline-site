@@ -3,13 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
-
-import CallRequestPopup from './component/callRequestPopup';
-// import SearchEngine from './container/searchEngine';
-// import NewsLetter from './component/newsLetter';
-import { destinationData, recommendedCardData, routesData } from './utils/data';
-import { RecommendedCard, DestinationCard, RouteCard, CallModal } from './component';
-import { Product01, Product02, experienceBg, bannerImage1, Gallery1, Gallery2, Gallery3, Gallery4, Gallery5 } from './utils/images';
+import { destinationData } from './utils/data';
+import { DestinationCard,  CallModal } from './component';
+import { Product01, Product02, experienceBg, bannerImage1, Gallery1, Gallery2, Gallery3, Gallery5 } from './utils/images';
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false)
@@ -40,7 +36,6 @@ const Home = () => {
               </div>
               {/* <SearchEngine handleToggle={handleToggle} /> */}
             </div>
-            <CallRequestPopup />
           </div>
         </div>
     {/*   <NewsLetter  /> */}
@@ -276,11 +271,7 @@ const Home = () => {
       </section>
 
       {/* call us modal */}
-      <CallModal show={show} handleClose={handleToggle} />
-
-
-
-
+      <CallModal show={show} handleClose={handleToggle}  setShow={setShow}/>
     </main>
   );
 }
