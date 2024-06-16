@@ -1157,4 +1157,76 @@ body {
   opacity: 0.75;
 }
 
+.step-container {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #ec7e1b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.step-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+}
+.step-text {
+  font-size: 1.1em;
+}
+.svg-divider {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+
+/* payment */
+
+/* Custom styles for CreditCardForm */
+
+.container.color {
+  background-color: #f8f9fa;
+}
+
+.input-group-addon {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+}
+
+input.form-control {
+  border-radius: 0.25rem;
+}
+
+button.btn {
+  border-radius: 0.25rem;
+}
+
+.large-image {
+  border-radius: 0.5rem;
+}
+
+.panel {
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.panel-heading {
+  border-bottom: 1px solid #ced4da;
+}
+
+.small-image {
+  margin: 0 5px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}
+
+
+
 /*# sourceMappingURL=main.css.map */
