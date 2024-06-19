@@ -42,6 +42,8 @@ export default function RootLayout({
         {children}
         <CookieCard />
         <Footer />
+        <script async src="https://api.cronbot.ai/v1/widgets/app/app_ucx8in9faejo"></script>
+
       </body>
     </html>
   );
