@@ -285,9 +285,9 @@ const Home = () => {
   
 <div className="container-fluid step-container">
   <div className="container text-center">
-    <svg className="svg-divider" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
+   { /* <svg className="svg-divider" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
       <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
-    </svg>
+    </svg> */}
     <div className="text-center pb-4">
       <h2 className="text-black fw-bold">How to Book</h2>
     </div>
@@ -339,7 +339,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
-              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
+              <h4 className="fs-2 fw-bold theme-text-secondary mb-0 mt-4">
                 PHOTO&apos;S FROM TRAVELLERS
               </h4>
               <p className="mb-0 theme-text-accent-one">

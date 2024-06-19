@@ -63,7 +63,6 @@ const Header = () => {
                   Gallery
                 </Link>
               </li>
-               
                 <Link
                   href="tel:1888 632 2155"
                   style={{ color: "#2290a6" }}

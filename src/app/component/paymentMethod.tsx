@@ -42,6 +42,8 @@ const PaymentMethod = () => {
             <div className="panel-heading mb-4">
               <h3 className="text-center fw-bold">Payment Details</h3>
               <div className="text-center">
+                <span>Secured Payment with following methods:
+                </span>
                 <img
                   className="img-fluid small-image mx-2"
                   src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png"
