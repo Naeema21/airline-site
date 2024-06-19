@@ -142,7 +142,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-      
+
         </div>
       </section>
 
@@ -282,56 +282,51 @@ const Home = () => {
       </section> */}
 
       {/* How to book */}
-  
-<div className="container-fluid step-container">
-  <div className="container text-center">
-    <svg className="svg-divider" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
-      <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
-    </svg>
-    <div className="text-center pb-4">
-      <h2 className="text-black fw-bold">How to Book</h2>
-    </div>
-    <div className="row g-4">
-      <div className="col-12 col-lg-3 step-card">
-        <div className="step-icon mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="bi bi-airplane">
-            <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
-          </svg>
+      <section className=" step-container">
+        <div className="container text-center">
+          <div className="row">
+            <div className="col-12 text-center mb-5">
+              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
+                How To Book
+              </h4>
+              <p className="mb-0 theme-text-accent-one">Quick and easy airline ticket reservations for stress-free travel planning.</p>
+            </div>
+          </div>
+          <div className="row g-4 relative">
+            {/* <svg className="svg-divider absolute" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
+            <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
+          </svg> */}
+            <div className="col-12 col-lg-3 step-card">
+              <div className="step-icon mx-auto">
+                <i className="bi bi-airplane text-white fs-1"></i>
+              </div>
+              <h3 className="text-black mt-2">Step 1</h3>
+              <p className="step-text">Enter your flight details and click search</p>
+            </div>
+            <div className="col-12 col-lg-3 step-card">
+              <div className="step-icon mx-auto">
+                <i className="bi bi-person-lines-fill text-white fs-1"></i>
+              </div>
+              <h3 className="text-black mt-2">Step 2</h3>
+              <p className="step-text">Fill your contact information</p>
+            </div>
+            <div className="col-12 col-lg-3 step-card">
+              <div className="step-icon mx-auto">
+                <i className="bi bi-headset text-white fs-1"></i>
+              </div>
+              <h3 className="text-black mt-2">Step 3</h3>
+              <p className="step-text">Your personal travel advisor will contact you momentarily</p>
+            </div>
+            <div className="col-12 col-lg-3 step-card">
+              <div className="step-icon mx-auto">
+                <i className="bi bi-ticket-perforated text-white fs-1"></i>
+              </div>
+              <h3 className="text-black mt-2">Step 4</h3>
+              <p className="step-text">Get your tickets and enjoy your trip</p>
+            </div>
+          </div>
         </div>
-        <h3 className="text-black mt-2">Step 1</h3>
-        <p className="step-text">Enter your flight details and click search</p>
-      </div>
-      <div className="col-12 col-lg-3 step-card">
-        <div className="step-icon mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="bi bi-person-lines-fill">
-            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H11zm-2-4.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
-          </svg>
-        </div>
-        <h3 className="text-black mt-2">Step 2</h3>
-        <p className="step-text">Fill your contact information</p>
-      </div>
-      <div className="col-12 col-lg-3 step-card">
-        <div className="step-icon mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="bi bi-headset">
-            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
-          </svg>
-        </div>
-        <h3 className="text-black mt-2">Step 3</h3>
-        <p className="step-text">Your personal travel advisor will contact you momentarily</p>
-      </div>
-      <div className="col-12 col-lg-3 step-card">
-        <div className="step-icon mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="bi bi-envelope-plus">
-            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zM5.708 8.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
-            <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5z"/>
-          </svg>
-        </div>
-        <h3 className="text-black mt-2">Step 4</h3>
-        <p className="step-text">Get your tickets and enjoy your trip</p>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
 
 
       {/* Gallery */}
@@ -340,7 +335,7 @@ const Home = () => {
           <div className="row">
             <div className="col-12 text-center mb-5">
               <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                PHOTO&apos;S FROM TRAVELLERS
+                Photo&apos;s From Travellers
               </h4>
               <p className="mb-0 theme-text-accent-one">
                 Be it a family vacation, a business trip or a short getaway,we

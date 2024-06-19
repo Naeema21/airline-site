@@ -1,9 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import Pci from "../utils/images/logo/pci-dss-certified.png";
 import { useState } from "react";
-import { FooterLogo, Logo } from "../utils/images";
+import { FooterLogo, Logo, PCCiIcon } from "../utils/images";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -44,44 +43,42 @@ const Header = () => {
             <ul className="navbar-nav me-auto page-menu" id="nav"></ul>
             <ul className="navbar-nav page-menu mb-3 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link pe-5 ps-0 ps-lg-5" href="#home">
+                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="#home">
                   Deals
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-5" href="#offers">
+                <Link className="nav-link pe-4" href="#offers">
                   Offers
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-5" href="#holidays">
+                <Link className="nav-link pe-4" href="#holidays">
                   Holidays
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-5" href="#gallery">
+                <Link className="nav-link pe-4" href="#gallery">
                   Gallery
                 </Link>
               </li>
-               
-                <Link
-                  href="tel:1888 632 2155"
-                  style={{ color: "#2290a6" }}
-                  className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold"
-                >
-                  <i className="bi bi-telephone"></i>
-                  <div>1888 632 2155</div>
-                </Link>
-                
-                <li className="d-flex justify-content-center mt-2">
-                  <Image
-                    src={Pci}
-                    alt="PCI DSS Certified"
-                    className="img-fluid"
-                    height={50}
-                  />
-                </li>
-              
+
+              <Link
+                href="tel:1888 632 2155"
+                style={{ color: "#2290a6" }}
+                className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold nav-item pe-4"
+              >
+                <i className="bi bi-telephone"></i>
+                <div>1888 632 2155</div>
+              </Link>
+
+              <Image
+                src={PCCiIcon}
+                alt="PCI DSS Certified"
+                className="img-fluid d-flex  justify-content-center align-items-center"
+                height={50}
+              />
+
               {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
               <Dropdown title="INR" items={currencyItems} />
               <li className="nav-item">
