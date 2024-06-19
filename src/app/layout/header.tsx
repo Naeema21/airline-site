@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import Pci from "../utils/images/logo/pci-dss-certified.png";
 import { useState } from "react";
 import { FooterLogo, Logo } from "../utils/images";
 
@@ -62,25 +63,36 @@ const Header = () => {
                   Gallery
                 </Link>
               </li>
-              <Link
-                href="tel:1888 632 2155"
-                style={{ color: "#2290a6" }}
-                className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold"
-              >
-                <i className="bi bi-telephone"></i>
-                <div>1888 632 2155</div>
-              </Link>
+               
+                <Link
+                  href="tel:1888 632 2155"
+                  style={{ color: "#2290a6" }}
+                  className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold"
+                >
+                  <i className="bi bi-telephone"></i>
+                  <div>1888 632 2155</div>
+                </Link>
+                
+                <li className="d-flex justify-content-center mt-2">
+                  <Image
+                    src={Pci}
+                    alt="PCI DSS Certified"
+                    className="img-fluid"
+                    height={50}
+                  />
+                </li>
+              
               {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
-                            <Dropdown title="INR" items={currencyItems} /> 
-                              <li className="nav-item">
-                                <Link href="#" className="nav-link mein-link d-inline-block position-relative">
-                                    <i className="bi bi-bell"></i>
-                                    <span className="position-absolute translate-middle p-1 bg-success border border-light rounded-circle">
-                                        <span className="visually-hidden">New alerts</span>
-                                    </span>
-                                </Link>
-                            </li> 
-                             <Dropdown title={<i className="bi bi-person"></i>} items={userItems} /> */}
+              <Dropdown title="INR" items={currencyItems} />
+              <li className="nav-item">
+                <Link href="#" className="nav-link mein-link d-inline-block position-relative">
+                  <i className="bi bi-bell"></i>
+                  <span className="position-absolute translate-middle p-1 bg-success border border-light rounded-circle">
+                    <span className="visually-hidden">New alerts</span>
+                  </span>
+                </Link>
+              </li>
+              <Dropdown title={<i className="bi bi-person"></i>} items={userItems} /> */}
             </ul>
           </div>
         </nav>
