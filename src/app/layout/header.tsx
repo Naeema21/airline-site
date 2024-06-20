@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { FooterLogo, Logo } from "../utils/images";
-import PCCiIcon from '../utils/images/icons/pci-dss-certified.png'; // Update the import path if necessary
+import PCCiIcon from '../utils/images/icons/pci-dss-certified.png'; 
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);

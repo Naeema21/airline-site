@@ -1,4 +1,3 @@
-// components/CreditCardForm.js
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -35,59 +34,60 @@ const PaymentMethod = () => {
   });
 
   return (
-    <div className="container color mb-4 rounded shadow-lg p-4 bg-white">
+    <div className="container mt-5">
       <div className="row justify-content-center">
         <div className="col-md-8">
-          <div className="panel panel-default">
-            <div className="panel-heading mb-4">
-              <h3 className="text-center fw-bold">Payment Details</h3>
+          <div className="card shadow-lg p-4">
+            <div className="card-header text-center mb-4">
+              <h3 className="fw-bold">Payment Details</h3>
               <div className="text-center">
-                <span>Secured Payment with following methods:
-                </span>
-                <img
-                  className="img-fluid small-image mx-2"
-                  src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png"
-                  alt="Mastercard"
-                  width={40}
-                  height={25}
-                />
-                <img
-                  className="img-fluid small-image mx-2"
-                  src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Visa-Curved.png"
-                  alt="VisaCard"
-                  width={40}
-                  height={25}
-                />
-                <img
-                  className="img-fluid small-image mx-2"
-                  src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Discover-Curved.png"
-                  alt="Discover"
-                  width={40}
-                  height={25}
-                />
-                <img
-                  className="img-fluid small-image mx-2"
-                  src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png"
-                  alt="Paypal"
-                  width={40}
-                  height={25}
-                />
-                <img
-                  className="img-fluid small-image mx-2"
-                  src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/American-Express-Curved.png"
-                  alt="American Express"
-                  width={40}
-                  height={25}
-                />
+                <span>Secured Payment with following methods:</span>
+                <div className="d-flex justify-content-center mt-2">
+                  <img
+                    className="img-fluid mx-2"
+                    src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png"
+                    alt="Mastercard"
+                    width={40}
+                    height={25}
+                  />
+                  <img
+                    className="img-fluid mx-2"
+                    src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Visa-Curved.png"
+                    alt="VisaCard"
+                    width={40}
+                    height={25}
+                  />
+                  <img
+                    className="img-fluid mx-2"
+                    src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Discover-Curved.png"
+                    alt="Discover"
+                    width={40}
+                    height={25}
+                  />
+                  <img
+                    className="img-fluid mx-2"
+                    src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png"
+                    alt="Paypal"
+                    width={40}
+                    height={25}
+                  />
+                  <img
+                    className="img-fluid mx-2"
+                    src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/American-Express-Curved.png"
+                    alt="American Express"
+                    width={40}
+                    height={25}
+                  />
+                </div>
               </div>
             </div>
-            <div className="panel-body">
+            <div className="card-body">
               <form onSubmit={formik.handleSubmit}>
                 <div className="form-group mb-3">
-                  <label>AMOUNT</label>
+                  <label className="form-label">Amount</label>
                   <input
                     type="text"
-                    className={`form-control rounded ${formik.touched.amount && formik.errors.amount ? 'is-invalid' : ''}`}
+                    className={`form-control ${formik.touched.amount && formik.errors.amount ? 'is-invalid' : ''}`}
                     name="amount"
                     placeholder="Amount"
                     onChange={formik.handleChange}
@@ -99,12 +99,12 @@ const PaymentMethod = () => {
                   ) : null}
                 </div>
                 <div className="form-group mb-3">
-                  <label>CARD HOLDER NAME</label>
+                  <label className="form-label">Card Holder Name</label>
                   <input
                     type="text"
-                    className={`form-control rounded ${formik.touched.cardHolderName && formik.errors.cardHolderName ? 'is-invalid' : ''}`}
+                    className={`form-control ${formik.touched.cardHolderName && formik.errors.cardHolderName ? 'is-invalid' : ''}`}
                     name="cardHolderName"
-                    placeholder="Card holder name"
+                    placeholder="Card Holder Name"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.cardHolderName}
@@ -114,10 +114,10 @@ const PaymentMethod = () => {
                   ) : null}
                 </div>
                 <div className="form-group mb-3">
-                  <label>CARD NUMBER</label>
+                  <label className="form-label">Card Number</label>
                   <input
                     type="text"
-                    className={`form-control rounded ${formik.touched.cardNumber && formik.errors.cardNumber ? 'is-invalid' : ''}`}
+                    className={`form-control ${formik.touched.cardNumber && formik.errors.cardNumber ? 'is-invalid' : ''}`}
                     name="cardNumber"
                     placeholder="Valid Card Number"
                     onChange={formik.handleChange}
@@ -128,13 +128,13 @@ const PaymentMethod = () => {
                     <div className="invalid-feedback">{formik.errors.cardNumber}</div>
                   ) : null}
                 </div>
-                <div className="form-row mb-3">
-                  <div className="col-md-7">
-                    <div className="form-group">
-                      <label>EXP DATE</label>
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group mb-3">
+                      <label className="form-label">Exp Date</label>
                       <input
                         type="text"
-                        className={`form-control rounded ${formik.touched.expDate && formik.errors.expDate ? 'is-invalid' : ''}`}
+                        className={`form-control ${formik.touched.expDate && formik.errors.expDate ? 'is-invalid' : ''}`}
                         name="expDate"
                         placeholder="MM / YY"
                         onChange={formik.handleChange}
@@ -146,12 +146,12 @@ const PaymentMethod = () => {
                       ) : null}
                     </div>
                   </div>
-                  <div className="col-md-5">
-                    <div className="form-group">
-                      <label>CVV</label>
+                  <div className="col-md-6">
+                    <div className="form-group mb-3">
+                      <label className="form-label">CVV</label>
                       <input
                         type="text"
-                        className={`form-control rounded ${formik.touched.cvv && formik.errors.cvv ? 'is-invalid' : ''}`}
+                        className={`form-control ${formik.touched.cvv && formik.errors.cvv ? 'is-invalid' : ''}`}
                         name="cvv"
                         placeholder="CVV"
                         onChange={formik.handleChange}
@@ -163,14 +163,14 @@ const PaymentMethod = () => {
                       ) : null}
                     </div>
                   </div>
-                </div>
+                </div>  
                 <div className="form-group mb-3">
-                  <label>PHONE NUMBER</label>
+                  <label className="form-label">Phone Number</label>
                   <input
                     type="text"
-                    className={`form-control rounded ${formik.touched.phoneNumber && formik.errors.phoneNumber ? 'is-invalid' : ''}`}
+                    className={`form-control ${formik.touched.phoneNumber && formik.errors.phoneNumber ? 'is-invalid' : ''}`}
                     name="phoneNumber"
-                    placeholder="Phone no"
+                    placeholder="Phone Number"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.phoneNumber}
@@ -180,12 +180,12 @@ const PaymentMethod = () => {
                   ) : null}
                 </div>
                 <div className="form-group mb-3">
-                  <label>BILLING ADDRESS</label>
+                  <label className="form-label">Billing Address</label>
                   <input
                     type="text"
-                    className={`form-control rounded ${formik.touched.billingAddress && formik.errors.billingAddress ? 'is-invalid' : ''}`}
+                    className={`form-control ${formik.touched.billingAddress && formik.errors.billingAddress ? 'is-invalid' : ''}`}
                     name="billingAddress"
-                    placeholder="Billing address"
+                    placeholder="Billing Address"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.billingAddress}
@@ -195,12 +195,12 @@ const PaymentMethod = () => {
                   ) : null}
                 </div>
                 <div className="form-group mb-3">
-                  <label>EMAIL ID</label>
+                  <label className="form-label">Email ID</label>
                   <input
                     type="email"
-                    className={`form-control rounded ${formik.touched.emailId && formik.errors.emailId ? 'is-invalid' : ''}`}
+                    className={`form-control ${formik.touched.emailId && formik.errors.emailId ? 'is-invalid' : ''}`}
                     name="emailId"
-                    placeholder="Email id"
+                    placeholder="Email ID"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.emailId}
@@ -209,7 +209,7 @@ const PaymentMethod = () => {
                     <div className="invalid-feedback">{formik.errors.emailId}</div>
                   ) : null}
                 </div>
-                <div className="form-group mb-4 form-check">
+                <div className="form-check mb-4">
                   <input
                     type="checkbox"
                     className="form-check-input"
@@ -220,19 +220,10 @@ const PaymentMethod = () => {
                   />
                   <label className="form-check-label" htmlFor="saveCard">Save card details for future payments</label>
                 </div>
-                <button type="submit" className="btn btn-success btn-lg btn-block rounded">Confirm Payment</button>
+                <button type="submit" className="btn btn-success btn-lg w-100">Confirm Payment</button>
               </form>
             </div>
           </div>
-        </div>
-        <div className="col-md-4 d-flex align-items-center justify-content-center">
-          <img
-            className="img-fluid large-image rounded shadow"
-            src='https://devguide.payu.in/website-assets/uploads/2022/08/payuin-payment-gateway-1.webp'
-            alt="Right Side Image"
-            width={500}
-            height={1000}
-          />
         </div>
       </div>
     </div>
