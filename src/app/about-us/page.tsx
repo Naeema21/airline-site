@@ -144,7 +144,7 @@ const About = () => {
               <div className="mt-3 mt-lg-4 d-flex flex-column">
                 <h3 className=" h5 text-info font-weight-bold">Start Your Journey</h3>
                 <p className="text-dark text-sm font-normal mt-2 mt-lg-3">
-                  Join us on an extraordinary travel experience with ReservationKart.com, where every journey is meticulously crafted to create lasting memories. Our team of passionate travel experts is ready to turn your travel dreams into reality. Contact us today to start planning your next dream vacation!
+                  Join us on an extraordinary travel experience with ReservationKart.com, where every journey is meticulously crafted to create lasting memories. Our team of passionate travel experts is ready to turn your travel dreams into reality. Contact us today to start planning your next dream vacation.
                 </p>
               </div>
             </div>
@@ -165,7 +165,7 @@ const About = () => {
               <div className="mt-3 mt-lg-4 d-flex flex-column">
                 <h3 className="text-info h5 font-weight-bold">Service Commitment</h3>
                 <p className="text-dark text-sm font-normal mt-2 mt-lg-3">
-                  At ReservationKart.com, our primary focus is on delivering exceptional service to our clients. We strive to exceed your expectations by creating personalized journeys filled with unique experiences, hidden gems, and unforgettable memories. Whether you're seeking a luxury adventure, a cultural exploration, or a relaxing retreat.
+                  At ReservationKart.com, our primary focus is on delivering exceptional service to our clients. We strive to exceed your expectations by creating personalized journeys filled with unique experiences, hidden gems, and unforgettable memories. Whether you are seeking a luxury adventure, a cultural exploration, or a relaxing retreat.
                 </p>
               </div>
             </div>
