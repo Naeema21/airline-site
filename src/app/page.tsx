@@ -281,7 +281,7 @@ const Home = () => {
         </div>
       </section> */}
 
-      {/* How to book */}
+      {/* How to book 
       <section className=" step-container">
         <div className="container text-center">
           <div className="row">
@@ -296,7 +296,7 @@ const Home = () => {
             {/* <svg className="svg-divider absolute" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
             <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
           </svg> */}
-            <div className="col-12 col-lg-3 step-card">
+        {/*}    <div className="col-12 col-lg-3 step-card">
               <div className="step-icon mx-auto">
                 <i className="bi bi-airplane text-white fs-1"></i>
               </div>
@@ -326,7 +326,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>  */}
 
 
       {/* Gallery */}
