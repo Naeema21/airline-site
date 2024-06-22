@@ -1225,5 +1225,24 @@ button.btn {
 }
 
 
+/* About */
+.bg-color{
+    background-color: gainsboro;
+}
+
+
+.text-color {
+  color: #2290a6;
+}
+.text-color2{
+  color: #12a9c7;
+}
+
+.text-adv{
+  color: #12a9c7;
+}
+.text-str{
+  color: #12a9c7;
+}
 
 /*# sourceMappingURL=main.css.map */
