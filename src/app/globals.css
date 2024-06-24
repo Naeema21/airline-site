@@ -220,7 +220,7 @@ a:hover {
 }
 
 .scrollToTop.active {
-  bottom: 30px;
+  bottom: 6rem;
   transform: translateY(0%);
 }
 
@@ -1082,47 +1082,7 @@ a:hover {
 
 
 
-body {
-  background-color: white;
-}
 
-.rows {
-  height: 100vh;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  min-height: calc(1.5em + .75rem + 2px);
-  padding: .575rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 52px;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.card {
-  padding: 20px;
-  background-color: #eee;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-
-.form-control:focus {
-  color: #495057;
-  background-color: #ffffff;
-  border-color: white;
-  outline: 0;
-  box-shadow: none;
-}
 
 .border-rad {
   border-top-right-radius: 28px;
@@ -1137,11 +1097,7 @@ body {
   border-color: white;
 }
 
-.modal-body-custom {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-}
+
 
 .closeButton {
   background: none;
@@ -1171,13 +1127,10 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-.step-icon svg {
-  width: 40px;
-  height: 40px;
-  fill: #fff;
-}
+
 .step-text {
-  font-size: 1.1em;
+  font-size: 1rem;
+  color: gray;
 }
 .svg-divider {
   width: 100%;

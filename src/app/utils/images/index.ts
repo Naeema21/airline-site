@@ -33,6 +33,7 @@ import PlayIcon from './icons/apple.png'
 import AppleIcon from './icons/play-icon.png'
 import paymentMethod from './icons/payment-method.svg'
 import paymentMethod1 from './icons/payment-method1.png'
+import PCCiIcon from './icons/pci-dss-certified.png'
 
 
 import Logo from './logo/logo.png'
@@ -80,5 +81,6 @@ export {
   icon4,
   SubscribeIcon,
   PlayIcon,
-  AppleIcon, Logo, FooterLogo
+  AppleIcon, Logo, FooterLogo,
+  PCCiIcon
 };
