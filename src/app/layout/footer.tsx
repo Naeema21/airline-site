@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react";
 
 import {
   SubscribeIcon,
@@ -11,6 +11,8 @@ import {
 
 const Footer = () => {
   const [isActive, setIsActive] = useState(false);
+  const [email, setEmail] = useState("");
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,28 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+
+  const handleSubscribe = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+      const result = await response.json();
+      if (result?.status) {
+        setEmail("")
+      }
+    }
+    catch (error) {
+      console.log(error)
+    }
+  };
+
   return (
     <>
       <section className="py-5 theme-bg-primary">
@@ -56,9 +80,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-12 col-lg-5 offset-lg-1 align-self-center">
-              <div className="input-group subs-form">
+              <form className="input-group subs-form" onSubmit={handleSubscribe}>
                 <input
                   type="text"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="form-control border-0"
                   placeholder="Your Email"
                   aria-label="Your Email"
@@ -66,12 +93,12 @@ const Footer = () => {
                 />
                 <button
                   className="btn btn-search"
-                  type="button"
+                  type="submit"
                   id="button-addon2"
                 >
                   Subscribe
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -115,7 +142,7 @@ const Footer = () => {
                 >
                   <i className="bi bi-facebook"></i>
                 </Link>
-               {/*} <Link href="#" className="fs-4 pe-3">
+                {/*} <Link href="#" className="fs-4 pe-3">
                   <i className="bi bi-twitter"></i>
                 </Link>  */}
                 <Link
