@@ -376,7 +376,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <PaymentMethod />
+     {/*  <PaymentMethod /> */}
       </section>
 
       {/* call us modal */}

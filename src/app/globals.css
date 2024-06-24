@@ -112,6 +112,10 @@ a:hover {
   color: #00A45D;
 }
 
+.text-yellow{
+  color: #f2902d;
+}
+
 .theme-box-shadow {
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
 }
@@ -1115,8 +1119,8 @@ a:hover {
 
 .step-container {
   background-color: #f8f9fa;
-  padding: 60px 0;
 }
+
 .step-icon {
   width: 80px;
   height: 80px;
@@ -1201,4 +1205,7 @@ button.btn {
   color: #12a9c7;  
 }
 */
+
+  
+ 
 /*# sourceMappingURL=main.css.map */
