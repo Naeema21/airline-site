@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { FooterLogo, Logo } from "../utils/images";
-import PCCiIcon from '../utils/images/icons/pci-dss-certified.png'; 
+import PCCiIcon from "../utils/images/icons/pci-dss-certified.png";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -44,23 +44,30 @@ const Header = () => {
             <ul className="navbar-nav me-auto page-menu" id="nav"></ul>
             <ul className="navbar-nav page-menu mb-3 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="#home">
+                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/about-us">
+                  AboutUs
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link pe-4 " href="/#deals">
                   Deals
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="#offers">
+                <Link className="nav-link pe-4" href="/#offers">
                   Offers
                 </Link>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="#holidays">
-                  Holidays
+                <Link className="nav-link pe-4" href="/#gallery">
+                  Gallery
                 </Link>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="#gallery">
-                  Gallery
+                <Link className="nav-link pe-4" href="/about-us#HowToBook">
+                  How To Book
                 </Link>
               </li>
 
@@ -73,15 +80,10 @@ const Header = () => {
                 <div>1888 5087143</div>
               </Link>
 
-             <div className="img-fluid d-flex justify-content-center align-items-center">
-              <Link href="/compliance_certificate.pdf" target="_blank">
-                <Image
-                  src={PCCiIcon}
-                  alt="PCI DSS Certified"
-                  height={50} 
-                 
-                />
-              </Link>
+              <div className="img-fluid d-flex justify-content-center align-items-center">
+                <Link href="/compliance_certificate.pdf" target="_blank">
+                  <Image src={PCCiIcon} alt="PCI DSS Certified" height={50} />
+                </Link>
               </div>
 
               {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
