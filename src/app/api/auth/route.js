@@ -6,7 +6,7 @@ export async function GET() {
         clientId: 'ABgo4bZ5j1alO9VivmPZzgyjchFFqjTIXB8flhQJ2wi084GEe6',
         clientSecret:'FUgeFTroJOuXrj3z2C990XA1x7QwR2ubiOdnMm5I',
         environment: "sandbox", // or 'production'
-        redirectUri: 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl',
+        redirectUri: 'http://localhost:3000/api/callback',
       });
 
     const authUri = oauthClient.authorizeUri({

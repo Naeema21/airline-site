@@ -25,16 +25,6 @@ const Home = () => {
     setShow(!show);
   };
 
-  useEffect(()=>{
-    const response =  fetch("/api/test", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    console.log(response)
-  },[])
-
   return (
     <main>
       <div className="pagewrap" id="home">
@@ -287,7 +277,7 @@ const Home = () => {
       </section> */}
 
       {/* How to book 
-      <section className=" step-container">
+      <section className=" step-container" id='howTobook'>
         <div className="container text-center">
           <div className="row">
             <div className="col-12 text-center mb-5">

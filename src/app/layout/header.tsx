@@ -43,23 +43,24 @@ const Header = () => {
           >
             <ul className="navbar-nav me-auto page-menu" id="nav"></ul>
             <ul className="navbar-nav page-menu mb-3 mb-lg-0">
+              
               <li className="nav-item">
-                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="#home">
+                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/#home">
                   Deals
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="#offers">
+                <Link className="nav-link pe-4" href="/#offers">
                   Offers
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="#holidays">
+                <Link className="nav-link pe-4" href="/#holidays">
                   Holidays
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="#gallery">
+                <Link className="nav-link pe-4" href="/#gallery">
                   Gallery
                 </Link>
               </li>
