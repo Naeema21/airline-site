@@ -119,9 +119,9 @@ const Footer = () => {
                 <br />
                 <Link
                   className="fs-5 theme-text-primary"
-                  href={"tel:1888 632 2155"}
+                  href={"tel:1888 5087143"}
                 >
-                  1888 632 2155
+                1888 5087143
                 </Link>
               </div>
               <div className="flex-grow-1 mt-3">
@@ -169,17 +169,17 @@ const Footer = () => {
               <h5 className="mb-3 fs-6">Support</h5>
               <div className="mt-3">
                 <ul className="fl-menu">
-                  <li className="nav-item">
-                    <Link href="#">Contact</Link>
+                  <li className="nav-item ">
+                    <Link href="#" className="fs-8 text-dark">Contact</Link>
                   </li>
                   <li className="nav-item">
-                    <Link href="/privacy-policy">Privacy Policy</Link>
+                    <Link href="/privacy-policy" className="fs-8 text-dark">Privacy Policy</Link>
                   </li>
                   <li className="nav-item">
-                    <Link href="/terms-conditions">Terms and Conditions</Link>
+                    <Link href="/terms-conditions"  className="fs-8 text-dark">Terms and Conditions</Link>
                   </li>
                   <li className="nav-item">
-                    <Link href="/refund-cancellation">
+                    <Link href="/refund-cancellation"  className="fs-8 text-dark">
                       Refund and Cancellation
                     </Link>
                   </li>

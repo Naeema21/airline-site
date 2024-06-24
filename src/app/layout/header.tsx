@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { FooterLogo, Logo, PCCiIcon } from "../utils/images";
+import { FooterLogo, Logo } from "../utils/images";
+import PCCiIcon from '../utils/images/icons/pci-dss-certified.png'; 
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -64,20 +65,24 @@ const Header = () => {
               </li>
 
               <Link
-                href="tel:1888 632 2155"
+                href="tel:1888 5087143"
                 style={{ color: "#2290a6" }}
                 className="d-flex flex-row justify-content-center align-items-center gap-2 fw-bold nav-item pe-4"
               >
                 <i className="bi bi-telephone"></i>
-                <div>1888 632 2155</div>
+                <div>1888 5087143</div>
               </Link>
 
-              <Image
-                src={PCCiIcon}
-                alt="PCI DSS Certified"
-                className="img-fluid d-flex  justify-content-center align-items-center"
-                height={50}
-              />
+             <div className="img-fluid d-flex justify-content-center align-items-center">
+              <Link href="/compliance_certificate.pdf" target="_blank">
+                <Image
+                  src={PCCiIcon}
+                  alt="PCI DSS Certified"
+                  height={50} 
+                 
+                />
+              </Link>
+              </div>
 
               {/* <Dropdown title={<><i className="bi bi-globe me-2"></i>Eng</>} items={languageItems} />
               <Dropdown title="INR" items={currencyItems} />

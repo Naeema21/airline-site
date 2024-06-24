@@ -32,6 +32,7 @@ const Policy = () => {
           and the &quot;Contact us&quot;; &quot;Apply with ReservationKart&quot; and &quot;Share on&quot; plugins on our digital
           properties.
         </p>
+        
         <p>By using or accessing the Website or other Sales Channels, the user hereby agrees with the terms of this Privacy
           Policy and the contents herein.</p>
         <p>This Privacy Policy does not apply to any website(s), mobile sites and mobile apps of third parties, even if their
@@ -39,12 +40,28 @@ const Policy = () => {
           ReservationKart&apos;s business partners, advertisers, sponsors or other sites to which we provide hyperlink(s),
           may be materially different from this Privacy Policy. Accordingly, it is recommended that you review the privacy
           statements and policies of any such third parties.</p>
+
+        <h5 >Payment Information Security: </h5>
+      <p>
+Ruzain Enterprises <b>(Herbskraft.com)</b> does not collect or store your credit card, debit card, or banking information.
+During checkout, this information is securely transmitted directly to our payment gateway provider, who then transmits it to the payment network or bank for authorization.
+Our payment gateway partners are compliant with relevant security standards, such as PCI (Payment Card Industry Data Security Standard), and have robust data security measures in place.
+We do not retain any portion of your payment details.
+Data Hosting and Security
+
+Our website is hosted by a third-party service provider who specializes in secure data hosting.
+The information you provide is stored on servers owned and managed by these companies, which may be located in India, the United States, or other countries.
+Our Website hosting partners comply with industry-recognized security standards such as ISO/IEC 27001
+Limitations of Liability. 
+While we take data security seriously and partner with reputable providers, we cannot be held liable for any data theft or security breaches that may occur at the data center hosting our website.</p>
+
         <p><b>ReservationKart for Business (Corporate):</b> In the event ReservationKart is providing services to you as part
           of our agreement with your employer, contractor, business partner, affiliate or any other party who is having a
           contractual arrangement with ReservationKart, then the terms and conditions stipulated in such contractual arrangement
           shall prevail over this data privacy policy. Such agreement may involve sharing personal data they control as part of
           that engagement. Our services may also include processing personal data under our client&apos;s control on our hosted
           software applications. All such processing will be governed by ReservationKart&apos;s client privacy policy.</p>
+
         <p>In case you book travel services on behalf of your family or a minor, you agree:</p>
         <ul className="ml-4">
           <li>To inform the individual about the content of this privacy policy</li>

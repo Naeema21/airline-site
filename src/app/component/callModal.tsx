@@ -24,18 +24,18 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow }) => {
               </button>
             </div>
             <div className="modal-body text-center d-flex flex-column align-items-center">
-              <Link href="tel:1888 632 2155"
+              <Link href="tel:1888 5087143"
                 className="video-icon video-icon2 mr-30 ml-20 video_model mb-3">
                 <i className="bi bi-telephone"></i>
               </Link>
 
-              <Link href={"tel:1888 508 7143"} className='call-title my-2'> 1888 632 2155 </Link>
+              <Link href={"tel:1888 5087143"} className='call-title my-2'> 1888 5087143 </Link>
               <h4 className='call-title'>Give Us A Call</h4>
               <p>Request a call back from us to get more information about our
                 services and offers.</p>
 
               <button className='btn btn-search'>
-                <Link href={'tel:1888 632 2155'}>
+                <Link href={'tel:1888 5087143'}>
                   <span className="fw-bold text-white">CALL US </span>
                 </Link>
               </button>
