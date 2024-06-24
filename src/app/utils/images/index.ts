@@ -1,5 +1,5 @@
 import bannerImage from "./section/banner-image.png";
-import bannerImage1 from './banner_image.jpg'
+import bannerImage1 from "./banner_image.jpg";
 import Product01 from "./section/product-banner01.png";
 import Product02 from "./section/product-banner02.png";
 
@@ -28,23 +28,28 @@ import icon2 from "./icons/2.png";
 import icon3 from "./icons/3.png";
 import icon4 from "./icons/4.png";
 
-import SubscribeIcon from './icons/subscribe-icon.png'
-import PlayIcon from './icons/apple.png'
-import AppleIcon from './icons/play-icon.png'
-import paymentMethod from './icons/payment-method.svg'
-import paymentMethod1 from './icons/payment-method1.png'
-import PCCiIcon from './icons/pci-dss-certified.png'
+import SubscribeIcon from "./icons/subscribe-icon.png";
+import PlayIcon from "./icons/apple.png";
+import AppleIcon from "./icons/play-icon.png";
+import paymentMethod from "./icons/payment-method.svg";
+import paymentMethod1 from "./icons/payment-method1.png";
+import PCCiIcon from "./icons/pci-dss-certified.png";
 
+import Logo from "./logo/logo.png";
+import FooterLogo from "./logo/NameKart - Logo.png";
 
-import Logo from './logo/logo.png'
-import FooterLogo from './logo/NameKart - Logo.png'
+import Gallery1 from "./gallery/gallery-1.jpg";
+import Gallery2 from "./gallery/gallery-2.jpg";
+import Gallery3 from "./gallery/gallery-3.jpg";
+import Gallery4 from "./gallery/gallery-4.jpg";
+import Gallery5 from "./gallery/gallery-5.jpg";
 
-import Gallery1 from './gallery/gallery-1.jpg'
-import Gallery2 from './gallery/gallery-2.jpg'
-import Gallery3 from './gallery/gallery-3.jpg'
-import Gallery4 from './gallery/gallery-4.jpg'
-import Gallery5 from './gallery/gallery-5.jpg'
-
+import AboutusImg1 from "./about-us/about1.jpg";
+import AboutusImg2 from "./about-us/about2.jpg";
+import Advantage1 from "./about-us/advantages1.jpg";
+import Advantage2 from "./about-us/advantages2.jpg";
+import Advantage3 from "./about-us/advantages3.jpg";
+import Advantage4 from "./about-us/advantages4.jpg";
 
 export {
   bannerImage,
@@ -81,6 +86,14 @@ export {
   icon4,
   SubscribeIcon,
   PlayIcon,
-  AppleIcon, Logo, FooterLogo,
-  PCCiIcon
+  AppleIcon,
+  Logo,
+  FooterLogo,
+  PCCiIcon,
+  AboutusImg1,
+  AboutusImg2,
+  Advantage1,
+  Advantage2,
+  Advantage3,
+  Advantage4,
 };

@@ -6,7 +6,7 @@ import PaymentMethod from "./component/paymentMethod";
 import { useState } from "react";
 
 import { destinationData } from "./utils/data";
-import { DestinationCard, CallModal } from "./component";
+import { DestinationCard, CallModal, } from "./component";
 import {
   Product01,
   Product02,
