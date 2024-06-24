@@ -46,7 +46,7 @@ const Header = () => {
               
               <li className="nav-item">
                 <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/about-us">
-                  AboutUs
+                  About
                 </Link>
               </li>
               <li className="nav-item">
@@ -66,11 +66,11 @@ const Header = () => {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="nav-link pe-4" href="/about-us#HowToBook">
+              {/* <li className="nav-item">
+                <Link className="nav-link pe-4" href="/about-us#steps">
                   How To Book
                 </Link>
-              </li>
+              </li> */}
 
               <Link
                 href="tel:1888 5087143"
