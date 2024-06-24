@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import PaymentMethod from "./component/paymentMethod";
+{ /* import PaymentMethod from "./component/paymentMethod";  */}
 import { useState } from "react";
 
 import { destinationData } from "./utils/data";
@@ -381,7 +381,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <PaymentMethod />
+     {/*  <PaymentMethod /> */}
       </section>
 
       {/* call us modal */}
