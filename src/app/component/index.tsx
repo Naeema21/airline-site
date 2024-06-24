@@ -7,4 +7,6 @@ import RouteCard from "./routeCard";
 import NewsLetter from "./newsLetter";
 
 
-export { AutoSearch , CallModal ,DestinationCard, Dropdown, RecommendedCard, RouteCard, NewsLetter}
+
+
+export { AutoSearch , CallModal ,DestinationCard, Dropdown, RecommendedCard, RouteCard, NewsLetter ,}
