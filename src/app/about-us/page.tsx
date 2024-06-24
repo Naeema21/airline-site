@@ -37,7 +37,7 @@ As a leading cheap flight agency, we specialize in providing budget friendly opt
 from airplane reservations to comprehensive travel packages.
 
 Book flights online effortlessly with our user-friendly platform, designed to help you find and secure cheap flight tickets with ease.
-Whether you're searching for airline tickets for a domestic trip or cheap international flights, we have you covered. 
+Whether you are searching for airline tickets for a domestic trip or cheap international flights, we have you covered. 
 Our extensive network ensures you get the best deals on plane tickets, making travel accessible and affordable.
             </p>
           </div>
