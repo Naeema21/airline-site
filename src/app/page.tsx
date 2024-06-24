@@ -142,7 +142,7 @@ const Home = () => {
       </section>
 
       {/* destination section */}
-      <section className="destinations" id="holidays">
+      {/* <section className="destinations" id="holidays">
         <div className="container">
           <div className="row">
             <div className="col-12 mb-5">
@@ -164,7 +164,7 @@ const Home = () => {
                 <li className="nav-item" role="presentation">
                   <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Places of interest</button>
                 </li>
-              </ul> */}
+              </ul> 
               <div className="tab-content mt-3" id="pills-tab2Content">
                 <div
                   className="tab-pane fade show active"
@@ -186,7 +186,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <!-- wonderful experience --> */}
       <section className="experience">

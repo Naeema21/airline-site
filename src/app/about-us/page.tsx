@@ -8,6 +8,7 @@ import {
   Advantage3,
   Advantage4,
 } from "../utils/images";
+
 const About = () => {
   return (
     <>
@@ -94,15 +95,17 @@ const About = () => {
       </section>
 
       {/* Advantage section */}
-      <section className="py-5 step-container">
+      {/* <section className="py-5 step-container">
         <div className="container">
           <div className="d-flex justify-content-center align-items-center">
             <div className="flex-shrink-0">
               <div className="row">
                 <div className="col-12 text-center mb-4">
                   <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                  Advantages
+                    What Sets Us Apart
                   </h4>
+                  <p className="theme-text-accent-one pb-0 pb-md-3 font-weight-normal text-base max-w-440 text-start text-md-left">
+                    Maximize your travel experience with our outstanding advantages.</p>
                 </div>
               </div>
             </div>
@@ -221,11 +224,11 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* how to book */}
 
-      <section className="step-container py-4" id="HowToBook">
+      {/* <section className="step-container py-4" id="steps">
         <div className="container text-center">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -239,9 +242,6 @@ const About = () => {
             </div>
           </div>
           <div className="row g-4 relative">
-            {/* <svg className="svg-divider absolute" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
-            <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
-          </svg> */}
             <div className="col-12 col-lg-3 step-card">
               <div className="step-icon mx-auto">
                 <i className="bi bi-airplane text-white fs-1"></i>
@@ -276,7 +276,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

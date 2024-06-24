@@ -15,10 +15,11 @@ export async function GET(request) {
         const authResponse = await oauthClient.createToken(parseRedirect);
 
         oauthClient.token =  authResponse?.token?.access_token
-        console.log('authtoen', authResponse?.token?.realmId)
+        console.log('authtoen', authResponse)
 
+        
         const response = await oauthClient.makeApiCall({
-            url: `https://sandbox-quickbooks.api.intuit.com/v4/company/${authResponse?.token?.realmId}/query?query=select * from Payment&minorversion=40`,
+            url: `https://sandbox-quickbooks.api.intuit.com//quickbooks/v4/customers/${authResponse?.token?.realmId}/bank-accounts`,
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
