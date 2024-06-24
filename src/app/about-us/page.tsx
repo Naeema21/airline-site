@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <section className="pt-5 pt-lg-5 step-container">
-        <div className="pb-5 pb-md-4 mt-4 mb-4 ">
+        <div className="pb-md-4 mt-4 container">
           <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
             <div className="w-100 w-md-50 max-h-330 p-0 rounded overflow-hidden">
               <Image
@@ -27,10 +27,14 @@ const About = () => {
             </div>
             <div className="p-3 d-flex align-items-end align-items-xl-center justify-content-center flex-column w-100 w-md-50">
               <div>
-                <h2 className="text-black pb-3 text-3xl font-bold max-w-440 mx-auto text-center text-md-start">
-                  Welcome to ReservationKart.com{" "}
-                </h2>
-                <p className="text-dark p-0 font-normal text-base max-w-440 text-center text-md-start">
+                <div className="row">
+                  <div className="col-12 text-center mb-3">
+                    <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
+                      Welcome to ReservationKart.com !
+                    </h4>
+                  </div>
+                </div>
+                <p className="theme-text-accent-one p-0 font-normal text-base max-w-440 text-center text-md-start">
                   Welcome to reservationkart.com, your ultimate destination for
                   effortless and affordable travel solutions. As a leading cheap
                   flight agency, we specialize in providing budget friendly
@@ -48,20 +52,21 @@ const About = () => {
           </div>
         </div>
       </section>
-      <br></br>
+
       {/*sec 2 who we are  */}
-      <section className="pb-5 step-container">
-        <div className="pb-4 pb-md-5">
+      <section className="step-container">
+        <div className="py-4 container">
           <div className="d-flex flex-column flex-md-row mb-0 w-100 container-xl mx-auto gap-4">
             <div className="p-3 d-flex align-items-end align-items-xl-center justify-content-center flex-column w-100 w-md-50">
               <div>
-                <h2 className="text-black pb-3 pb-md-4 text-3xl font-weight-bold max-w-440 mx-auto text-center text-md-left">
-                  Looking for more than just flights
-                </h2>
-                <p className=" text-dark p-0 font-weight-normal text-base max-w-440 text-start text-md-left">
-                  Your Ultimate Travel Experience
-                </p>
-                <p className="text-dark pb-0 pb-md-3 font-weight-normal text-base max-w-440 text-start text-md-left">
+                <div className="row">
+                  <div className="col-12 text-center mb-3">
+                    <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
+                      Looking for more than just flights !
+                    </h4>
+                  </div>
+                </div>
+                <p className="theme-text-accent-one pb-0 pb-md-3 font-weight-normal text-base max-w-440 text-start text-md-left">
                   We offer a complete traveler agency experience with services
                   that include cab bookings and hotel reservations. Plan your
                   entire journey in one place, saving you time and money.
@@ -73,7 +78,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="w-100 w-md-50 max-h-330px p-0 rounded overflow-hidden">
+            <div className="w-100 w-md-50 mh-350  p-0 rounded overflow-hidden">
               <Image
                 src={AboutusImg2}
                 alt="who we are"
@@ -89,19 +94,23 @@ const About = () => {
       </section>
 
       {/* Advantage section */}
-      <section className="pb-5 step-container">
-        <div className="container mx-auto xl:max-w-920px px-3">
+      <section className="py-5 step-container">
+        <div className="container">
           <div className="d-flex justify-content-center align-items-center">
             <div className="flex-shrink-0">
-              <div className="text-center pb-3 pb-md-5">
-                <h2 className=" text-black font-weight-bold">Advantages</h2>
+              <div className="row">
+                <div className="col-12 text-center mb-4">
+                  <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
+                  Advantages
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
           <div className="row justify-content-center px-3 mx-auto">
             <div className="col-12 col-lg-6 pb-3 px-3">
               <div className="d-flex flex-column">
-                <div className="w-100 h-auto max-h-220px flex-shrink-0 rounded overflow-hidden">
+                <div className="w-100 h-auto  flex-shrink-0 rounded overflow-hidden">
                   <Image
                     src={Advantage1}
                     alt="advantages-1"
@@ -113,10 +122,10 @@ const About = () => {
                   />
                 </div>
                 <div className="mt-3 mt-lg-4 d-flex flex-column">
-                  <h3 className="text-black h5 font-weight-bold">
+                  <h3 className="text-yellow fs-4 fw-bold">
                     Excellence in Operation
                   </h3>
-                  <p className="text-dark text-sm font-normal mt-2 mt-lg-3">
+                  <p className="theme-text-accent-one text-sm font-normal mt-2 mt-lg-3">
                     We take immense pride in the expertise and dedication of our
                     team. Each member of our sales floor boasts an average
                     experience of 8 years in the travel industry. This means you
@@ -141,10 +150,10 @@ const About = () => {
                   />
                 </div>
                 <div className="mt-3 mt-lg-4 d-flex flex-column">
-                  <h3 className="text-black h5 font-weight-bold">
+                  <h3 className="text-yellow fs-4 fw-bold">
                     Transparency and Professionalism
                   </h3>
-                  <p className="text-dark text-sm font-normal mt-2 mt-lg-3">
+                  <p className="theme-text-accent-one text-sm font-normal mt-2 mt-lg-3">
                     Building trust and lasting client relationships are
                     paramount. We prioritize transparency and professionalism,
                     ensuring clear and accurate information in your travel
@@ -168,10 +177,10 @@ const About = () => {
                   />
                 </div>
                 <div className="mt-3 mt-lg-4 d-flex flex-column">
-                  <h3 className=" h5 text-black font-weight-bold">
+                  <h3 className=" text-yellow fs-4 fw-bold">
                     Start Your Journey
                   </h3>
-                  <p className="text-dark text-sm font-normal mt-2 mt-lg-3">
+                  <p className="theme-text-accent-one text-sm font-normal mt-2 mt-lg-3">
                     Join us on an extraordinary travel experience with
                     ReservationKart.com, where every journey is meticulously
                     crafted to create lasting memories. Our team of passionate
@@ -196,10 +205,10 @@ const About = () => {
                   />
                 </div>
                 <div className="mt-3 mt-lg-4 d-flex flex-column">
-                  <h3 className="text-black h5 font-weight-bold">
+                  <h3 className="text-yellow fs-4 fw-bold">
                     Service Commitment
                   </h3>
-                  <p className="text-dark text-sm font-normal mt-2 mt-lg-3">
+                  <p className="theme-text-accent-one text-sm font-normal mt-2 mt-lg-3">
                     At ReservationKart.com, our primary focus is on delivering
                     exceptional service to our clients. We strive to exceed your
                     expectations by creating personalized journeys filled with
@@ -216,7 +225,7 @@ const About = () => {
 
       {/* how to book */}
 
-      <section className="step-container" id="HowToBook">
+      <section className="step-container py-4" id="HowToBook">
         <div className="container text-center">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -237,7 +246,7 @@ const About = () => {
               <div className="step-icon mx-auto">
                 <i className="bi bi-airplane text-white fs-1"></i>
               </div>
-              <h3 className="text-black mt-2">Step 1</h3>
+              <h3 className="theme-text-primary fs-5 fw-bold mt-2">Step 1</h3>
               <p className="step-text">
                 Enter your flight details and click search
               </p>
@@ -246,14 +255,14 @@ const About = () => {
               <div className="step-icon mx-auto">
                 <i className="bi bi-person-lines-fill text-white fs-1"></i>
               </div>
-              <h3 className="text-black mt-2">Step 2</h3>
+              <h3 className="theme-text-primary fs-5 fw-bold mt-2">Step 2</h3>
               <p className="step-text">Fill your contact information</p>
             </div>
             <div className="col-12 col-lg-3 step-card">
               <div className="step-icon mx-auto">
                 <i className="bi bi-headset text-white fs-1"></i>
               </div>
-              <h3 className="text-black mt-2">Step 3</h3>
+              <h3 className="theme-text-primary fs-5 fw-bold mt-2">Step 3</h3>
               <p className="step-text">
                 Your personal travel advisor will contact you momentarily
               </p>
@@ -262,7 +271,7 @@ const About = () => {
               <div className="step-icon mx-auto">
                 <i className="bi bi-ticket-perforated text-white fs-1"></i>
               </div>
-              <h3 className="text-black mt-2">Step 4</h3>
+              <h3 className="theme-text-primary fs-5 fw-bold mt-2">Step 4</h3>
               <p className="step-text">Get your tickets and enjoy your trip</p>
             </div>
           </div>
