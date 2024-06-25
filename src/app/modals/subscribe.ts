@@ -10,6 +10,32 @@ const subscribe = new Schema(
   { timestamps: true }
 );
 
-const subscribeModal = mongoose.models.subscribe || mongoose.model("subscribe", subscribe);
+const subscribeModal =
+  mongoose.models.subscribe || mongoose.model("subscribe", subscribe);
 
-export default subscribeModal;
+const Contact = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    phone: {
+      type: String,
+      required: true,
+    },
+    message: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
+
+const contactModal =
+  mongoose.models.contact || mongoose.model("contact", Contact);
+
+export { subscribeModal, contactModal };

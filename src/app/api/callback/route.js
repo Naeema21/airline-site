@@ -18,15 +18,20 @@ export async function GET(request) {
         console.log('authtoen', authResponse)
 
         
-        const response = await oauthClient.makeApiCall({
-            url: `https://sandbox-quickbooks.api.intuit.com//quickbooks/v4/customers/${authResponse?.token?.realmId}/bank-accounts`,
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        // const response = await oauthClient.makeApiCall({
+        //     url: `https://sandbox-quickbooks.api.intuit.com//quickbooks/v4/customers/${authResponse?.token?.realmId}/bank-accounts`,
+        //     method: 'GET',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // });
+        // return NextResponse.redirect(authUri);
 
-        return NextResponse.json(response, { status: 200 });
+
+        // return NextResponse.json(authResponse, { status: 200 });
+        const baseUrl = 'https://sandbox.api.intuit.com'
+
+        return NextResponse.redirect(`${baseUrl}/about-us`);
 
     } catch (e) {
         return NextResponse.json({ error: `Authentication failed: ${e.message}` }, { status: 500 });
