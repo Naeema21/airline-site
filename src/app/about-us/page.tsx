@@ -178,7 +178,7 @@ const About = () => {
                     height={160}
                     className="w-100 h-100 object-cover"
                   />
-                </div>
+                </div>    
                 <div className="mt-3 mt-lg-4 d-flex flex-column">
                   <h3 className=" text-yellow fs-4 fw-bold">
                     Start Your Journey
@@ -224,7 +224,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section> 
 
       {/* how to book */}
 
