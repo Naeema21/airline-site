@@ -76,8 +76,10 @@ const Home = () => {
         </div>
       </section> */}
 
+
+
       {/* <!-- special offers section --> */}
-      <section className="special-offers" id="offers">
+     {/*  <section className="special-offers" id="offers">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -139,7 +141,11 @@ const Home = () => {
           </div>
 
         </div>
-      </section>
+      </section>    */}
+
+      {/* About Us */}
+       
+       
 
       {/* destination section */}
       {/* <section className="destinations" id="holidays">
