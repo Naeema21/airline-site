@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-{ /* import PaymentMethod from "./component/paymentMethod";  */}
-import { useState } from "react";
+import PaymentMethod from "./component/paymentMethod";
+import { useEffect, useState } from "react";
 
 import { destinationData } from "./utils/data";
 import { DestinationCard, CallModal, } from "./component";
@@ -39,13 +39,8 @@ const Home = () => {
                   <h1 className="display-1 mb-2 theme-text-white theme-text-shadow">
                     Your dream travel just <br /> a phone call away!
                   </h1>
-                  <p className="mb-0 theme-text-white">
-                    Travel has always proven to be the ultimate cure. Even if
-                    not pursued with fervor,
-                    <br />
-                    unfamiliar destinations consistently offer the tranquility
-                    you have been seeking.
-                  </p>
+                  <p className="mb-0 theme-text-white">Travel has always proven to be the ultimate cure. Even if not pursued with fervor,<br />
+                    unfamiliar destinations consistently offer the tranquility you have been seeking.</p>
 
                   <button
                     type="submit"
@@ -54,14 +49,14 @@ const Home = () => {
                   >
                     <span className="fw-bold"> Call Us Now</span>
                   </button>
-                </div>
-              </div>
+                </div >
+              </div >
               {/* <SearchEngine handleToggle={handleToggle} /> */}
-            </div>
-          </div>
-        </div>
+            </div >
+          </div >
+        </div >
         {/*   <NewsLetter  /> */}
-      </div>
+      </div >
 
       {/* <!-- recommended section --> */}
       {/* <section className="recommended" id="deals">
@@ -147,7 +142,7 @@ const Home = () => {
       </section>
 
       {/* destination section */}
-      <section className="destinations" id="holidays">
+      {/* <section className="destinations" id="holidays">
         <div className="container">
           <div className="row">
             <div className="col-12 mb-5">
@@ -169,7 +164,7 @@ const Home = () => {
                 <li className="nav-item" role="presentation">
                   <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Places of interest</button>
                 </li>
-              </ul> */}
+              </ul> 
               <div className="tab-content mt-3" id="pills-tab2Content">
                 <div
                   className="tab-pane fade show active"
@@ -191,7 +186,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <!-- wonderful experience --> */}
       <section className="experience">
@@ -282,7 +277,7 @@ const Home = () => {
       </section> */}
 
       {/* How to book 
-      <section className=" step-container">
+      <section className=" step-container" id='howTobook'>
         <div className="container text-center">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -387,7 +382,7 @@ const Home = () => {
 
       {/* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
-    </main>
+    </main >
   );
 };
 

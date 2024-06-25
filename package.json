@@ -12,6 +12,7 @@
     "@next/third-parties": "^14.2.3",
     "bootstrap": "^5.3.3",
     "formik": "^2.4.6",
+    "intuit-oauth": "^4.1.2",
     "js-cookie": "^3.0.5",
     "mongoose": "^8.4.1",
     "next": "14.2.3",
