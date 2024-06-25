@@ -1,12 +1,12 @@
 import { connectMongoDB } from "@/app/lib/connect";
-import { subscribeModal } from "@/app/modals/subscribe";
+import { contactModal } from "@/app/modals/subscribe";
 import { NextResponse } from "next/server";
 
 export const POST = async (request: Request) => {
   try {
     const res = await request.json();
     await connectMongoDB();
-    await subscribeModal.create(res);
+    await contactModal.create(res);
     return NextResponse.json({
       message: `Thank You for contacting!`,
       status: 201,
