@@ -7,8 +7,8 @@ const Contact = () => {
       <div className="container">
         <div className="row justify-content-md-center">
           <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-            <h2 className="mb-4 display-5 text-center fw-semibold">Contact</h2>
-            <p className="text-secondary mb-4 text-center">
+          <h4 className="fs-2 fw-bold theme-text-secondary mb-2 text-center">Contact</h4>
+           <p className="mb-0 theme-text-accent-one">
               The best way to contact us is to use our contact form below.
               Please fill out all of the required fields and we will get back to
               you as soon as possible.
@@ -19,7 +19,7 @@ const Contact = () => {
 
       <div className="container">
         <div className="row justify-content-lg-center">
-          <div className="col-12 col-lg-9">
+          <div className="col-12 col-lg-9 mt-2">
             <div className="bg-white border rounded shadow-sm overflow-hidden">
               <form action="#!">
                 <div className="row gy-4 gy-xl-5 p-4 p-xl-5">
@@ -35,7 +35,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-6 mt-2">
                     <label htmlFor="email" className="form-label">
                       Email <span className="text-danger">*</span>
                     </label>
@@ -61,7 +61,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-6 mt-2">
                     <label htmlFor="phone" className="form-label">
                       Phone Number <span className="text-danger">*</span>
                     </label>
@@ -86,7 +86,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-12">
+                  <div className="col-12 mt-2">
                     <label htmlFor="message" className="form-label">
                       Message <span className="text-danger">*</span>
                     </label>
@@ -97,15 +97,9 @@ const Contact = () => {
                       required
                     ></textarea>
                   </div>
-                  <div className="form-group form-check">
-    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-  </div>
-                  <div className="col-12">
+                  <div className="col-12 mt-2">
                     <div className="d-grid">
-                      <button className="btn btn-primary btn-lg" type="submit">
-                        Submit
-                      </button>
+                    <button type="submit" className="btn btn-search mt-4 mb-6"><span className="fw-bold"> Submit</span></button>
                     </div>
                   </div>
                 </div>
