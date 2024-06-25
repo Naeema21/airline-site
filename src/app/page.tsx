@@ -32,8 +32,12 @@ const Home = () => {
         <div className="head-wrapper">
           <div
             className="search-engine"
-            style={{ backgroundImage: `url(${bannerImage1.src})` }}
+          // style={{ backgroundImage: `url(${bannerImage1.src})` }}
           >
+            <video autoPlay loop muted >
+              <source src="/airline.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div className="container">
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
@@ -80,7 +84,7 @@ const Home = () => {
 
 
       {/* <!-- special offers section --> */}
-     {/*  <section className="special-offers" id="offers">
+      {/*  <section className="special-offers" id="offers">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -143,50 +147,50 @@ const Home = () => {
 
         </div>
       </section>    */}
-{/* About Us */}
-<section className="py-5 mt-4 mb-4 step-container">
-  <div className="container pb-4">
-    <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
-      <div className="p-3 d-flex align-items-center justify-content-center flex-column w-100 w-md-50">
-        <div>
-          <div className="row">
-            <div className="col-12 text-center mb-3">
-              <h4 className="fs-2 fw-bold text-primary mb-0">
-                Welcome to ReservationKart.com!
-              </h4>
+      {/* About Us */}
+      <section className="py-5 mt-4 mb-4 step-container">
+        <div className="container pb-4">
+          <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
+            <div className="p-3 d-flex align-items-center justify-content-center flex-column w-100 w-md-50">
+              <div>
+                <div className="row">
+                  <div className="col-12 text-center mb-3">
+                    <h4 className="fs-2 fw-bold text-primary mb-0">
+                      Welcome to ReservationKart.com!
+                    </h4>
+                  </div>
+                </div>
+                <p className="text-muted font-normal text-base text-center text-md-start mb-4">
+                  Welcome to ReservationKart.com, your ultimate destination for
+                  effortless and affordable travel solutions. As a leading cheap
+                  flight agency, we specialize in providing budget-friendly options
+                  for all your travel needs, from airplane reservations to
+                  comprehensive travel packages. Book flights online effortlessly
+                  with our user-friendly platform, designed to help you find and
+                  secure cheap flight tickets with ease. Whether you are searching for
+                  airline tickets for a domestic trip or cheap international flights,
+                  we have you covered. Our extensive network ensures you get the best
+                  deals on plane tickets, making travel accessible and affordable.
+                </p>
+              </div>
+            </div>
+            <div className="w-100 w-md-50 max-h-330 p-0 rounded overflow-hidden">
+              <Image
+                src={AboutusImg1}
+                alt="About image"
+                title="About"
+                layout="responsive"
+                width={500}
+                height={300}
+                className="h-100 w-100 object-cover"
+              />
             </div>
           </div>
-          <p className="text-muted font-normal text-base text-center text-md-start mb-4">
-            Welcome to ReservationKart.com, your ultimate destination for
-            effortless and affordable travel solutions. As a leading cheap
-            flight agency, we specialize in providing budget-friendly options
-            for all your travel needs, from airplane reservations to
-            comprehensive travel packages. Book flights online effortlessly
-            with our user-friendly platform, designed to help you find and
-            secure cheap flight tickets with ease. Whether you are searching for
-            airline tickets for a domestic trip or cheap international flights,
-            we have you covered. Our extensive network ensures you get the best
-            deals on plane tickets, making travel accessible and affordable.
-          </p>
         </div>
-      </div>
-      <div className="w-100 w-md-50 max-h-330 p-0 rounded overflow-hidden">
-        <Image
-          src={AboutusImg1}
-          alt="About image"
-          title="About"
-          layout="responsive"
-          width={500}
-          height={300}
-          className="h-100 w-100 object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
-       
+
 
       {/* destination section */}
       {/* <section className="destinations" id="holidays">
@@ -236,7 +240,7 @@ const Home = () => {
       </section> */}
 
       {/* <!-- wonderful experience --> */}
-     {/*  <section className="experience">
+      {/*  <section className="experience">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -294,7 +298,7 @@ const Home = () => {
       </section>  */}
 
       {/* Why Choose Us */}
-      
+
 
       {/* <!-- popular routes section --> */}
       {/* <section className="popular-routes">
@@ -341,7 +345,7 @@ const Home = () => {
             {/* <svg className="svg-divider absolute" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
             <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
           </svg> */}
-        {/*}    <div className="col-12 col-lg-3 step-card">
+      {/*}    <div className="col-12 col-lg-3 step-card">
               <div className="step-icon mx-auto">
                 <i className="bi bi-airplane text-white fs-1"></i>
               </div>
@@ -372,7 +376,7 @@ const Home = () => {
           </div>
         </div>
       </section>  */}
-      
+
 
 
       {/* Gallery */}
@@ -427,7 +431,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-     {/*  <PaymentMethod /> */}
+        {/*  <PaymentMethod /> */}
       </section>
 
       {/* call us modal */}
