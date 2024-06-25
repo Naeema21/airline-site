@@ -38,7 +38,6 @@ const SearchEngine: React.FC<SearchEngineProps> = ({ handleToggle }) => {
 
     const { values, handleChange, errors, touched, handleSubmit, setFieldValue, isSubmitting } = formik;
 
-    console.log(values, errors)
     return (
         <form className="row mt-0 mt-lg-4 justify-content-center" onSubmit={handleSubmit}>
             <div className={`col-12 ${isSearch ? 'col-lg-12' : 'col-lg-11'} mb-5 text-center position-relative`}>
