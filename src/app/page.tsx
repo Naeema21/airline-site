@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 import { destinationData } from "./utils/data";
 import { DestinationCard, CallModal, } from "./component";
+import { AboutusImg1 } from "./utils/images";
 import {
   Product01,
   Product02,
@@ -142,9 +143,49 @@ const Home = () => {
 
         </div>
       </section>    */}
+{/* About Us */}
+<section className="py-5 mt-4 mb-4 step-container">
+  <div className="container pb-4">
+    <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
+      <div className="p-3 d-flex align-items-center justify-content-center flex-column w-100 w-md-50">
+        <div>
+          <div className="row">
+            <div className="col-12 text-center mb-3">
+              <h4 className="fs-2 fw-bold text-primary mb-0">
+                Welcome to ReservationKart.com!
+              </h4>
+            </div>
+          </div>
+          <p className="text-muted font-normal text-base text-center text-md-start mb-4">
+            Welcome to ReservationKart.com, your ultimate destination for
+            effortless and affordable travel solutions. As a leading cheap
+            flight agency, we specialize in providing budget-friendly options
+            for all your travel needs, from airplane reservations to
+            comprehensive travel packages. Book flights online effortlessly
+            with our user-friendly platform, designed to help you find and
+            secure cheap flight tickets with ease. Whether you are searching for
+            airline tickets for a domestic trip or cheap international flights,
+            we have you covered. Our extensive network ensures you get the best
+            deals on plane tickets, making travel accessible and affordable.
+          </p>
+        </div>
+      </div>
+      <div className="w-100 w-md-50 max-h-330 p-0 rounded overflow-hidden">
+        <Image
+          src={AboutusImg1}
+          alt="About image"
+          title="About"
+          layout="responsive"
+          width={500}
+          height={300}
+          className="h-100 w-100 object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* About Us */}
-       
+
        
 
       {/* destination section */}
@@ -195,7 +236,7 @@ const Home = () => {
       </section> */}
 
       {/* <!-- wonderful experience --> */}
-      <section className="experience">
+     {/*  <section className="experience">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -248,9 +289,12 @@ const Home = () => {
                 <p className="fs-4 mb-0 theme-text-accent-one">Ratings</p>
               </div>
             </div>
-          </div> */}
+          </div> 
         </div>
-      </section>
+      </section>  */}
+
+      {/* Why Choose Us */}
+      
 
       {/* <!-- popular routes section --> */}
       {/* <section className="popular-routes">
