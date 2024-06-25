@@ -44,8 +44,8 @@ const Header = () => {
             <ul className="navbar-nav me-auto page-menu" id="nav"></ul>
             <ul className="navbar-nav page-menu mb-3 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/about-us">
-                  AboutUs
+                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/home">
+                  Home
                 </Link>
               </li>
               <li className="nav-item">
@@ -59,15 +59,14 @@ const Header = () => {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="nav-link pe-4" href="/#gallery">
-                  Gallery
-                </Link>
-              </li>
-
-              <li className="nav-item">
+           {/*  <li className="nav-item">
                 <Link className="nav-link pe-4" href="/about-us#HowToBook">
                   How To Book
+                </Link>
+              </li>  */}
+              <li className="nav-item">
+                <Link className="nav-link pe-4" href="/contact">
+                  Contact
                 </Link>
               </li>
 

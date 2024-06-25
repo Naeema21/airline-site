@@ -112,7 +112,7 @@ const About = () => {
                     className="w-100 h-100 object-cover"
                   />
                 </div>
-                <div className="mt-3 mt-lg-4 d-flex flex-column">
+             {/*  <div className="mt-3 mt-lg-4 d-flex flex-column">
                   <h3 className="text-black h5 font-weight-bold">
                     Excellence in Operation
                   </h3>
@@ -139,8 +139,8 @@ const About = () => {
                     height={160}
                     className="w-100 h-100 object-cover"
                   />
-                </div>
-                <div className="mt-3 mt-lg-4 d-flex flex-column">
+                </div>  */}
+              {/*  <div className="mt-3 mt-lg-4 d-flex flex-column">
                   <h3 className="text-black h5 font-weight-bold">
                     Transparency and Professionalism
                   </h3>
@@ -166,7 +166,7 @@ const About = () => {
                     height={160}
                     className="w-100 h-100 object-cover"
                   />
-                </div>
+                </div>    */}
                 <div className="mt-3 mt-lg-4 d-flex flex-column">
                   <h3 className=" h5 text-black font-weight-bold">
                     Start Your Journey
@@ -214,60 +214,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* how to book */}
-
-      <section className="step-container" id="HowToBook">
-        <div className="container text-center">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                How To Book
-              </h4>
-              <p className="mb-0 theme-text-accent-one">
-                Quick and easy airline ticket reservations for stress-free
-                travel planning.
-              </p>
-            </div>
-          </div>
-          <div className="row g-4 relative">
-            {/* <svg className="svg-divider absolute" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
-            <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
-          </svg> */}
-            <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-airplane text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 1</h3>
-              <p className="step-text">
-                Enter your flight details and click search
-              </p>
-            </div>
-            <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-person-lines-fill text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 2</h3>
-              <p className="step-text">Fill your contact information</p>
-            </div>
-            <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-headset text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 3</h3>
-              <p className="step-text">
-                Your personal travel advisor will contact you momentarily
-              </p>
-            </div>
-            <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-ticket-perforated text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 4</h3>
-              <p className="step-text">Get your tickets and enjoy your trip</p>
-            </div>
-          </div>
-        </div>
-      </section>
+     
     </>
   );
 };
