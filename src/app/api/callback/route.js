@@ -1,12 +1,14 @@
 import OAuthClient from 'intuit-oauth';
 import { NextResponse } from 'next/server';
+import { clientId, clientSecret, environment,redirectUri } from '@/app/utils/constant';
 
-export async function GET(request) {
+
+export async function GET(request,) {
     var oauthClient = new OAuthClient({
-        clientId: 'ABgo4bZ5j1alO9VivmPZzgyjchFFqjTIXB8flhQJ2wi084GEe6',
-        clientSecret: 'FUgeFTroJOuXrj3z2C990XA1x7QwR2ubiOdnMm5I',
-        environment: "sandbox", // or 'production'
-        redirectUri: 'http://localhost:3000/api/callback',
+        clientId,
+        clientSecret,
+        environment,
+        redirectUri,
     });
 
     const parseRedirect = request.url;
@@ -28,10 +30,10 @@ export async function GET(request) {
         // return NextResponse.redirect(authUri);
 
 
-        // return NextResponse.json(authResponse, { status: 200 });
-        const baseUrl = 'https://sandbox.api.intuit.com'
+        return NextResponse.json(authResponse, { status: 200 });
+        // const baseUrl = 'https://sandbox.api.intuit.com'
 
-        return NextResponse.redirect(`${baseUrl}/about-us`);
+        // return NextResponse.redirect(`${baseUrl}/about-us`);
 
     } catch (e) {
         return NextResponse.json({ error: `Authentication failed: ${e.message}` }, { status: 500 });
