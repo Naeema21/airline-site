@@ -1,14 +1,46 @@
 // components/Contact.js
+'use client'
 import React from "react";
+import { useFormik } from "formik";
+import { contactInitialValues } from "../utils/data";
+import { contactValidationSchema } from "../utils/schema";
+
 
 const Contact = () => {
+
+  const formik = useFormik({
+    initialValues: contactInitialValues,
+    validationSchema: contactValidationSchema,
+    onSubmit: async (values, { setSubmitting }) => {
+      try {
+        setSubmitting(true)
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+        const result = await response.json();
+        console.log(result)
+        setSubmitting(false)
+      }
+      catch (error) {
+        console.log(error)
+        setSubmitting(false)
+      }
+    },
+  });
+
+  const { handleChange, errors, handleSubmit,  isSubmitting } = formik;
+
   return (
     <section className="bg-light py-3 py-md-5">
       <div className="container">
         <div className="row justify-content-md-center">
           <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h4 className="fs-2 fw-bold theme-text-secondary mb-2 text-center">Contact</h4>
-           <p className="mb-0 theme-text-accent-one">
+            <h4 className="fs-2 fw-bold theme-text-secondary mb-2 text-center">Contact</h4>
+            <p className="mb-0 theme-text-accent-one">
               The best way to contact us is to use our contact form below.
               Please fill out all of the required fields and we will get back to
               you as soon as possible.
@@ -21,19 +53,21 @@ const Contact = () => {
         <div className="row justify-content-lg-center">
           <div className="col-12 col-lg-9 mt-2">
             <div className="bg-white border rounded shadow-sm overflow-hidden">
-              <form action="#!">
+              <form onSubmit={handleSubmit}>
                 <div className="row gy-4 gy-xl-5 p-4 p-xl-5">
                   <div className="col-12">
-                    <label htmlFor="fullname" className="form-label">
+                    <label htmlFor="name" className="form-label">
                       Full Name <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
                       className="form-control"
-                      id="fullname"
-                      name="fullname"
-                      required
+                      id="name"
+                      name="name"
+                      onChange={handleChange}
                     />
+                    {errors.name && <span className="text-danger error">{errors.name}</span>}
+
                   </div>
                   <div className="col-12 col-md-6 mt-2">
                     <label htmlFor="email" className="form-label">
@@ -57,9 +91,10 @@ const Contact = () => {
                         className="form-control"
                         id="email"
                         name="email"
-                        required
+                        onChange={handleChange}
                       />
                     </div>
+                    {errors.email && <span className="text-danger error">{errors.email}</span>}
                   </div>
                   <div className="col-12 col-md-6 mt-2">
                     <label htmlFor="phone" className="form-label">
@@ -83,8 +118,11 @@ const Contact = () => {
                         className="form-control"
                         id="phone"
                         name="phone"
+                        onChange={handleChange}
                       />
                     </div>
+                    {errors.phone && <span className="text-danger error">{errors.phone}</span>}
+
                   </div>
                   <div className="col-12 mt-2">
                     <label htmlFor="message" className="form-label">
@@ -94,12 +132,16 @@ const Contact = () => {
                       className="form-control"
                       id="message"
                       name="message"
-                      required
+                      onChange={handleChange}
                     ></textarea>
+                    {errors.message && <span className="text-danger error">{errors.message}</span>}
+
                   </div>
                   <div className="col-12 mt-2">
                     <div className="d-grid">
-                    <button type="submit" className="btn btn-search mt-4 mb-6"><span className="fw-bold"> Submit</span></button>
+                      <button type="submit" className="btn btn-search mt-4 mb-6" disabled={isSubmitting}>
+                        <span className="fw-bold"> Submit</span>
+                      </button>
                     </div>
                   </div>
                 </div>

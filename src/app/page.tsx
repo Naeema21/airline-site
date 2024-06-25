@@ -31,8 +31,12 @@ const Home = () => {
         <div className="head-wrapper">
           <div
             className="search-engine"
-            style={{ backgroundImage: `url(${bannerImage1.src})` }}
+            // style={{ backgroundImage: `url(${bannerImage1.src})` }}
           >
+            <video autoPlay loop muted >
+              <source src="/airline.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div className="container">
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
@@ -79,7 +83,7 @@ const Home = () => {
 
 
       {/* <!-- special offers section --> */}
-     {/*  <section className="special-offers" id="offers">
+      {/*  <section className="special-offers" id="offers">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -144,8 +148,8 @@ const Home = () => {
       </section>    */}
 
       {/* About Us */}
-       
-       
+
+
 
       {/* destination section */}
       {/* <section className="destinations" id="holidays">
@@ -297,7 +301,7 @@ const Home = () => {
             {/* <svg className="svg-divider absolute" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
             <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
           </svg> */}
-        {/*}    <div className="col-12 col-lg-3 step-card">
+      {/*}    <div className="col-12 col-lg-3 step-card">
               <div className="step-icon mx-auto">
                 <i className="bi bi-airplane text-white fs-1"></i>
               </div>
@@ -328,7 +332,7 @@ const Home = () => {
           </div>
         </div>
       </section>  */}
-      
+
 
 
       {/* Gallery */}
@@ -383,7 +387,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-     {/*  <PaymentMethod /> */}
+        {/*  <PaymentMethod /> */}
       </section>
 
       {/* call us modal */}
