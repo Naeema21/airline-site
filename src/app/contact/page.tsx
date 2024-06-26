@@ -2,11 +2,13 @@
 'use client'
 import React from "react";
 import { useFormik } from "formik";
+import { useRouter } from "next/navigation";
 import { contactInitialValues } from "../utils/data";
 import { contactValidationSchema } from "../utils/schema";
 
 
 const Contact = () => {
+  const router = useRouter()
 
   const formik = useFormik({
     initialValues: contactInitialValues,
@@ -22,7 +24,12 @@ const Contact = () => {
           body: JSON.stringify(values),
         });
         const result = await response.json();
-        console.log(result)
+
+        if (result.status == 201) {
+          router.push('/thank-you')
+        } else {
+          alert('Something wrong! Please try Again!')
+        }
         setSubmitting(false)
       }
       catch (error) {
@@ -32,7 +39,7 @@ const Contact = () => {
     },
   });
 
-  const { handleChange, errors, handleSubmit,  isSubmitting } = formik;
+  const { handleChange, errors, handleSubmit, isSubmitting } = formik;
 
   return (
     <section className="bg-light py-3 py-md-5">

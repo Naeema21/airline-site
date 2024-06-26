@@ -2,6 +2,7 @@ import bannerImage from "./section/banner-image.png";
 import bannerImage1 from "./banner_image.jpg";
 import Product01 from "./section/product-banner01.png";
 import Product02 from "./section/product-banner02.png";
+import PopupBg from './section/popup-bg.png'
 
 import recommended1 from "./recommended/offers01.png";
 import recommended2 from "./recommended/offers02.png";
@@ -21,7 +22,7 @@ import destination10 from "./destinations/destination10.jpg";
 import destination11 from "./destinations/destination11.jpg";
 import destination12 from "./destinations/destination12.jpg";
 
-import experienceBg from "./section/bg-picture.jpg";
+import experienceBg from "./section/bg-picture1.jpg";
 
 import icon1 from "./icons/1.png";
 import icon2 from "./icons/2.png";
@@ -34,6 +35,10 @@ import AppleIcon from "./icons/play-icon.png";
 import paymentMethod from "./icons/payment-method.svg";
 import paymentMethod1 from "./icons/payment-method1.png";
 import PCCiIcon from "./icons/pci-dss-certified.png";
+import EasyImg from './icons/easy-booking.svg'
+import LowestImg from './icons/lowest-booking.svg'
+import ExcImg from './icons/exc-deal.svg'
+import Support from './icons/support.svg'
 
 import Logo from "./logo/logo.png";
 import FooterLogo from "./logo/NameKart - Logo.png";
@@ -50,6 +55,10 @@ import Advantage1 from "./about-us/advantages1.jpg";
 import Advantage2 from "./about-us/advantages2.jpg";
 import Advantage3 from "./about-us/advantages3.jpg";
 import Advantage4 from "./about-us/advantages4.jpg";
+
+
+
+
 
 export {
   bannerImage,
@@ -96,4 +105,9 @@ export {
   Advantage2,
   Advantage3,
   Advantage4,
+  PopupBg,
+  EasyImg,
+  LowestImg,
+  ExcImg,
+  Support,
 };

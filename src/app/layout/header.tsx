@@ -2,8 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { FooterLogo, Logo } from "../utils/images";
-import PCCiIcon from "../utils/images/icons/pci-dss-certified.png";
+import { FooterLogo, Logo, PCCiIcon } from "../utils/images";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -43,34 +42,30 @@ const Header = () => {
           >
             <ul className="navbar-nav me-auto page-menu" id="nav"></ul>
             <ul className="navbar-nav page-menu mb-3 mb-lg-0">
-              
+
               <li className="nav-item">
-                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/home">
+                <Link className="nav-link pe-4 ps-0 ps-lg-5" href="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pe-4 " href="/#deals">
-                  Deals
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link pe-4" href="/#offers">
-                  Offers
+                <Link className="nav-link pe-4 " href="/about-us">
+                  About
                 </Link>
               </li>
 
-            {/* <li className="nav-item">
-                <Link className="nav-link pe-4" href="/about-us#HowToBook">
-                  
-                </Link>  
-              </li>  */}
 
               <li className="nav-item">
-                <Link className="nav-link pe-4" href="/gallery">
+                <Link className="nav-link pe-4" href="/#gallery">
                   Gallery
                 </Link>
-              </li> 
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link pe-4" href="/contact">
+                  Contact
+                </Link>
+              </li>
 
               <Link
                 href="tel:1888 5087143"
