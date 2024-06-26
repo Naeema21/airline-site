@@ -160,3 +160,10 @@ export const searchOption = [
   "Los Angeles",
   "Chicago",
 ];
+
+export const contactInitialValues ={
+ name:'',
+ email:'',
+ phone:'',
+ message:''
+}
