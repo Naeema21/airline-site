@@ -16,8 +16,8 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow }) => {
       <div className={`modal fade ${show ? 'show d-block' : ''}`} id="exampleModalCenter"
         tabIndex={-1} role="dialog" aria-labelledby="flight booking"
         aria-hidden={!show} style={{ display: show ? 'block' : 'none', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content" style={{ borderRadius: '10px' }}>
+        <div className="modal-dialog modal-dialog-centered " role="document">
+          <div className="modal-content popup" style={{ borderRadius: '10px' }}>
             <div className="modal-header justify-content-end border-0 p-0">
               <button type="button" className="closeButton mx-2" onClick={handleClose}>
                 <span aria-hidden="true" style={{ fontSize: '1.5rem' }}>&times;</span>

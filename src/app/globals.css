@@ -1195,7 +1195,12 @@ button.btn {
   margin-left: 5px;
 }
 
-
+.thankyou{
+  color: #2290a6;
+}
+.popup{
+  background-image: url('./utils/images/logo/popup.png');
+}
 /* About 
 .bg-color{
     background-color: gainsboro;
