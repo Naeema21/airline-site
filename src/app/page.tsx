@@ -36,7 +36,7 @@ const Home = () => {
         <div className="head-wrapper">
           <div
             className="search-engine"
-            // style={{ backgroundImage: `url(${bannerImage1.src})` }}
+          // style={{ backgroundImage: `url(${bannerImage1.src})` }}
           >
             <video autoPlay loop muted >
               <source src="/airline.mp4" type="video/mp4" />
@@ -199,7 +199,7 @@ const Home = () => {
       </section> 
 
       {/* <!-- wonderful experience --> */}
-     {/*  <section className="experience">
+      {/*  <section className="experience">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -257,7 +257,7 @@ const Home = () => {
       </section>  */}
 
       {/* Why Choose Us */}
-      
+
 
       {/* <!-- popular routes section --> */}
      {/*  <section className="popular-routes">
