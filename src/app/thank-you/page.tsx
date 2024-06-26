@@ -1,41 +1,49 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
+import { CallModal } from "../component";
 
 const ThankYou = () => {
-  return (
-    <div className="vh-100 d-flex justify-content-center align-items-center">
-      <div>
-        <div className="mb-4 text-center thankyou">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className=""
-            width="75"
-            height="75"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-          </svg>
-        </div>
-        <div className="text-center">
-          <h1>Thank you for choosing ReservationKart.com!</h1>
-          <p>
-            A travel expert will be in touch with you in shortly with the best
-            deals tailor-made for your journey. 
-          </p>
-          <button
-                    type="submit"
-                    className="btn btn-search mt-4 mb-6"
-                   
-                   // onClick={handleToggle}
-                  
-                    
-                    >
+  const [show, setShow] = useState<boolean>(false);
 
-                    <span className="fw-bold"> Back Home</span>
-                  </button>
+  const handleToggle = () => {
+    setShow(!show);
+  };
+
+  return (
+    <>
+      <div className="d-flex justify-content-center align-items-center my-4">
+        <div>
+          <div className="my-4 text-center theme-text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className=""
+              width="75"
+              height="75"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </svg>
+          </div>
+         
+          <div className="text-center">
+            <h1 className="fs-2 fw-bold theme-text-secondary mb-0">Thank you for choosing ReservationKart.com!</h1>
+            <p className="mb-0 theme-text-accent-one">
+              A travel expert will be in touch with you in shortly with the best
+              deals tailor-made for your journey. For more Info
+            </p>
+            <button
+              onClick={handleToggle}
+              type="submit"
+              className="btn btn-search mt-4 mb-6">
+              <span className="fw-bold"> CALL US </span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+
+      <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
+    </>
   );
 };
 
