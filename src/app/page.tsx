@@ -2,26 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import PaymentMethod from "./component/paymentMethod";
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
 import { destinationData, recommendedCardData, routesData } from "./utils/data";
 import { DestinationCard, CallModal, RouteCard, RecommendedCard, } from "./component";
-import { AboutusImg1 } from "./utils/images";
-import EasyImg from './utils/images/icons/easy-booking.svg'
-import LowestImg from './utils/images/icons/lowest-booking.svg'
-import ExcImg from './utils/images/icons/exc-deal.svg'
-import Support from './utils/images/icons/support.svg'
-import {
-  Product01,
-  Product02,
-  experienceBg,
-  bannerImage1,
-  Gallery1,
-  Gallery2,
-  Gallery3,
-  Gallery5,
-} from "./utils/images";
+import {Product01,Product02,experienceBg,Gallery1, Gallery2, Gallery3, Gallery5} from "./utils/images";
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -199,7 +183,7 @@ const Home = () => {
       </section> 
 
       {/* <!-- wonderful experience --> */}
-      {/*  <section className="experience">
+       <section className="experience">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -229,7 +213,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* <div className="row mt-5">
+           {/* <div className="row mt-5">
             <div className="col-12 col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div className="d-flex align-items-center p-4 p-md-0">
                 <i className="bi bi-airplane fs-4 theme-text-primary"></i>
@@ -252,12 +236,9 @@ const Home = () => {
                 <p className="fs-4 mb-0 theme-text-accent-one">Ratings</p>
               </div>
             </div>
-          </div> 
+          </div>  */}
         </div>
-      </section>  */}
-
-      {/* Why Choose Us */}
-
+      </section>  
 
       {/* <!-- popular routes section --> */}
      {/*  <section className="popular-routes">
@@ -287,55 +268,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>  */}
-
-      {/* How to book 
-      <section className=" step-container" id='howTobook'>
-        <div className="container text-center">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                How To Book
-              </h4>
-              <p className="mb-0 theme-text-accent-one">Quick and easy airline ticket reservations for stress-free travel planning.</p>
-            </div>
-          </div>
-          <div className="row g-4 relative">
-            {/* <svg className="svg-divider absolute" xmlns="http://www.w3.org/2000/svg" width="930" height="50" viewBox="0 0 950 50" fill="none">
-            <path d="M0.5 34.9981C99 50.9984 248 -11.0007 347 27.4986C463 72.6088 583.061 34.7134 629 20.4977C803.5 -33.5004 928.5 45.0006 953 26.5" stroke="#CEA67D" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="9 9"></path>
-          </svg> */}
-      {/*}    <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-airplane text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 1</h3>
-              <p className="step-text">Enter your flight details and click search</p>
-            </div>
-            <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-person-lines-fill text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 2</h3>
-              <p className="step-text">Fill your contact information</p>
-            </div>
-            <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-headset text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 3</h3>
-              <p className="step-text">Your personal travel advisor will contact you momentarily</p>
-            </div>
-            <div className="col-12 col-lg-3 step-card">
-              <div className="step-icon mx-auto">
-                <i className="bi bi-ticket-perforated text-white fs-1"></i>
-              </div>
-              <h3 className="text-black mt-2">Step 4</h3>
-              <p className="step-text">Get your tickets and enjoy your trip</p>
-            </div>
-          </div>
-        </div>
-      </section>  */}
-
+      </section>  ~ */}
 
 
       {/* Gallery */}
@@ -393,68 +326,7 @@ const Home = () => {
         {/*  <PaymentMethod /> */}
       </section>
 
-      {/* Why Book With Us */}
-      <div className="container my-4">
-        <div className="text-center mb-4">
-          <h4 className="fs-2 fw-bold theme-text-secondary">Why Book With Us?</h4>
-        </div>
-        <div className="row">
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body text-center mb-2">
-                <Image
-                src={EasyImg}
-                className="w-50 mb-3"
-                alt="easy booking"
-                />
-                <h5 className="card-title">Easy Booking</h5>
-                <p className="card-text">We offer easy and convenient flight bookings with attractive offers.</p>
-              </div>
-              </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body text-center mb-4">
-                <Image
-                src={LowestImg}
-                className="w-50 mb-3"
-                alt="best price"
-                />
-                <h5 className="card-title">Lowest Price</h5>
-                <p className="card-test"> We ensure low rates on hotel reservation, holiday packages and on flight tickets.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body text-center mb-4">
-                <Image
-                src={ExcImg}
-                className="w-50 mb-3"
-                alt="Existing Deal"
-                />
-                <h5 className="card-title">Exciting Deals</h5>
-                <p className="card-text">Enjoy exciting deals on flights, hotels, buses, car rental and tour packages.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <div className="card h-100">
-              <div className="card-body text-center mb-4">
-                <Image
-                src={Support}
-                className="w-50 mb-3"
-                alt="24/7 Support"
-                />
-                <h5 className="card-title">24/7 Support</h5>
-                <p className="card-text">Get assistance 24/7 on any kind of travel related query. We are happy to assist you. </p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  
       {/* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
     </main >

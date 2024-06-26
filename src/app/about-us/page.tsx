@@ -1,13 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {
-  AboutusImg1,
-  AboutusImg2,
-  Advantage1,
-  Advantage2,
-  Advantage3,
-  Advantage4,
-} from "../utils/images";
+import {AboutusImg1,AboutusImg2,Advantage1,Advantage2,Advantage3,Advantage4,EasyImg,ExcImg,LowestImg,Support,} from "../utils/images";
 
 const About = () => {
   return (
@@ -89,6 +82,69 @@ const About = () => {
                 height={160}
                 className="h-100 w-100 object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Book With Us */}
+      <section id='whyBookWithUs'>
+        <div className="container my-4">
+          <div className="text-center mb-4">
+            <h4 className="fs-2 fw-bold theme-text-secondary">Why Book With Us?</h4>
+          </div>
+          <div className="row">
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body text-center mb-2">
+                  <Image
+                    src={EasyImg}
+                    className="w-50 mb-3"
+                    alt="easy booking"
+                  />
+                  <h5 className="card-title">Easy Booking</h5>
+                  <p className="card-text">We offer easy and convenient flight bookings with attractive offers.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body text-center mb-4">
+                  <Image
+                    src={LowestImg}
+                    className="w-50 mb-3"
+                    alt="best price"
+                  />
+                  <h5 className="card-title">Lowest Price</h5>
+                  <p className="card-test"> We ensure low rates on hotel reservation, holiday packages and on flight tickets.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body text-center mb-4">
+                  <Image
+                    src={ExcImg}
+                    className="w-50 mb-3"
+                    alt="Existing Deal"
+                  />
+                  <h5 className="card-title">Exciting Deals</h5>
+                  <p className="card-text">Enjoy exciting deals on flights, hotels, buses, car rental and tour packages.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3 mb-4">
+              <div className="card h-100">
+                <div className="card-body text-center mb-4">
+                  <Image
+                    src={Support}
+                    className="w-50 mb-3"
+                    alt="24/7 Support"
+                  />
+                  <h5 className="card-title">24/7 Support</h5>
+                  <p className="card-text">Get assistance 24/7 on any kind of travel related query. We are happy to assist you. </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
