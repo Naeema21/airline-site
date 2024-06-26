@@ -39,9 +39,10 @@ const Home = () => {
           // style={{ backgroundImage: `url(${bannerImage1.src})` }}
           >
             <video autoPlay loop muted >
-              <source src="/airline.mp4" type="video/mp4" />
+              <source src="/airline.mp4" type="video/mp4" /> 
+             
               Your browser does not support the video tag.
-            </video>
+           </video>
             <div className="container">
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">

@@ -277,6 +277,8 @@ const About = () => {
           </div>
         </div>
       </section> */}
+
+      
     </>
   );
 };
