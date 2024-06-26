@@ -20,7 +20,7 @@ const Home = () => {
         <div className="head-wrapper">
           <div
             className="search-engine"
-            // style={{ backgroundImage: `url(${bannerImage1.src})` }}
+          // style={{ backgroundImage: `url(${bannerImage1.src})` }}
           >
             <video autoPlay loop muted >
               <source src="/airline.mp4" type="video/mp4" />
@@ -52,7 +52,7 @@ const Home = () => {
       </div >
 
       {/* <!-- recommended section --> */}
-      {/* <section className="recommended" id="deals">
+      <section className="recommended" id="deals">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6">
@@ -60,19 +60,18 @@ const Home = () => {
               <p className="mb-0 theme-text-accent-one">International & Domestic fames ac ante ipsum</p>
             </div>
           </div>
-          {/* <!-- recomended tours card -->
           <div className="row mt-5">
             {recommendedCardData?.map((card, index) => (
               <RecommendedCard card={card} key={index} />
             ))}
           </div>
         </div>
-      </section> */}
+      </section> 
 
 
 
       {/* <!-- special offers section --> */}
-      {/*  <section className="special-offers" id="offers">
+        <section className="special-offers" id="offers">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -134,14 +133,10 @@ const Home = () => {
           </div>
 
         </div>
-      </section>    */}
-
-      {/* About Us */}
-
-
+      </section>    
 
       {/* destination section */}
-      {/* <section className="destinations" id="holidays">
+      <section className="destinations" id="holidays">
         <div className="container">
           <div className="row">
             <div className="col-12 mb-5">
@@ -153,7 +148,7 @@ const Home = () => {
               </p>
             </div>
             <div className="col-12">
-              {/* <ul className="nav nav-pills mb-3 destination-pill" id="pills-tab2" role="tablist">
+               <ul className="nav nav-pills mb-3 destination-pill" id="pills-tab2" role="tablist">
                 <li className="nav-item" role="presentation">
                   <button className="nav-link active" id="pills-regions-tab" data-bs-toggle="pill" data-bs-target="#pills-regions" type="button" role="tab" aria-controls="pills-regions" aria-selected="true">Regions</button>
                 </li>
@@ -185,7 +180,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section> 
 
       {/* <!-- wonderful experience --> */}
        <section className="experience">
@@ -246,7 +241,7 @@ const Home = () => {
       </section>  
 
       {/* <!-- popular routes section --> */}
-      {/* <section className="popular-routes">
+     {/*  <section className="popular-routes">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6 mb-5 mb-lg-0">
