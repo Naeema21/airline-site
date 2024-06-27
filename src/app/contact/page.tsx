@@ -33,7 +33,6 @@ const Contact = () => {
         setSubmitting(false)
       }
       catch (error) {
-        console.log(error)
         setSubmitting(false)
       }
     },
