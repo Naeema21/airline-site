@@ -23,7 +23,7 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow }) => {
       <div className={`modal  fade ${show ? 'show d-block' : ''}`} id="exampleModalCenter"
         tabIndex={-1} role="dialog" aria-labelledby="flight booking"
         aria-hidden={!show} style={{ display: show ? 'block' : 'none', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-        <div className="modal-dialog modal-dialog-centered modal-lg " role="document">
+        <div className="modal-dialog modal-dialog-centered  " role="document">
           <div className="modal-content popup-bg" style={{ borderRadius: '10px', backgroundImage: `url(${PopupBg.src})` }}>
             <div className="modal-header justify-content-end border-0 p-0">
               <button type="button" className="closeButton mx-2" onClick={handleClose}>
@@ -32,11 +32,11 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow }) => {
             </div>
             <div className="modal-body text-center d-flex flex-column align-items-center py-4">
               <Link href="tel:1888 5087143"
-                className="text-yellow fs-1" >
+                className="video-icon video-icon2 mb-3 fs-1" >
                 <i className="bi bi-telephone-fill"></i>
               </Link>
 
-              <Link href="tel:1888 5087143" className='fw-bold text-dark my-2 fs-1'> 1888 5087143 </Link>
+              <Link href="tel:1888 5087143" className='fw-bold theme-text-primary my-2 fs-1'> 1888 5087143 </Link>
               <h4 className='fw-bold text-dark mt-2'>Call Us Now</h4>
               <p  className='theme-text-accent-one'>To unlock exclusive deals and offers for your bookings.</p>
 
