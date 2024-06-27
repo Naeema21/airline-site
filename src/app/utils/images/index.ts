@@ -50,7 +50,7 @@ import Gallery4 from "./gallery/gallery-4.jpg";
 import Gallery5 from "./gallery/gallery-5.jpg";
 
 import AboutusImg1 from "./about-us/about1.jpg";
-import AboutusImg2 from "./about-us/about2.jpg";
+import AboutusImg2 from "./about-us/aboutImg2.jpg";
 import Advantage1 from "./about-us/advantages1.jpg";
 import Advantage2 from "./about-us/advantages2.jpg";
 import Advantage3 from "./about-us/advantages3.jpg";

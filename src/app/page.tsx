@@ -89,7 +89,7 @@ const Home = () => {
                 <div className="row">
                   <div className="col-12 text-center mb-3">
                     <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                      Welcome to ReservationKart.com !
+                      Welcome to ReservationKart.com 
                     </h4>
                   </div>
                 </div>
