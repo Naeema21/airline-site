@@ -40,7 +40,7 @@ const Home = () => {
                     className="btn btn-search mt-4 mb-6"
                     onClick={handleToggle}
                   >
-                    <span className="fw-bold"> Call Us Now</span>
+                    <span className="fw-bold"> Call Now</span>
                   </button>
                 </div >
               </div >

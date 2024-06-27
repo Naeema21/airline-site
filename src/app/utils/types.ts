@@ -93,3 +93,4 @@ export interface FormValues {
 export interface SearchEngineProps {
   handleToggle?:  () => void
 }
+
