@@ -1124,9 +1124,10 @@ a:hover {
   opacity: 0.75;
 }
 
-.step-container {
+/* .step-container {
   background-color: #f8f9fa;
 }
+*/
 
 .step-icon {
   width: 80px;
