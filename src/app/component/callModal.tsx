@@ -38,7 +38,7 @@ const CallModal: React.FC<Modalprops> = ({ show, handleClose, setShow }) => {
 
               <Link href="tel:1888 5087143" className='fw-bold theme-text-primary my-2 fs-1'> 1888 5087143 </Link>
               <h4 className='fw-bold text-dark mt-2'>Call Us Now</h4>
-              <p  className='theme-text-accent-one'>To unlock exclusive deals and offers for your bookings.</p>
+              <p  className='text-black'>To unlock exclusive deals and offers for your bookings!</p>
 
               <button className='btn btn-search' style={{ backgroundColor: '#007bff', borderColor: '#007bff', borderRadius: '5px', padding: '10px 20px' }}>
                 <Link href='tel:1888 5087143' style={{ color: 'white', textDecoration: 'none' }}>

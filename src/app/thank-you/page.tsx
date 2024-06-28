@@ -27,7 +27,7 @@ const ThankYou = () => {
           </div>
 
           <div className="text-center">
-            <h1 className="fs-2 fw-bold theme-text-secondary mb-0">Thank you for choosing ReservationKart.com!</h1>
+            <h1 className="fs-2 fw-bold theme-text-secondary mb-0">Thank you for choosing ReservationKart.com</h1>
             <p className="mb-0 theme-text-accent-one">
               One of our travel experts will be reaching out to you shortly, offering the best deals tailored to your specific requirements.
             </p>
