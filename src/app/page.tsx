@@ -1,13 +1,36 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import {AboutusImg1,AboutusImg2,Advantage1,Advantage2,Advantage3,Advantage4,EasyImg,ExcImg,LowestImg,Support,}
-from "./utils/images"; 
+import {
+  AboutusImg1,
+  AboutusImg2,
+  Advantage1,
+  Advantage2,
+  Advantage3,
+  Advantage4,
+  EasyImg,
+  ExcImg,
+  LowestImg,
+  Support,
+} from "./utils/images";
 import { useState } from "react";
 import { destinationData, recommendedCardData, routesData } from "./utils/data";
-import { DestinationCard, CallModal, RouteCard, RecommendedCard, } from "./component";
-import {Product01,Product02,experienceBg,Gallery1, Gallery2, Gallery3, Gallery5} from "./utils/images";
-
+import {
+  DestinationCard,
+  CallModal,
+  RouteCard,
+  RecommendedCard,
+  PaymentMethod,
+} from "./component";
+import {
+  Product01,
+  Product02,
+  experienceBg,
+  Gallery1,
+  Gallery2,
+  Gallery3,
+  Gallery5,
+} from "./utils/images";
 
 const Home = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -22,39 +45,45 @@ const Home = () => {
         <div className="head-wrapper">
           <div
             className="search-engine"
-          // style={{ backgroundImage: `url(${bannerImage1.src})` }}
+            // style={{ backgroundImage: `url(${bannerImage1.src})` }}
           >
-            <video autoPlay loop muted >
-              <source src="/flight_video.mp4" type="video/mp4" />
+            <video autoPlay loop muted>
+              <source src="/flight_video1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
-           </video>
+            </video>
             <div className="container">
               <div className="row">
                 <div className="col-12 col-lg-12  text-center position-relative">
                   <h1 className="display-1 mb-2 theme-text-white theme-text-shadow">
                     Your dream travel just <br /> a phone call away!
                   </h1>
-                  <p className="mb-0 theme-text-white">Travel has always proven to be the ultimate cure. Even if not pursued with fervor,<br />
-                    unfamiliar destinations consistently offer the tranquility you have been seeking.</p>
+                  <p className="mb-0 theme-text-white">
+                    Travel has always proven to be the ultimate cure. Even if
+                    not pursued with fervor,
+                    <br />
+                    unfamiliar destinations consistently offer the tranquility
+                    you have been seeking.
+                  </p>
 
                   <button
                     type="submit"
-                    className="btn btn-search mt-4 mb-6"
+                    className="btn btn-search mt-4 mb-6 me-2"
                     onClick={handleToggle}
                   >
                     <span className="fw-bold"> Call Now</span>
                   </button>
-                </div >
-              </div >
+                  <PaymentMethod />
+                </div>
+              </div>
               {/* <SearchEngine handleToggle={handleToggle} /> */}
-            </div >
-          </div >
-        </div >
+            </div>
+          </div>
+        </div>
         {/*   <NewsLetter  /> */}
-      </div >
+      </div>
 
       {/* <!-- recommended section --> */}
-    {/* <section className="recommended" id="deals">
+      {/* <section className="recommended" id="deals">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6">
@@ -70,7 +99,7 @@ const Home = () => {
         </div>
       </section>  */}
 
-<section className="pt-5 pt-lg-5 step-container">
+      <section className="pt-5 pt-lg-5 step-container">
         <div className="pb-md-4 mt-4 container">
           <div className="d-flex flex-column flex-md-row mb-0 w-100 mx-auto container-xl gap-4">
             <div className="w-100 w-md-50 max-h-330 p-0 rounded overflow-hidden">
@@ -89,7 +118,7 @@ const Home = () => {
                 <div className="row">
                   <div className="col-12 text-center mb-3">
                     <h4 className="fs-2 fw-bold theme-text-secondary mb-0">
-                      Welcome to ReservationKart.com 
+                      Welcome to ReservationKart.com
                     </h4>
                   </div>
                 </div>
@@ -111,8 +140,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-       
-        {/*sec 2 who we are  */}
+
+      {/*sec 2 who we are  */}
       <section className="step-container">
         <div className="py-4 container">
           <div className="d-flex flex-column flex-md-row mb-0 w-100 container-xl mx-auto gap-4">
@@ -153,10 +182,12 @@ const Home = () => {
       </section>
 
       {/* Why Book With Us */}
-      <section id='whyBookWithUs'>
+      <section id="whyBookWithUs">
         <div className="container my-4">
           <div className="text-center mb-4">
-            <h4 className="fs-2 fw-bold theme-text-secondary">Why Book With Us?</h4>
+            <h4 className="fs-2 fw-bold theme-text-secondary">
+              Why Book With Us?
+            </h4>
           </div>
           <div className="row">
             <div className="col-md-3 mb-4">
@@ -168,7 +199,10 @@ const Home = () => {
                     alt="easy booking"
                   />
                   <h5 className="card-title">Easy Booking</h5>
-                  <p className="card-text">We offer easy and convenient flight bookings with attractive offers.</p>
+                  <p className="card-text">
+                    We offer easy and convenient flight bookings with attractive
+                    offers.
+                  </p>
                 </div>
               </div>
             </div>
@@ -181,7 +215,11 @@ const Home = () => {
                     alt="best price"
                   />
                   <h5 className="card-title">Lowest Price</h5>
-                  <p className="card-test"> We ensure low rates on hotel reservation, holiday packages and on flight tickets.</p>
+                  <p className="card-test">
+                    {" "}
+                    We ensure low rates on hotel reservation, holiday packages
+                    and on flight tickets.
+                  </p>
                 </div>
               </div>
             </div>
@@ -194,7 +232,10 @@ const Home = () => {
                     alt="Existing Deal"
                   />
                   <h5 className="card-title">Exciting Deals</h5>
-                  <p className="card-text">Enjoy exciting deals on flights, hotels, buses, car rental and tour packages.</p>
+                  <p className="card-text">
+                    Enjoy exciting deals on flights, hotels, buses, car rental
+                    and tour packages.
+                  </p>
                 </div>
               </div>
             </div>
@@ -207,15 +248,16 @@ const Home = () => {
                     alt="24/7 Support"
                   />
                   <h5 className="card-title">24/7 Support</h5>
-                  <p className="card-text">Get assistance 24/7 on any kind of travel related query. We are happy to assist you. </p>
+                  <p className="card-text">
+                    Get assistance 24/7 on any kind of travel related query. We
+                    are happy to assist you.{" "}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-
 
       {/* <!-- special offers section --> 
         <section className="special-offers" id="offers">
@@ -330,7 +372,7 @@ const Home = () => {
       </section>  */}
 
       {/* <!-- wonderful experience --> */}
-       <section className="experience">
+      <section className="experience">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -360,7 +402,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-           {/* <div className="row mt-5">
+          {/* <div className="row mt-5">
             <div className="col-12 col-sm-6 col-lg-4 mb-3 mb-lg-0">
               <div className="d-flex align-items-center p-4 p-md-0">
                 <i className="bi bi-airplane fs-4 theme-text-primary"></i>
@@ -385,10 +427,10 @@ const Home = () => {
             </div>
           </div>  */}
         </div>
-      </section>  
+      </section>
 
       {/* <!-- popular routes section --> */}
-     {/*  <section className="popular-routes">
+      {/*  <section className="popular-routes">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6 mb-5 mb-lg-0">
@@ -416,7 +458,6 @@ const Home = () => {
           </div>
         </div>
       </section>  ~ */}
-
 
       {/* Gallery */}
       <section id="gallery">
@@ -470,13 +511,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/*  <PaymentMethod /> */}
       </section>
 
-  
       {/* call us modal */}
       <CallModal show={show} handleClose={handleToggle} setShow={setShow} />
-    </main >
+    </main>
   );
 };
 
