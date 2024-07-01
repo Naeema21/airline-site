@@ -5,8 +5,10 @@ import Dropdown from "./dropDown";
 import RecommendedCard from "./recommendedCard";
 import RouteCard from "./routeCard";
 import NewsLetter from "./newsLetter";
+import PaymentMethod from "./paymentMethod";
 
 
 
 
-export { AutoSearch , CallModal ,DestinationCard, Dropdown, RecommendedCard, RouteCard, NewsLetter ,}
+
+export { AutoSearch , CallModal ,DestinationCard, Dropdown, RecommendedCard, RouteCard, NewsLetter, PaymentMethod,}
